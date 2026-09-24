@@ -1,0 +1,144 @@
+/* Custom Variables & Tailwind overrides */
+:root {
+  --color-primary: #1b4332; /* Deep Forest Green */
+  --color-secondary: #52796f; /* Sage Green */
+  --color-accent: #dda15e; /* Warm Botanical Gold */
+  --color-accent-hover: #bc6c25; /* Earthy Terracotta */
+  --color-bg-light: #fefae0; /* Warm Ivory / Soft Natural Cream */
+  --color-text-dark: #2d3748; 
+  --color-text-light: #f8f9fa;
+  --font-heading: 'Playfair Display', serif;
+  --font-body: 'Inter', sans-serif;
+  --transition: all 0.3s ease;
+}
+
+/* Base Styles */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--color-bg-light);
+  color: var(--color-text-dark);
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+}
+
+/* Header & Nav */
+.header-sticky {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  backdrop-filter: blur(10px);
+  background-color: rgba(254, 250, 224, 0.9);
+  transition: var(--transition);
+}
+
+.logo-text {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  color: var(--color-primary);
+  font-size: 1.5rem;
+}
+
+.nav-link {
+  color: var(--color-text-dark);
+  font-weight: 500;
+  transition: var(--transition);
+}
+
+.nav-link:hover, .nav-link.active {
+  color: var(--color-accent-hover);
+}
+
+.btn-primary {
+  background-color: var(--color-primary);
+  color: var(--color-text-light);
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  transition: var(--transition);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.btn-primary:hover {
+  background-color: var(--color-secondary);
+  color: var(--color-text-light);
+}
+
+.btn-secondary {
+  background-color: var(--color-accent);
+  color: var(--color-text-dark);
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  transition: var(--transition);
+}
+
+.btn-secondary:hover {
+  background-color: var(--color-accent-hover);
+  color: white;
+}
+
+/* Cards */
+.native-card {
+  background-color: white;
+  border-radius: 1rem;
+  overflow: hidden;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  transition: var(--transition);
+}
+
+.native-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+/* Utilities */
+.text-primary { color: var(--color-primary); }
+.text-secondary { color: var(--color-secondary); }
+.text-accent { color: var(--color-accent); }
+.bg-primary { background-color: var(--color-primary); }
+.bg-secondary { background-color: var(--color-secondary); }
+.bg-accent { background-color: var(--color-accent); }
+
+/* Custom Animations */
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0px); }
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+/* Responsive Overrides */
+@media (max-width: 768px) {
+  .mobile-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: var(--color-bg-light);
+    padding: 1rem;
+    box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1);
+  }
+  .mobile-menu.active {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+/* Prevent horizontal scroll issues caused by animations or overflowing elements */
+html, body {
+  overflow-x: clip;
+  max-width: 100vw;
+}

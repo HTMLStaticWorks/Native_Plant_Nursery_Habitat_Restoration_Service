@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coming Soon | Verdantia Nursery</title>
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@500;700&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: 'var(--color-primary)',
+                        secondary: 'var(--color-secondary)',
+                        accent: 'var(--color-accent)',
+                        'accent-hover': 'var(--color-accent-hover)',
+                        'bg-light': 'var(--color-bg-light)',
+                        'text-dark': 'var(--color-text-dark)',
+                        'text-light': 'var(--color-text-light)',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    
+    <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg"><path d='M12 22c4-4 8-9 8-14a8 8 0 1 0-16 0c0 5 4 10 8 14z'/></svg>">
+</head>
+<body class="antialiased bg-bg-light text-text-dark min-h-screen flex items-center justify-center relative overflow-hidden bg-primary">
+    <!-- Background Image -->
+    <div class="absolute inset-0 z-0">
+        <img src="https://images.unsplash.com/photo-1416879598555-227289568972?auto=format&fit=crop&w=1920&q=80" alt="Botanical Pattern Background" class="w-full h-full object-cover mix-blend-overlay opacity-30">
+        <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div>
+    </div>
+    
+    <div class="relative z-10 max-w-2xl mx-auto px-6 text-center text-white">
+        <!-- Logo -->
+        <div class="flex items-center justify-center gap-3 mb-10">
+            <i data-lucide="leaf" class="text-accent w-12 h-12"></i>
+            <span class="font-serif font-bold text-4xl">Verdantia</span>
+        </div>
+        
+        <h1 class="text-4xl md:text-6xl font-bold font-serif mb-6 leading-tight">
+            We are planting the seeds. <br>
+            <span class="text-accent">Growing Soon.</span>
+        </h1>
+        
+        <p class="text-xl mb-12 opacity-90 max-w-xl mx-auto font-light leading-relaxed">
+            A premium collection of ethically sourced native plants and comprehensive ecological restoration services is coming to your region.
+        </p>
+        
+        <div class="bg-white/10 backdrop-blur-md p-8 rounded-3xl border border-white/20 mb-12">
+            <h3 class="text-xl font-bold mb-4">Be the first to know when we launch</h3>
+            <form class="flex flex-col sm:flex-row gap-3" onsubmit="event.preventDefault(); alert('Thanks for subscribing!');">
+                <input type="email" placeholder="Enter your email" required class="flex-grow px-6 py-4 rounded-full bg-white/20 border border-white/30 text-white placeholder-gray-300 focus:outline-none focus:bg-white/30">
+                <button type="submit" class="bg-accent text-primary font-bold rounded-full px-8 py-4 hover:bg-accent-hover hover:text-white transition-colors">
+                    Notify Me
+                </button>
+            </form>
+        </div>
+        
+        <div class="flex justify-center gap-6">
+            <a href="#" class="w-12 h-12 rounded-full bg-white/10 flex items-center justify-center hover:bg-accent hover:text-primary transition-colors border border-white/20"><i data-lucide="facebook" class="w-5 h-5"></i></a>
+            <a href="#" class="w-12 h-12 rounded-full bg-white/10 flex items-center justify-center hover:bg-accent hover:text-primary transition-colors border border-white/20"><i data-lucide="instagram" class="w-5 h-5"></i></a>
+            <a href="#" class="w-12 h-12 rounded-full bg-white/10 flex items-center justify-center hover:bg-accent hover:text-primary transition-colors border border-white/20"><svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4l11.733 16h4.267l-11.733 -16z"/><path d="M4 20l6.768 -6.768m2.46 -2.46l6.772 -6.772"/></svg></a>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+</html>

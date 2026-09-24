@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Planting Guide | Verdantia Nursery</title>
+    <meta name="description" content="Learn how to choose, plant, and maintain native plants for ecological success.">
+    
+    <!-- SEO -->
+    <meta property="og:title" content="Planting Guide | Verdantia Nursery">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@500;700&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: 'var(--color-primary)',
+                        secondary: 'var(--color-secondary)',
+                        accent: 'var(--color-accent)',
+                        'accent-hover': 'var(--color-accent-hover)',
+                        'bg-light': 'var(--color-bg-light)',
+                        'text-dark': 'var(--color-text-dark)',
+                        'text-light': 'var(--color-text-light)',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <!-- AOS CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/dark-mode.css">
+    <link rel="stylesheet" href="assets/css/rtl.css">
+
+    <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg"><path d='M12 22c4-4 8-9 8-14a8 8 0 1 0-16 0c0 5 4 10 8 14z'/></svg>">
+</head>
+<body class="antialiased bg-bg-light text-text-dark">
+
+    <!-- Header -->
+    <header class="header-sticky py-4 px-6 border-b border-gray-200/50">
+        <div class="max-w-7xl mx-auto flex justify-between items-center">
+            <!-- Logo -->
+            <a href="index.html" class="flex items-center gap-3 group">
+                <i data-lucide="leaf" class="text-primary group-hover:scale-110 transition-transform w-8 h-8"></i>
+                <span class="logo-text">Verdantia</span>
+            </a>
+
+            <!-- Desktop Nav -->
+            <nav class="hidden lg:flex items-center gap-8">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="home-2.html" class="nav-link">Home 2</a>
+                <a href="about.html" class="nav-link">About</a>
+                <a href="products.html" class="nav-link">Products</a>
+                <a href="restoration-services.html" class="nav-link">Restoration Services</a>
+                <a href="planting-guide.html" class="nav-link active">Planting Guide</a>
+                <a href="contact.html" class="nav-link">Contact</a>
+            </nav>
+
+            <!-- Actions -->
+            <div class="flex items-center gap-4">
+                <button class="theme-toggle hidden lg:flex p-2 rounded-full hover:bg-gray-200/50 transition-colors" aria-label="Toggle Theme">
+                    <i data-lucide="moon" class="w-5 h-5 text-text-dark"></i>
+                </button>
+                <button class="rtl-toggle hidden lg:flex p-2 rounded-full hover:bg-gray-200/50 transition-colors" aria-label="Toggle RTL">
+                    <i data-lucide="arrow-left-right" class="w-5 h-5 text-text-dark"></i>
+                </button>
+                <a href="products.html" class="hidden lg:inline-flex btn-primary">
+                    Explore Native Plants
+                </a>
+
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-btn" class="lg:hidden p-2 text-text-dark" aria-label="Menu">
+                    <i id="menu-icon" data-lucide="menu" class="w-6 h-6"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="mobile-menu hidden lg:hidden">
+            <div class="flex items-center justify-between pb-4 border-b border-gray-100 dark:border-gray-800">
+                <span class="font-semibold text-text-dark">Settings</span>
+                <div class="flex gap-2">
+                    <button class="theme-toggle p-2 rounded-full hover:bg-gray-200/50 transition-colors" aria-label="Toggle Theme">
+                        <i data-lucide="moon" class="w-5 h-5 text-text-dark"></i>
+                    </button>
+                    <button class="rtl-toggle p-2 rounded-full hover:bg-gray-200/50 transition-colors" aria-label="Toggle RTL">
+                        <i data-lucide="arrow-left-right" class="w-5 h-5 text-text-dark"></i>
+                    </button>
+                </div>
+            </div>
+            <a href="index.html" class="nav-link py-3 border-b border-gray-100 font-semibold">Home</a>
+            <a href="home-2.html" class="nav-link py-3 border-b border-gray-100 font-semibold">Home 2</a>
+            <a href="about.html" class="nav-link py-3 border-b border-gray-100 font-semibold">About</a>
+            <a href="products.html" class="nav-link py-3 border-b border-gray-100 font-semibold">Products</a>
+            <a href="restoration-services.html"
+                class="nav-link py-3 border-b border-gray-100 font-semibold">Restoration Services</a>
+            <a href="planting-guide.html" class="nav-link py-3 border-b border-gray-100 font-semibold active">Planting
+                Guide</a>
+            <a href="contact.html" class="nav-link py-3 border-b border-gray-100 font-semibold">Contact</a>
+            <a href="products.html" class="btn-primary justify-center mt-4 w-full">Explore Native Plants</a>
+        </div>
+    </header>
+
+    <main>
+        <!-- SECTION 1 - Hero -->
+        <section class="relative bg-bg-light pt-32 pb-24 border-b border-gray-200 overflow-hidden">
+            <div class="max-w-7xl mx-auto px-6">
+                <div class="grid lg:grid-cols-2 gap-12 items-center">
+                    <div data-aos="fade-right">
+                        <h1 class="text-5xl md:text-6xl font-bold font-serif mb-6 text-primary">Plant Native.<br>Grow Resilient.</h1>
+                        <p class="text-lg mb-8 opacity-80 leading-relaxed text-text-dark">
+                            Successful native gardening starts with knowledge. Learn how to select the right species, prepare your site, and care for your habitat.
+                        </p>
+                        <a href="#guide" class="btn-primary">
+                            Start Learning <i data-lucide="arrow-down" class="w-5 h-5 ml-2"></i>
+                        </a>
+                    </div>
+                    <div class="relative" data-aos="fade-left">
+                        <div class="aspect-square rounded-full overflow-hidden border-8 border-white shadow-xl relative z-10">
+                            <img src="https://images.pexels.com/photos/38524143/pexels-photo-38524143.jpeg" alt="Botanical Education" class="w-full h-full object-cover">
+                        </div>
+                        <div class="absolute -bottom-8 -right-8 w-40 h-40 bg-accent rounded-full -z-0 opacity-20 blur-xl"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 2 - Choose the Right Native Plants -->
+        <section id="guide" class="py-24">
+            <div class="max-w-7xl mx-auto px-6">
+                <div class="text-center mb-16" data-aos="fade-up">
+                    <h2 class="text-2xl md:text-3xl font-bold font-serif text-primary mb-4">Choose the Right Native Plants</h2>
+                    <p class="text-lg opacity-80">Match plants to your specific site conditions for ecological success.</p>
+                </div>
+                
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <div class="native-card p-6 shadow-sm hover:shadow-md group" data-aos="fade-up" data-aos-delay="100">
+                        <i data-lucide="sun" class="w-10 h-10 text-accent mb-4 group-hover:scale-110 transition-transform"></i>
+                        <h3 class="font-bold text-xl text-primary mb-2">Sun Loving</h3>
+                        <p class="text-sm opacity-80">Requires 6+ hours of direct sunlight. Ideal for prairie and meadow species.</p>
+                    </div>
+                    <div class="native-card p-6 shadow-sm hover:shadow-md group" data-aos="fade-up" data-aos-delay="200">
+                        <i data-lucide="cloud" class="w-10 h-10 text-accent mb-4 group-hover:scale-110 transition-transform"></i>
+                        <h3 class="font-bold text-xl text-primary mb-2">Shade Tolerant</h3>
+                        <p class="text-sm opacity-80">Thrives in less than 4 hours of sun. Perfect for woodland gardens and ferns.</p>
+                    </div>
+                    <div class="native-card p-6 shadow-sm hover:shadow-md group" data-aos="fade-up" data-aos-delay="300">
+                        <i data-lucide="sunset" class="w-10 h-10 text-accent mb-4 group-hover:scale-110 transition-transform"></i>
+                        <h3 class="font-bold text-xl text-primary mb-2">Dry Soil</h3>
+                        <p class="text-sm opacity-80">Deep-rooted species that excel in well-drained, sandy, or rocky conditions.</p>
+                    </div>
+                    <div class="native-card p-6 shadow-sm hover:shadow-md group" data-aos="fade-up" data-aos-delay="100">
+                        <i data-lucide="droplets" class="w-10 h-10 text-accent mb-4 group-hover:scale-110 transition-transform"></i>
+                        <h3 class="font-bold text-xl text-primary mb-2">Moist Soil</h3>
+                        <p class="text-sm opacity-80">Plants for rain gardens, low spots, and clay soils that hold water.</p>
+                    </div>
+                    <div class="native-card p-6 shadow-sm hover:shadow-md group" data-aos="fade-up" data-aos-delay="200">
+                        <i data-lucide="bug" class="w-10 h-10 text-accent mb-4 group-hover:scale-110 transition-transform"></i>
+                        <h3 class="font-bold text-xl text-primary mb-2">Pollinator Gardens</h3>
+                        <p class="text-sm opacity-80">High nectar output flowers blooming in succession to feed insects.</p>
+                    </div>
+                    <div class="native-card p-6 shadow-sm hover:shadow-md group" data-aos="fade-up" data-aos-delay="300">
+                        <i data-lucide="bird" class="w-10 h-10 text-accent mb-4 group-hover:scale-110 transition-transform"></i>
+                        <h3 class="font-bold text-xl text-primary mb-2">Bird Habitat</h3>
+                        <p class="text-sm opacity-80">Shrubs and trees offering berries, nesting sites, and caterpillars.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 3 - Step-by-Step Planting Guide -->
+        <section class="py-24 bg-bg-light">
+            <div class="max-w-7xl mx-auto px-6">
+                <div class="text-center mb-16" data-aos="fade-up">
+                    <h2 class="text-2xl md:text-3xl font-bold font-serif mb-4 text-primary">Step-by-Step Planting Guide</h2>
+                    <p class="text-lg opacity-80">Follow these steps to give your native plants the best start.</p>
+                </div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Step 1 -->
+                    <div class="native-card p-8 rounded-2xl shadow-xl" data-aos="zoom-in" data-aos-delay="100">
+                        <div class="w-12 h-12 bg-accent text-primary font-bold rounded-full flex items-center justify-center text-xl mb-6">1</div>
+                        <h3 class="font-bold text-xl mb-3 text-primary">Prepare the Site</h3>
+                        <p class="opacity-80 text-sm">Remove invasive species and lawn grass. Do not till the soil, as this brings weed seeds to the surface.</p>
+                    </div>
+                    <!-- Step 2 -->
+                    <div class="native-card p-8 rounded-2xl shadow-xl" data-aos="zoom-in" data-aos-delay="200">
+                        <div class="w-12 h-12 bg-accent text-primary font-bold rounded-full flex items-center justify-center text-xl mb-6">2</div>
+                        <h3 class="font-bold text-xl mb-3 text-primary">Select Species</h3>
+                        <p class="opacity-80 text-sm">Choose plants appropriate for your light and soil conditions. Avoid amending the soil; native plants prefer native soil.</p>
+                    </div>
+                    <!-- Step 3 -->
+                    <div class="native-card p-8 rounded-2xl shadow-xl" data-aos="zoom-in" data-aos-delay="300">
+                        <div class="w-12 h-12 bg-accent text-primary font-bold rounded-full flex items-center justify-center text-xl mb-6">3</div>
+                        <h3 class="font-bold text-xl mb-3 text-primary">Dig the Hole</h3>
+                        <p class="opacity-80 text-sm">Dig a hole twice as wide as the pot but no deeper. The root flare should sit slightly above ground level.</p>
+                    </div>
+                    <!-- Step 4 -->
+                    <div class="native-card p-8 rounded-2xl shadow-xl" data-aos="zoom-in" data-aos-delay="400">
+                        <div class="w-12 h-12 bg-accent text-primary font-bold rounded-full flex items-center justify-center text-xl mb-6">4</div>
+                        <h3 class="font-bold text-xl mb-3 text-primary">Plant Correctly</h3>
+                        <p class="opacity-80 text-sm">Gently loosen the roots. Place in hole and backfill with the original soil. Tamp down lightly to remove air pockets.</p>
+                    </div>
+                    <!-- Step 5 -->
+                    <div class="native-card p-8 rounded-2xl shadow-xl" data-aos="zoom-in" data-aos-delay="500">
+                        <div class="w-12 h-12 bg-accent text-primary font-bold rounded-full flex items-center justify-center text-xl mb-6">5</div>
+                        <h3 class="font-bold text-xl mb-3 text-primary">Water Properly</h3>
+                        <p class="opacity-80 text-sm">Water deeply immediately after planting. Continue watering during dry spells for the first year until established.</p>
+                    </div>
+                    <!-- Step 6 -->
+                    <div class="native-card p-8 rounded-2xl shadow-xl" data-aos="zoom-in" data-aos-delay="600">
+                        <div class="w-12 h-12 bg-accent text-primary font-bold rounded-full flex items-center justify-center text-xl mb-6">6</div>
+                        <h3 class="font-bold text-xl mb-3 text-primary">Maintain & Monitor</h3>
+                        <p class="opacity-80 text-sm">Mulch lightly with natural leaf litter or hardwood mulch (keep away from stems). Pull weeds as needed.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 4 - Seasonal Planting Calendar -->
+        <section class="py-24">
+            <div class="max-w-7xl mx-auto px-6">
+                <div class="text-center mb-16" data-aos="fade-up">
+                    <h2 class="text-2xl md:text-3xl font-bold font-serif text-primary mb-4">Seasonal Planting Calendar</h2>
+                    <p class="text-lg opacity-80">When to plant and when to plan.</p>
+                </div>
+                
+                <div class="space-y-6 max-w-4xl mx-auto">
+                    <!-- Spring -->
+                    <div class="flex flex-col md:flex-row gap-6 p-6 rounded-2xl bg-bg-light border border-gray-100" data-aos="fade-up">
+                        <div class="md:w-1/4 font-serif font-bold text-2xl text-secondary flex items-center gap-2">
+                            <i data-lucide="flower" class="w-6 h-6"></i> Spring
+                        </div>
+                        <div class="md:w-3/4 text-sm opacity-80 leading-relaxed">
+                            Excellent time for planting container plants and bare root trees. Ensure danger of hard frost has passed. Early spring is also ideal for sowing warm-season grasses.
+                        </div>
+                    </div>
+                    <!-- Summer -->
+                    <div class="flex flex-col md:flex-row gap-6 p-6 rounded-2xl bg-bg-light border border-gray-100" data-aos="fade-up">
+                        <div class="md:w-1/4 font-serif font-bold text-2xl text-accent-hover flex items-center gap-2">
+                            <i data-lucide="sun" class="w-6 h-6"></i> Summer
+                        </div>
+                        <div class="md:w-3/4 text-sm opacity-80 leading-relaxed">
+                            Generally avoid planting during heat waves. If you must plant, rigorous watering is required. Good time for planning fall restorations and site preparation.
+                        </div>
+                    </div>
+                    <!-- Fall -->
+                    <div class="flex flex-col md:flex-row gap-6 p-6 rounded-2xl bg-bg-light border border-gray-100" data-aos="fade-up">
+                        <div class="md:w-1/4 font-serif font-bold text-2xl text-accent flex items-center gap-2">
+                            <i data-lucide="leaf" class="w-6 h-6"></i> Fall
+                        </div>
+                        <div class="md:w-3/4 text-sm opacity-80 leading-relaxed">
+                            Often the best time to plant! Cooler temps and rain help roots establish before winter. Ideal for dormant seeding of wildflowers.
+                        </div>
+                    </div>
+                    <!-- Winter -->
+                    <div class="flex flex-col md:flex-row gap-6 p-6 rounded-2xl bg-bg-light border border-gray-100" data-aos="fade-up">
+                        <div class="md:w-1/4 font-serif font-bold text-2xl text-primary flex items-center gap-2">
+                            <i data-lucide="snowflake" class="w-6 h-6"></i> Winter
+                        </div>
+                        <div class="md:w-3/4 text-sm opacity-80 leading-relaxed">
+                            Time for "winter sowing" seeds that require cold stratification. Excellent time for pruning dormant native trees and shrubs.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 5 - Download / Explore More Guide CTA -->
+        <section class="py-24 bg-bg-light text-center relative overflow-hidden">
+            <div class="max-w-4xl mx-auto px-6 relative z-10" data-aos="zoom-in">
+                <i data-lucide="book-open" class="w-16 h-16 mx-auto mb-6 text-primary"></i>
+                <h2 class="text-3xl md:text-4xl font-bold mb-6 text-primary font-serif">Get the Full Planting Checklist</h2>
+                <p class="text-xl mb-10 opacity-80 leading-relaxed max-w-2xl mx-auto">
+                    Download our comprehensive native plant guide, complete with soil testing instructions, spacing charts, and maintenance schedules.
+                </p>
+                <div class="flex flex-col sm:flex-row justify-center gap-4">
+                    <a href="#" class="btn-primary justify-center px-8 py-4 text-lg">
+                        <i data-lucide="download" class="w-5 h-5 mr-2"></i> Download PDF Guide
+                    </a>
+                    <a href="contact.html" class="btn-secondary justify-center px-8 py-4 text-lg">
+                        Ask an Ecologist
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-bg-light text-text-dark pt-20 pb-10 border-t-4 border-accent">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
+                <!-- Brand -->
+                <div>
+                    <a href="index.html" class="flex items-center gap-3 group mb-6">
+                            <i data-lucide="leaf" class="text-primary group-hover:scale-110 transition-transform w-8 h-8"></i>
+                            <span class="logo-text">Verdantia</span>
+                        </a>
+                    <p class="opacity-80 text-sm leading-relaxed mb-6">
+                        Dedicated to preserving biodiversity through premium native plants and expert habitat
+                        restoration services. Let's grow a healthier ecosystem together.
+                    </p>
+                    <div class="flex gap-4 mt-2">
+                        <a href="#" class="w-10 h-10 rounded-full bg-[#1b4332] flex items-center justify-center text-[#fefae0] hover:bg-[#dda15e] hover:text-white transition-all duration-300 hover:-translate-y-1 shadow-sm" aria-label="Facebook">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+                        </a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-[#1b4332] flex items-center justify-center text-[#fefae0] hover:bg-[#dda15e] hover:text-white transition-all duration-300 hover:-translate-y-1 shadow-sm" aria-label="Instagram">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
+                        </a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-[#1b4332] flex items-center justify-center text-[#fefae0] hover:bg-[#dda15e] hover:text-white transition-all duration-300 hover:-translate-y-1 shadow-sm" aria-label="Twitter">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4l11.733 16h4.267l-11.733 -16z"/><path d="M4 20l6.768 -6.768m2.46 -2.46l6.772 -6.772"/></svg>
+                        </a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-[#1b4332] flex items-center justify-center text-[#fefae0] hover:bg-[#dda15e] hover:text-white transition-all duration-300 hover:-translate-y-1 shadow-sm" aria-label="LinkedIn">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></svg>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div>
+                    <h4 class="text-primary font-bold text-lg mb-6 font-serif">Quick Links</h4>
+                    <ul class="space-y-3">
+                        <li><a href="products.html" class="hover:text-accent transition-colors">Native Plants</a>
+                        </li>
+                        <li><a href="restoration-services.html"
+                                class="hover:text-accent transition-colors">Restoration Services</a></li>
+                        <li><a href="planting-guide.html" class="hover:text-accent transition-colors">Planting
+                                Guide</a></li>
+                        <li><a href="about.html" class="hover:text-accent transition-colors">About Us</a></li>
+                        <li><a href="contact.html" class="hover:text-accent transition-colors">Contact</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact -->
+                <div>
+                    <h4 class="text-primary font-bold text-lg mb-6 font-serif">Nursery Information</h4>
+                    <ul class="space-y-4">
+                        <li class="flex items-start gap-3">
+                            <i data-lucide="map-pin" class="w-5 h-5 text-accent shrink-0 mt-0.5"></i>
+                            <span class="text-sm">123 Native Way, <br>Ecology Valley, EV 12345</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <i data-lucide="phone" class="w-5 h-5 text-accent shrink-0"></i>
+                            <span class="text-sm">(555) 123-4567</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <i data-lucide="mail" class="w-5 h-5 text-accent shrink-0"></i>
+                            <span class="text-sm">hello@verdantia.com</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Newsletter -->
+                <div>
+                    <h4 class="text-primary font-bold text-lg mb-6 font-serif">Join Our Newsletter</h4>
+                    <p class="text-sm opacity-80 mb-4">Get seasonal planting tips and ecological news.</p>
+                    <form class="flex flex-col gap-3" onsubmit="event.preventDefault(); alert('Subscribed!');">
+                        <input type="email" placeholder="Email address" required
+                            class="form-input bg-white border border-gray-300 rounded-lg px-4 py-2 text-text-dark placeholder-gray-400 focus:outline-none focus:border-accent">
+                        <button type="submit"
+                            class="bg-accent text-[#1b2e25] font-bold rounded-lg px-4 py-2 hover:bg-accent-hover hover:text-white transition-colors">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Bottom -->
+            <div
+                class="pt-8 border-t border-primary/10 flex flex-col md:flex-row justify-between items-center gap-4 text-sm opacity-60">
+                <p>&copy; 2026 Verdantia Native Plant Nursery. All rights reserved.</p>
+                <div class="flex gap-6 items-center">
+                    <a href="#" class="hover:text-primary">Privacy Policy</a>
+                    <a href="#" class="hover:text-primary">Terms & Conditions</a>
+                    <button id="back-to-top"
+                        class="ml-4 bg-accent/20 hover:bg-accent text-accent hover:text-[#1b2e25] p-2 rounded-full transition-all duration-300"
+                        aria-label="Back to Top">
+                        <i data-lucide="arrow-up" class="w-4 h-4"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+</html>

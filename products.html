@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="dark">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Native Plants | Verdantia Nursery</title>
+    <meta name="description"
+        content="Browse our premium collection of native plants, organized by ecoregion and plant type. Find the perfect species for your habitat restoration project.">
+
+    <!-- SEO -->
+    <meta property="og:title" content="Native Plants | Verdantia Nursery">
+    <meta property="og:description"
+        content="Browse our premium collection of native plants, organized by ecoregion and plant type.">
+    <meta property="og:type" content="website">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@500;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: 'var(--color-primary)',
+                        secondary: 'var(--color-secondary)',
+                        accent: 'var(--color-accent)',
+                        'accent-hover': 'var(--color-accent-hover)',
+                        'bg-light': 'var(--color-bg-light)',
+                        'text-dark': 'var(--color-text-dark)',
+                        'text-light': 'var(--color-text-light)',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- AOS CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/dark-mode.css">
+    <link rel="stylesheet" href="assets/css/rtl.css">
+
+    <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg"><path d='M12 22c4-4 8-9 8-14a8 8 0 1 0-16 0c0 5 4 10 8 14z'/></svg>">
+</head>
+
+<body class="antialiased bg-bg-light text-text-dark">
+
+    <!-- Header -->
+    <header class="header-sticky py-4 px-6 border-b border-gray-200/50">
+        <div class="max-w-7xl mx-auto flex justify-between items-center">
+            <!-- Logo -->
+            <a href="index.html" class="flex items-center gap-3 group">
+                <i data-lucide="leaf" class="text-primary group-hover:scale-110 transition-transform w-8 h-8"></i>
+                <span class="logo-text">Verdantia</span>
+            </a>
+
+            <!-- Desktop Nav -->
+            <nav class="hidden lg:flex items-center gap-8">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="home-2.html" class="nav-link">Home 2</a>
+                <a href="about.html" class="nav-link">About</a>
+                <a href="products.html" class="nav-link active">Products</a>
+                <a href="restoration-services.html" class="nav-link">Restoration Services</a>
+                <a href="planting-guide.html" class="nav-link">Planting Guide</a>
+                <a href="contact.html" class="nav-link">Contact</a>
+            </nav>
+
+            <!-- Actions -->
+            <div class="flex items-center gap-4">
+                <button class="theme-toggle hidden lg:flex p-2 rounded-full hover:bg-gray-200/50 transition-colors" aria-label="Toggle Theme">
+                    <i data-lucide="moon" class="w-5 h-5 text-text-dark"></i>
+                </button>
+                <button class="rtl-toggle hidden lg:flex p-2 rounded-full hover:bg-gray-200/50 transition-colors" aria-label="Toggle RTL">
+                    <i data-lucide="arrow-left-right" class="w-5 h-5 text-text-dark"></i>
+                </button>
+                <a href="products.html" class="hidden lg:inline-flex btn-primary">
+                    Explore Native Plants
+                </a>
+
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-btn" class="lg:hidden p-2 text-text-dark" aria-label="Menu">
+                    <i id="menu-icon" data-lucide="menu" class="w-6 h-6"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="mobile-menu hidden lg:hidden">
+            <div class="flex items-center justify-between pb-4 border-b border-gray-100 dark:border-gray-800">
+                <span class="font-semibold text-text-dark">Settings</span>
+                <div class="flex gap-2">
+                    <button class="theme-toggle p-2 rounded-full hover:bg-gray-200/50 transition-colors" aria-label="Toggle Theme">
+                        <i data-lucide="moon" class="w-5 h-5 text-text-dark"></i>
+                    </button>
+                    <button class="rtl-toggle p-2 rounded-full hover:bg-gray-200/50 transition-colors" aria-label="Toggle RTL">
+                        <i data-lucide="arrow-left-right" class="w-5 h-5 text-text-dark"></i>
+                    </button>
+                </div>
+            </div>
+            <a href="index.html" class="nav-link py-3 border-b border-gray-100 font-semibold">Home</a>
+            <a href="home-2.html" class="nav-link py-3 border-b border-gray-100 font-semibold">Home 2</a>
+            <a href="about.html" class="nav-link py-3 border-b border-gray-100 font-semibold">About</a>
+            <a href="products.html" class="nav-link py-3 border-b border-gray-100 font-semibold active">Products</a>
+            <a href="restoration-services.html"
+                class="nav-link py-3 border-b border-gray-100 font-semibold">Restoration Services</a>
+            <a href="planting-guide.html" class="nav-link py-3 border-b border-gray-100 font-semibold">Planting
+                Guide</a>
+            <a href="contact.html" class="nav-link py-3 border-b border-gray-100 font-semibold">Contact</a>
+            <a href="products.html" class="btn-primary justify-center mt-4 w-full">Explore Native Plants</a>
+        </div>
+    </header>
+
+    <main>
+        <!-- SECTION 1 - Hero -->
+        <section class="relative bg-primary pt-32 pb-24 text-white overflow-hidden">
+            <div class="absolute inset-0 z-0">
+                <img src="https://images.unsplash.com/photo-1590494498305-6ec090e50f55?auto=format&fit=crop&w=1920&q=80"
+                    alt="Nursery Greenhouse" class="w-full h-full object-cover opacity-20">
+            </div>
+            <div class="max-w-7xl mx-auto px-6 relative z-10 text-center" data-aos="fade-up">
+                <h1 class="text-5xl md:text-6xl font-bold font-serif mb-6">Native Plant Collections</h1>
+                <p class="text-xl max-w-2xl mx-auto opacity-90 leading-relaxed">
+                    Sustainably grown, pesticide-free native plants ready to transform your landscape into a thriving
+                    ecosystem. Find the perfect species for your specific conditions.
+                </p>
+            </div>
+        </section>
+
+        <!-- SECTION 2 - Browse by Region -->
+        <section class="py-24 bg-bg-light border-b border-gray-200">
+            <div class="max-w-7xl mx-auto px-6">
+                <div class="text-center mb-16" data-aos="fade-up">
+                    <h2 class="text-2xl md:text-3xl font-bold font-serif text-primary mb-4">Browse by Region</h2>
+                    <p class="text-lg opacity-80">Select your ecoregion to find plants naturally adapted to your local
+                        climate and soil.</p>
+                </div>
+
+                <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
+                    <!-- 1 -->
+                    <a href="#northeast" class="group block text-center" data-aos="fade-up" data-aos-delay="100">
+                        <div
+                            class="rounded-xl overflow-hidden aspect-square mb-4 border-2 border-transparent group-hover:border-accent transition-all duration-300">
+                            <img src="https://images.unsplash.com/photo-1511497584788-876760111969?auto=format&fit=crop&w=300&q=80"
+                                alt="Northeast"
+                                class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                        </div>
+                        <h4 class="font-bold text-text-dark group-hover:text-primary">Northeast</h4>
+                    </a>
+                    <!-- 2 -->
+                    <a href="#southeast" class="group block text-center" data-aos="fade-up" data-aos-delay="150">
+                        <div
+                            class="rounded-xl overflow-hidden aspect-square mb-4 border-2 border-transparent group-hover:border-accent transition-all duration-300">
+                            <img src="https://images.unsplash.com/photo-1475924156734-496f6cac6ec1?auto=format&fit=crop&w=300&q=80"
+                                alt="Southeast"
+                                class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                        </div>
+                        <h4 class="font-bold text-text-dark group-hover:text-primary">Southeast</h4>
+                    </a>
+                    <!-- 3 -->
+                    <a href="#midwest" class="group block text-center" data-aos="fade-up" data-aos-delay="200">
+                        <div
+                            class="rounded-xl overflow-hidden aspect-square mb-4 border-2 border-transparent group-hover:border-accent transition-all duration-300">
+                            <img src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=300&q=80"
+                                alt="Midwest"
+                                class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                        </div>
+                        <h4 class="font-bold text-text-dark group-hover:text-primary">Midwest</h4>
+                    </a>
+                    <!-- 4 -->
+                    <a href="#southwest" class="group block text-center" data-aos="fade-up" data-aos-delay="250">
+                        <div
+                            class="rounded-xl overflow-hidden aspect-square mb-4 border-2 border-transparent group-hover:border-accent transition-all duration-300">
+                            <img src="https://images.unsplash.com/photo-1469122312224-c5846569feb1?auto=format&fit=crop&w=300&q=80"
+                                alt="Southwest"
+                                class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                        </div>
+                        <h4 class="font-bold text-text-dark group-hover:text-primary">Southwest</h4>
+                    </a>
+                    <!-- 5 -->
+                    <a href="#west" class="group block text-center" data-aos="fade-up" data-aos-delay="300">
+                        <div
+                            class="rounded-xl overflow-hidden aspect-square mb-4 border-2 border-transparent group-hover:border-accent transition-all duration-300">
+                            <img src="https://images.pexels.com/photos/17146210/pexels-photo-17146210.jpeg?auto=compress&cs=tinysrgb&w=300"
+                                alt="West"
+                                class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                        </div>
+                        <h4 class="font-bold text-text-dark group-hover:text-primary">West</h4>
+                    </a>
+                    <!-- 6 -->
+                    <a href="#pacific-nw" class="group block text-center" data-aos="fade-up" data-aos-delay="350">
+                        <div
+                            class="rounded-xl overflow-hidden aspect-square mb-4 border-2 border-transparent group-hover:border-accent transition-all duration-300">
+                            <img src="https://images.unsplash.com/photo-1444858291040-58f756a3bdd6?auto=format&fit=crop&w=300&q=80"
+                                alt="Pacific Northwest"
+                                class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                        </div>
+                        <h4 class="font-bold text-text-dark group-hover:text-primary">Pacific NW</h4>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 3 - Browse by Plant Type -->
+        <section class="py-24">
+            <div class="max-w-7xl mx-auto px-6">
+                <div class="text-center mb-16" data-aos="fade-up">
+                    <h2 class="text-2xl md:text-3xl font-bold font-serif text-primary mb-4">Browse by Plant Type</h2>
+                    <p class="text-lg opacity-80">Build structure and diversity into your ecological design.</p>
+                </div>
+
+                <div class="grid grid-cols-2 md:grid-cols-3 gap-8">
+                    <a href="#wildflowers"
+                        class="flex items-center gap-4 p-6 rounded-2xl bg-bg-light hover:shadow-md transition-shadow group"
+                        data-aos="fade-right">
+                        <div
+                            class="w-16 h-16 rounded-full bg-secondary/10 flex items-center justify-center text-secondary group-hover:scale-110 transition-transform">
+                            <i data-lucide="flower-2" class="w-8 h-8"></i>
+                        </div>
+                        <h3 class="font-bold text-xl text-primary">Wildflowers</h3>
+                    </a>
+                    <a href="#grasses"
+                        class="flex items-center gap-4 p-6 rounded-2xl bg-bg-light hover:shadow-md transition-shadow group"
+                        data-aos="fade-right" data-aos-delay="100">
+                        <div
+                            class="w-16 h-16 rounded-full bg-secondary/10 flex items-center justify-center text-secondary group-hover:scale-110 transition-transform">
+                            <i data-lucide="wind" class="w-8 h-8"></i>
+                        </div>
+                        <h3 class="font-bold text-xl text-primary">Grasses</h3>
+                    </a>
+                    <a href="#shrubs"
+                        class="flex items-center gap-4 p-6 rounded-2xl bg-bg-light hover:shadow-md transition-shadow group"
+                        data-aos="fade-right" data-aos-delay="200">
+                        <div
+                            class="w-16 h-16 rounded-full bg-secondary/10 flex items-center justify-center text-secondary group-hover:scale-110 transition-transform">
+                            <i data-lucide="tree-deciduous" class="w-8 h-8"></i>
+                        </div>
+                        <h3 class="font-bold text-xl text-primary">Shrubs</h3>
+                    </a>
+                    <a href="#trees"
+                        class="flex items-center gap-4 p-6 rounded-2xl bg-bg-light hover:shadow-md transition-shadow group"
+                        data-aos="fade-left">
+                        <div
+                            class="w-16 h-16 rounded-full bg-secondary/10 flex items-center justify-center text-secondary group-hover:scale-110 transition-transform">
+                            <i data-lucide="trees" class="w-8 h-8"></i>
+                        </div>
+                        <h3 class="font-bold text-xl text-primary">Trees</h3>
+                    </a>
+                    <a href="#ferns"
+                        class="flex items-center gap-4 p-6 rounded-2xl bg-bg-light hover:shadow-md transition-shadow group"
+                        data-aos="fade-left" data-aos-delay="100">
+                        <div
+                            class="w-16 h-16 rounded-full bg-secondary/10 flex items-center justify-center text-secondary group-hover:scale-110 transition-transform">
+                            <i data-lucide="leafy-green" class="w-8 h-8"></i>
+                        </div>
+                        <h3 class="font-bold text-xl text-primary">Ferns</h3>
+                    </a>
+                    <a href="#groundcovers"
+                        class="flex items-center gap-4 p-6 rounded-2xl bg-bg-light hover:shadow-md transition-shadow group"
+                        data-aos="fade-left" data-aos-delay="200">
+                        <div
+                            class="w-16 h-16 rounded-full bg-secondary/10 flex items-center justify-center text-secondary group-hover:scale-110 transition-transform">
+                            <i data-lucide="layout-grid" class="w-8 h-8"></i>
+                        </div>
+                        <h3 class="font-bold text-xl text-primary">Groundcovers</h3>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 4 - Featured Plant Collections -->
+        <section class="py-24 bg-bg-light border-y border-gray-200">
+            <div class="max-w-7xl mx-auto px-6">
+                <div class="flex flex-col md:flex-row justify-between items-end mb-12" data-aos="fade-up">
+                    <div>
+                        <h2 class="text-2xl md:text-3xl font-bold font-serif text-primary mb-4">Featured Native Plants
+                        </h2>
+                        <p class="text-lg opacity-80">Our most requested species for ecological restoration.</p>
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Product 1 -->
+                    <div class="native-card group flex flex-col h-full" data-aos="fade-up" data-aos-delay="100">
+                        <div class="relative aspect-[4/3] overflow-hidden">
+                            <img src="https://images.pexels.com/photos/29069204/pexels-photo-29069204.jpeg"
+                                alt="Purple Coneflower"
+                                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                            <div
+                                class="absolute top-4 left-4 bg-white/90 backdrop-blur text-gray-800 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider shadow">
+                                Wildflower</div>
+                        </div>
+                        <div class="p-6 flex flex-col flex-grow">
+                            <h3 class="text-2xl font-bold mb-1">Purple Coneflower</h3>
+                            <p class="text-sm italic opacity-70 mb-4">Echinacea purpurea</p>
+
+                            <div class="grid grid-cols-2 gap-y-3 gap-x-2 text-sm mb-6 border-y border-gray-100 py-4">
+                                <div class="flex items-center gap-2"><i data-lucide="map"
+                                        class="w-4 h-4 text-accent"></i> <span>Midwest/East</span></div>
+                                <div class="flex items-center gap-2"><i data-lucide="sun"
+                                        class="w-4 h-4 text-accent"></i> <span>Full Sun</span></div>
+                                <div class="flex items-center gap-2"><i data-lucide="droplets"
+                                        class="w-4 h-4 text-accent"></i> <span>Dry-Medium</span></div>
+                                <div class="flex items-center gap-2"><i data-lucide="bird"
+                                        class="w-4 h-4 text-accent"></i> <span>Birds & Bees</span></div>
+                            </div>
+
+                            <div class="mt-auto">
+                                <button class="btn-primary w-full justify-center">Add to Enquiry</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Product 2 -->
+                    <div class="native-card group flex flex-col h-full" data-aos="fade-up" data-aos-delay="200">
+                        <div class="relative aspect-[4/3] overflow-hidden">
+                            <img src="https://images.pexels.com/photos/27774165/pexels-photo-27774165.png"
+                                alt="Butterfly Milkweed"
+                                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                            <div
+                                class="absolute top-4 left-4 bg-white/90 backdrop-blur text-gray-800 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider shadow">
+                                Wildflower</div>
+                        </div>
+                        <div class="p-6 flex flex-col flex-grow">
+                            <h3 class="text-2xl font-bold mb-1">Butterfly Milkweed</h3>
+                            <p class="text-sm italic opacity-70 mb-4">Asclepias tuberosa</p>
+
+                            <div class="grid grid-cols-2 gap-y-3 gap-x-2 text-sm mb-6 border-y border-gray-100 py-4">
+                                <div class="flex items-center gap-2"><i data-lucide="map"
+                                        class="w-4 h-4 text-accent"></i> <span>Widespread</span></div>
+                                <div class="flex items-center gap-2"><i data-lucide="sun"
+                                        class="w-4 h-4 text-accent"></i> <span>Full Sun</span></div>
+                                <div class="flex items-center gap-2"><i data-lucide="droplets"
+                                        class="w-4 h-4 text-accent"></i> <span>Dry</span></div>
+                                <div class="flex items-center gap-2"><i data-lucide="bug"
+                                        class="w-4 h-4 text-accent"></i> <span>Monarchs</span></div>
+                            </div>
+
+                            <div class="mt-auto">
+                                <button class="btn-primary w-full justify-center">Add to Enquiry</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Product 3 -->
+                    <div class="native-card group flex flex-col h-full" data-aos="fade-up" data-aos-delay="300">
+                        <div class="relative aspect-[4/3] overflow-hidden">
+                            <img src="https://images.pexels.com/photos/36791859/pexels-photo-36791859.jpeg"
+                                alt="Little Bluestem"
+                                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                            <div
+                                class="absolute top-4 left-4 bg-white/90 backdrop-blur text-gray-800 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider shadow">
+                                Grass</div>
+                        </div>
+                        <div class="p-6 flex flex-col flex-grow">
+                            <h3 class="text-2xl font-bold mb-1">Little Bluestem</h3>
+                            <p class="text-sm italic opacity-70 mb-4">Schizachyrium scoparium</p>
+
+                            <div class="grid grid-cols-2 gap-y-3 gap-x-2 text-sm mb-6 border-y border-gray-100 py-4">
+                                <div class="flex items-center gap-2"><i data-lucide="map"
+                                        class="w-4 h-4 text-accent"></i> <span>Widespread</span></div>
+                                <div class="flex items-center gap-2"><i data-lucide="sun"
+                                        class="w-4 h-4 text-accent"></i> <span>Sun/Part Shade</span></div>
+                                <div class="flex items-center gap-2"><i data-lucide="droplets"
+                                        class="w-4 h-4 text-accent"></i> <span>Dry</span></div>
+                                <div class="flex items-center gap-2"><i data-lucide="bird"
+                                        class="w-4 h-4 text-accent"></i> <span>Nesting/Seeds</span></div>
+                            </div>
+
+                            <div class="mt-auto">
+                                <button class="btn-primary w-full justify-center">Add to Enquiry</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 5 - Plant Selection CTA -->
+        <section class="py-32 relative overflow-hidden">
+            <!-- Decorative blur -->
+            <div class="absolute -top-40 -right-40 w-96 h-96 bg-accent/20 rounded-full blur-3xl"></div>
+            <div class="absolute -bottom-40 -left-40 w-96 h-96 bg-primary/10 rounded-full blur-3xl"></div>
+
+            <div class="max-w-4xl mx-auto px-6 text-center relative z-10" data-aos="zoom-in">
+                <i data-lucide="sprout" class="w-16 h-16 mx-auto mb-6 text-primary"></i>
+                <h2 class="text-3xl md:text-4xl font-bold mb-6 text-primary font-serif">Need Help Selecting?</h2>
+                <p class="text-xl mb-10 opacity-80 leading-relaxed max-w-2xl mx-auto">
+                    Not sure which plants are best for your site conditions? Our ecologists can help you design a custom
+                    plant community for your restoration or landscaping project.
+                </p>
+                <a href="contact.html" class="btn-secondary text-lg px-10 py-4 shadow-xl">
+                    Request Nursery Consultation
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-bg-light text-text-dark pt-20 pb-10 border-t-4 border-accent">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
+                <!-- Brand -->
+                <div>
+                    <a href="index.html" class="flex items-center gap-3 group mb-6">
+                            <i data-lucide="leaf" class="text-primary group-hover:scale-110 transition-transform w-8 h-8"></i>
+                            <span class="logo-text">Verdantia</span>
+                        </a>
+                    <p class="opacity-80 text-sm leading-relaxed mb-6">
+                        Dedicated to preserving biodiversity through premium native plants and expert habitat
+                        restoration services. Let's grow a healthier ecosystem together.
+                    </p>
+                    <div class="flex gap-4 mt-2">
+                        <a href="#" class="w-10 h-10 rounded-full bg-[#1b4332] flex items-center justify-center text-[#fefae0] hover:bg-[#dda15e] hover:text-white transition-all duration-300 hover:-translate-y-1 shadow-sm" aria-label="Facebook">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+                        </a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-[#1b4332] flex items-center justify-center text-[#fefae0] hover:bg-[#dda15e] hover:text-white transition-all duration-300 hover:-translate-y-1 shadow-sm" aria-label="Instagram">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
+                        </a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-[#1b4332] flex items-center justify-center text-[#fefae0] hover:bg-[#dda15e] hover:text-white transition-all duration-300 hover:-translate-y-1 shadow-sm" aria-label="Twitter">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4l11.733 16h4.267l-11.733 -16z"/><path d="M4 20l6.768 -6.768m2.46 -2.46l6.772 -6.772"/></svg>
+                        </a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-[#1b4332] flex items-center justify-center text-[#fefae0] hover:bg-[#dda15e] hover:text-white transition-all duration-300 hover:-translate-y-1 shadow-sm" aria-label="LinkedIn">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></svg>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div>
+                    <h4 class="text-primary font-bold text-lg mb-6 font-serif">Quick Links</h4>
+                    <ul class="space-y-3">
+                        <li><a href="products.html" class="hover:text-accent transition-colors">Native Plants</a>
+                        </li>
+                        <li><a href="restoration-services.html"
+                                class="hover:text-accent transition-colors">Restoration Services</a></li>
+                        <li><a href="planting-guide.html" class="hover:text-accent transition-colors">Planting
+                                Guide</a></li>
+                        <li><a href="about.html" class="hover:text-accent transition-colors">About Us</a></li>
+                        <li><a href="contact.html" class="hover:text-accent transition-colors">Contact</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact -->
+                <div>
+                    <h4 class="text-primary font-bold text-lg mb-6 font-serif">Nursery Information</h4>
+                    <ul class="space-y-4">
+                        <li class="flex items-start gap-3">
+                            <i data-lucide="map-pin" class="w-5 h-5 text-accent shrink-0 mt-0.5"></i>
+                            <span class="text-sm">123 Native Way, <br>Ecology Valley, EV 12345</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <i data-lucide="phone" class="w-5 h-5 text-accent shrink-0"></i>
+                            <span class="text-sm">(555) 123-4567</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <i data-lucide="mail" class="w-5 h-5 text-accent shrink-0"></i>
+                            <span class="text-sm">hello@verdantia.com</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Newsletter -->
+                <div>
+                    <h4 class="text-primary font-bold text-lg mb-6 font-serif">Join Our Newsletter</h4>
+                    <p class="text-sm opacity-80 mb-4">Get seasonal planting tips and ecological news.</p>
+                    <form class="flex flex-col gap-3" onsubmit="event.preventDefault(); alert('Subscribed!');">
+                        <input type="email" placeholder="Email address" required
+                            class="form-input bg-white border border-gray-300 rounded-lg px-4 py-2 text-text-dark placeholder-gray-400 focus:outline-none focus:border-accent">
+                        <button type="submit"
+                            class="bg-accent text-[#1b2e25] font-bold rounded-lg px-4 py-2 hover:bg-accent-hover hover:text-white transition-colors">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Bottom -->
+            <div
+                class="pt-8 border-t border-primary/10 flex flex-col md:flex-row justify-between items-center gap-4 text-sm opacity-60">
+                <p>&copy; 2026 Verdantia Native Plant Nursery. All rights reserved.</p>
+                <div class="flex gap-6 items-center">
+                    <a href="#" class="hover:text-primary">Privacy Policy</a>
+                    <a href="#" class="hover:text-primary">Terms & Conditions</a>
+                    <button id="back-to-top"
+                        class="ml-4 bg-accent/20 hover:bg-accent text-accent hover:text-[#1b2e25] p-2 rounded-full transition-all duration-300"
+                        aria-label="Back to Top">
+                        <i data-lucide="arrow-up" class="w-4 h-4"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>

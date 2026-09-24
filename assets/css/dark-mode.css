@@ -1,0 +1,65 @@
+/* Dark Mode Overrides */
+[data-theme="dark"] {
+  --color-bg-light: #0d1b14; /* Deep Forest / Near Black */
+  --color-text-dark: #f8f9fa; /* Light text for readability */
+  --color-text-light: #f8f9fa;
+  --color-primary: #a3b18a; /* Lighter green for primary elements */
+  --color-secondary: #588157;
+  --color-accent: #dda15e;
+}
+
+[data-theme="dark"] body {
+  background-color: var(--color-bg-light);
+  color: var(--color-text-dark);
+}
+
+[data-theme="dark"] .header-sticky {
+  background-color: rgba(13, 27, 20, 0.95);
+}
+
+[data-theme="dark"] .native-card {
+  background-color: #1b2e25;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.3);
+}
+
+[data-theme="dark"] .nav-link {
+  color: var(--color-text-dark);
+}
+
+[data-theme="dark"] .nav-link:hover,
+[data-theme="dark"] .nav-link.active {
+  color: var(--color-accent);
+}
+
+[data-theme="dark"] .logo-text {
+  color: var(--color-primary);
+}
+
+[data-theme="dark"] .btn-primary {
+  background-color: var(--color-primary);
+  color: #0d1b14;
+}
+
+[data-theme="dark"] .btn-primary:hover {
+  background-color: var(--color-accent);
+  color: #0d1b14;
+}
+
+[data-theme="dark"] .form-input {
+  background-color: #0d1b14 !important;
+  border-color: #2a4034 !important;
+  color: var(--color-text-dark) !important;
+}
+
+[data-theme="dark"] .form-input::placeholder {
+  color: rgba(248, 249, 250, 0.5);
+}
+
+/* Override layout background colors for dark mode to keep them dark */
+[data-theme="dark"] .bg-primary {
+  background-color: #08130e !important;
+}
+
+[data-theme="dark"] .bg-secondary {
+  background-color: #0b1a13 !important;
+}
