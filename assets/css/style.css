@@ -120,7 +120,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* Responsive Overrides */
-@media (max-width: 768px) {
+@media (max-width: 1279px) {
   .mobile-menu {
     display: none;
     position: absolute;

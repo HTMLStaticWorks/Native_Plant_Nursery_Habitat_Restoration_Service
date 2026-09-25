@@ -46,12 +46,12 @@
     <link rel="stylesheet" href="assets/css/dark-mode.css">
     <link rel="stylesheet" href="assets/css/rtl.css">
 
-    <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg"><path d='M12 22c4-4 8-9 8-14a8 8 0 1 0-16 0c0 5 4 10 8 14z'/></svg>">
+    <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
 </head>
 <body class="antialiased bg-bg-light text-text-dark">
 
     <!-- Header -->
-    <header class="header-sticky py-4 px-6 border-b border-gray-200/50">
+    <header class="header-sticky py-2 px-6 border-b border-gray-200/50">
         <div class="max-w-7xl mx-auto flex justify-between items-center">
             <!-- Logo -->
             <a href="index.html" class="flex items-center gap-3 group">
@@ -60,7 +60,7 @@
             </a>
 
             <!-- Desktop Nav -->
-            <nav class="hidden lg:flex items-center gap-8">
+            <nav class="hidden xl:flex items-center gap-8">
                 <a href="index.html" class="nav-link">Home</a>
                 <a href="home-2.html" class="nav-link">Home 2</a>
                 <a href="about.html" class="nav-link">About</a>
@@ -72,36 +72,25 @@
 
             <!-- Actions -->
             <div class="flex items-center gap-4">
-                <button class="theme-toggle hidden lg:flex p-2 rounded-full hover:bg-gray-200/50 transition-colors" aria-label="Toggle Theme">
+                <button class="theme-toggle flex p-2 rounded-full hover:bg-gray-200/50 transition-colors" aria-label="Toggle Theme">
                     <i data-lucide="moon" class="w-5 h-5 text-text-dark"></i>
                 </button>
-                <button class="rtl-toggle hidden lg:flex p-2 rounded-full hover:bg-gray-200/50 transition-colors" aria-label="Toggle RTL">
+                <button class="rtl-toggle flex p-2 rounded-full hover:bg-gray-200/50 transition-colors" aria-label="Toggle RTL">
                     <i data-lucide="arrow-left-right" class="w-5 h-5 text-text-dark"></i>
                 </button>
-                <a href="products.html" class="hidden lg:inline-flex btn-primary">
+                <a href="products.html" class="hidden xl:inline-flex btn-primary">
                     Explore Native Plants
                 </a>
 
                 <!-- Mobile Menu Button -->
-                <button id="mobile-menu-btn" class="lg:hidden p-2 text-text-dark" aria-label="Menu">
+                <button id="mobile-menu-btn" class="xl:hidden p-2 text-text-dark" aria-label="Menu">
                     <i id="menu-icon" data-lucide="menu" class="w-6 h-6"></i>
                 </button>
             </div>
         </div>
 
         <!-- Mobile Menu -->
-        <div id="mobile-menu" class="mobile-menu hidden lg:hidden">
-            <div class="flex items-center justify-between pb-4 border-b border-gray-100 dark:border-gray-800">
-                <span class="font-semibold text-text-dark">Settings</span>
-                <div class="flex gap-2">
-                    <button class="theme-toggle p-2 rounded-full hover:bg-gray-200/50 transition-colors" aria-label="Toggle Theme">
-                        <i data-lucide="moon" class="w-5 h-5 text-text-dark"></i>
-                    </button>
-                    <button class="rtl-toggle p-2 rounded-full hover:bg-gray-200/50 transition-colors" aria-label="Toggle RTL">
-                        <i data-lucide="arrow-left-right" class="w-5 h-5 text-text-dark"></i>
-                    </button>
-                </div>
-            </div>
+        <div id="mobile-menu" class="mobile-menu hidden xl:hidden">
             <a href="index.html" class="nav-link py-3 border-b border-gray-100 font-semibold">Home</a>
             <a href="home-2.html" class="nav-link py-3 border-b border-gray-100 font-semibold">Home 2</a>
             <a href="about.html" class="nav-link py-3 border-b border-gray-100 font-semibold">About</a>
@@ -193,37 +182,37 @@
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                     <!-- Step 1 -->
                     <div class="native-card p-8 rounded-2xl shadow-xl" data-aos="zoom-in" data-aos-delay="100">
-                        <div class="w-12 h-12 bg-accent text-primary font-bold rounded-full flex items-center justify-center text-xl mb-6">1</div>
+                        <div class="w-12 h-12 bg-accent text-white font-bold rounded-full flex items-center justify-center text-xl mb-6">1</div>
                         <h3 class="font-bold text-xl mb-3 text-primary">Prepare the Site</h3>
                         <p class="opacity-80 text-sm">Remove invasive species and lawn grass. Do not till the soil, as this brings weed seeds to the surface.</p>
                     </div>
                     <!-- Step 2 -->
                     <div class="native-card p-8 rounded-2xl shadow-xl" data-aos="zoom-in" data-aos-delay="200">
-                        <div class="w-12 h-12 bg-accent text-primary font-bold rounded-full flex items-center justify-center text-xl mb-6">2</div>
+                        <div class="w-12 h-12 bg-accent text-white font-bold rounded-full flex items-center justify-center text-xl mb-6">2</div>
                         <h3 class="font-bold text-xl mb-3 text-primary">Select Species</h3>
                         <p class="opacity-80 text-sm">Choose plants appropriate for your light and soil conditions. Avoid amending the soil; native plants prefer native soil.</p>
                     </div>
                     <!-- Step 3 -->
                     <div class="native-card p-8 rounded-2xl shadow-xl" data-aos="zoom-in" data-aos-delay="300">
-                        <div class="w-12 h-12 bg-accent text-primary font-bold rounded-full flex items-center justify-center text-xl mb-6">3</div>
+                        <div class="w-12 h-12 bg-accent text-white font-bold rounded-full flex items-center justify-center text-xl mb-6">3</div>
                         <h3 class="font-bold text-xl mb-3 text-primary">Dig the Hole</h3>
                         <p class="opacity-80 text-sm">Dig a hole twice as wide as the pot but no deeper. The root flare should sit slightly above ground level.</p>
                     </div>
                     <!-- Step 4 -->
                     <div class="native-card p-8 rounded-2xl shadow-xl" data-aos="zoom-in" data-aos-delay="400">
-                        <div class="w-12 h-12 bg-accent text-primary font-bold rounded-full flex items-center justify-center text-xl mb-6">4</div>
+                        <div class="w-12 h-12 bg-accent text-white font-bold rounded-full flex items-center justify-center text-xl mb-6">4</div>
                         <h3 class="font-bold text-xl mb-3 text-primary">Plant Correctly</h3>
                         <p class="opacity-80 text-sm">Gently loosen the roots. Place in hole and backfill with the original soil. Tamp down lightly to remove air pockets.</p>
                     </div>
                     <!-- Step 5 -->
                     <div class="native-card p-8 rounded-2xl shadow-xl" data-aos="zoom-in" data-aos-delay="500">
-                        <div class="w-12 h-12 bg-accent text-primary font-bold rounded-full flex items-center justify-center text-xl mb-6">5</div>
+                        <div class="w-12 h-12 bg-accent text-white font-bold rounded-full flex items-center justify-center text-xl mb-6">5</div>
                         <h3 class="font-bold text-xl mb-3 text-primary">Water Properly</h3>
                         <p class="opacity-80 text-sm">Water deeply immediately after planting. Continue watering during dry spells for the first year until established.</p>
                     </div>
                     <!-- Step 6 -->
                     <div class="native-card p-8 rounded-2xl shadow-xl" data-aos="zoom-in" data-aos-delay="600">
-                        <div class="w-12 h-12 bg-accent text-primary font-bold rounded-full flex items-center justify-center text-xl mb-6">6</div>
+                        <div class="w-12 h-12 bg-accent text-white font-bold rounded-full flex items-center justify-center text-xl mb-6">6</div>
                         <h3 class="font-bold text-xl mb-3 text-primary">Maintain & Monitor</h3>
                         <p class="opacity-80 text-sm">Mulch lightly with natural leaf litter or hardwood mulch (keep away from stems). Pull weeds as needed.</p>
                     </div>

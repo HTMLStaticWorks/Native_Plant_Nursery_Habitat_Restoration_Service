@@ -46,12 +46,12 @@
     <link rel="stylesheet" href="assets/css/dark-mode.css">
     <link rel="stylesheet" href="assets/css/rtl.css">
 
-    <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg"><path d='M12 22c4-4 8-9 8-14a8 8 0 1 0-16 0c0 5 4 10 8 14z'/></svg>">
+    <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
 </head>
 <body class="antialiased bg-bg-light text-text-dark">
 
     <!-- Header -->
-    <header class="header-sticky py-4 px-6 border-b border-gray-200/50">
+    <header class="header-sticky py-2 px-6 border-b border-gray-200/50">
         <div class="max-w-7xl mx-auto flex justify-between items-center">
             <!-- Logo -->
             <a href="index.html" class="flex items-center gap-3 group">
@@ -60,7 +60,7 @@
             </a>
 
             <!-- Desktop Nav -->
-            <nav class="hidden lg:flex items-center gap-8">
+            <nav class="hidden xl:flex items-center gap-8">
                 <a href="index.html" class="nav-link">Home</a>
                 <a href="home-2.html" class="nav-link">Home 2</a>
                 <a href="about.html" class="nav-link active">About</a>
@@ -72,36 +72,25 @@
 
             <!-- Actions -->
             <div class="flex items-center gap-4">
-                <button class="theme-toggle hidden lg:flex p-2 rounded-full hover:bg-gray-200/50 transition-colors" aria-label="Toggle Theme">
+                <button class="theme-toggle flex p-2 rounded-full hover:bg-gray-200/50 transition-colors" aria-label="Toggle Theme">
                     <i data-lucide="moon" class="w-5 h-5 text-text-dark"></i>
                 </button>
-                <button class="rtl-toggle hidden lg:flex p-2 rounded-full hover:bg-gray-200/50 transition-colors" aria-label="Toggle RTL">
+                <button class="rtl-toggle flex p-2 rounded-full hover:bg-gray-200/50 transition-colors" aria-label="Toggle RTL">
                     <i data-lucide="arrow-left-right" class="w-5 h-5 text-text-dark"></i>
                 </button>
-                <a href="products.html" class="hidden lg:inline-flex btn-primary">
+                <a href="products.html" class="hidden xl:inline-flex btn-primary">
                     Explore Native Plants
                 </a>
 
                 <!-- Mobile Menu Button -->
-                <button id="mobile-menu-btn" class="lg:hidden p-2 text-text-dark" aria-label="Menu">
+                <button id="mobile-menu-btn" class="xl:hidden p-2 text-text-dark" aria-label="Menu">
                     <i id="menu-icon" data-lucide="menu" class="w-6 h-6"></i>
                 </button>
             </div>
         </div>
 
         <!-- Mobile Menu -->
-        <div id="mobile-menu" class="mobile-menu hidden lg:hidden">
-            <div class="flex items-center justify-between pb-4 border-b border-gray-100 dark:border-gray-800">
-                <span class="font-semibold text-text-dark">Settings</span>
-                <div class="flex gap-2">
-                    <button class="theme-toggle p-2 rounded-full hover:bg-gray-200/50 transition-colors" aria-label="Toggle Theme">
-                        <i data-lucide="moon" class="w-5 h-5 text-text-dark"></i>
-                    </button>
-                    <button class="rtl-toggle p-2 rounded-full hover:bg-gray-200/50 transition-colors" aria-label="Toggle RTL">
-                        <i data-lucide="arrow-left-right" class="w-5 h-5 text-text-dark"></i>
-                    </button>
-                </div>
-            </div>
+        <div id="mobile-menu" class="mobile-menu hidden xl:hidden">
             <a href="index.html" class="nav-link py-3 border-b border-gray-100 font-semibold">Home</a>
             <a href="home-2.html" class="nav-link py-3 border-b border-gray-100 font-semibold">Home 2</a>
             <a href="about.html" class="nav-link py-3 border-b border-gray-100 font-semibold active">About</a>
@@ -179,12 +168,12 @@
                     </div>
                     <div class="native-card p-8 border border-gray-100" data-aos="fade-up" data-aos-delay="200">
                         <i data-lucide="dna" class="w-10 h-10 text-secondary mb-4"></i>
-                        <h3 class="font-bold text-xl text-primary mb-3">Local Eco-types</h3>
+                        <h3 class="font-bold text-xl text-primary mb-3">Local <br class="hidden md:block lg:hidden"> Eco-types</h3>
                         <p class="opacity-70 text-sm leading-relaxed">We source seeds as locally as possible to maintain genetic diversity and ensure plants are adapted to specific regional conditions.</p>
                     </div>
                     <div class="native-card p-8 border border-gray-100" data-aos="fade-up" data-aos-delay="300">
                         <i data-lucide="sprout" class="w-10 h-10 text-secondary mb-4"></i>
-                        <h3 class="font-bold text-xl text-primary mb-3">Straight Species</h3>
+                        <h3 class="font-bold text-xl text-primary mb-3">Straight <br class="hidden md:block lg:hidden"> Species</h3>
                         <p class="opacity-70 text-sm leading-relaxed">While cultivars have a place, we prioritize growing straight species (wild types) which provide the highest ecological value.</p>
                     </div>
                 </div>
@@ -211,7 +200,7 @@
                     
                     <div class="text-center group" data-aos="fade-up" data-aos-delay="200">
                         <div class="w-48 h-48 mx-auto rounded-full overflow-hidden mb-6 shadow-lg border-4 border-white group-hover:border-secondary transition-colors">
-                            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=400&q=80" alt="Head Propagator" class="w-full h-full object-cover">
+                            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=400&q=80" alt="Head Propagator" class="w-full h-full object-cover object-top">
                         </div>
                         <h3 class="font-bold text-xl text-primary mb-1">Marcus Thorne</h3>
                         <p class="text-accent text-sm font-bold uppercase tracking-wider mb-3">Head Propagator</p>
