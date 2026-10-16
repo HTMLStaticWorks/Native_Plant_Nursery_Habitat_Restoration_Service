@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr" data-theme="dark">
+<html lang="en" dir="ltr" data-theme="dark" class="dark">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -18,6 +18,7 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
+            darkMode: 'class',
             theme: {
                 extend: {
                     colors: {
@@ -278,19 +279,93 @@
             </div>
         </section>
 
-        <!-- SECTION 5 - Final CTA + Newsletter signup -->
-        <section class="py-24 bg-secondary text-white text-center">
-            <div class="max-w-3xl mx-auto px-6" data-aos="zoom-in">
-                <i data-lucide="mail-open" class="w-12 h-12 mx-auto mb-6 text-accent"></i>
-                <h2 class="text-2xl md:text-3xl font-bold font-serif mb-4">Stay Rooted in Nature</h2>
-                <p class="text-lg opacity-90 mb-8">Join our newsletter for seasonal planting guides, new inventory alerts, and ecological news.</p>
-                
-                <form class="flex flex-col sm:flex-row gap-4 justify-center max-w-xl mx-auto" onsubmit="event.preventDefault(); alert('Thank you for subscribing!');">
-                    <input type="email" placeholder="Your email address" required class="flex-grow px-6 py-4 rounded-full text-text-dark focus:outline-none focus:ring-4 focus:ring-accent/50">
-                    <button type="submit" class="btn-primary bg-accent hover:bg-accent-hover text-primary rounded-full px-8 justify-center">
-                        Subscribe
-                    </button>
-                </form>
+        <!-- SECTION 5 - Final CTA + Nursery Visit & Newsletter -->
+        <section class="py-24 bg-[#14261e] text-white relative overflow-hidden">
+            <div class="absolute inset-0 z-0">
+                <img src="assets/images/echinacea-hero-bg.jpg" alt="Botanical Pattern Background" class="w-full h-full object-cover opacity-10">
+                <div class="absolute inset-0 bg-gradient-to-t from-[#14261e] via-[#14261e]/90 to-transparent"></div>
+            </div>
+
+            <div class="max-w-7xl mx-auto px-6 relative z-10">
+                <div class="grid lg:grid-cols-12 gap-8 items-stretch">
+                    <!-- Nursery In-Person Visit Card -->
+                    <div class="lg:col-span-6 bg-white/10 backdrop-blur-md rounded-3xl p-8 border border-white/20 shadow-xl flex flex-col justify-between" data-aos="fade-right">
+                        <div>
+                            <div class="relative rounded-2xl overflow-hidden aspect-[16/9] mb-6 shadow-md">
+                                <img src="assets/images/native-nursery-hero.jpg" alt="Verdantia Nursery Grounds" class="w-full h-full object-cover">
+                                <div class="absolute inset-0 bg-gradient-to-t from-black/75 via-transparent to-transparent"></div>
+                                <span class="absolute bottom-3 left-4 text-xs font-bold text-white bg-black/50 backdrop-blur-md px-3 py-1 rounded-full border border-white/20 flex items-center gap-1.5">
+                                    <i data-lucide="door-open" class="w-3.5 h-3.5 text-accent"></i> Open to the Public
+                                </span>
+                            </div>
+
+                            <h3 class="text-2xl font-bold font-serif text-white mb-2">Visit Our Nursery Grounds</h3>
+                            <p class="text-sm text-gray-300 mb-6 leading-relaxed">
+                                Walk our display pollinator gardens, browse thousands of potted native wildflowers and grasses, and speak directly with our horticulturalists.
+                            </p>
+
+                            <div class="space-y-3 text-sm text-gray-200 mb-6">
+                                <div class="flex items-center gap-3">
+                                    <i data-lucide="clock" class="w-4 h-4 text-accent shrink-0"></i>
+                                    <span><strong>Hours:</strong> Mon – Sat: 8:00 AM – 5:00 PM | Sun: 10:00 AM – 4:00 PM</span>
+                                </div>
+                                <div class="flex items-center gap-3">
+                                    <i data-lucide="map-pin" class="w-4 h-4 text-accent shrink-0"></i>
+                                    <span><strong>Address:</strong> 123 Native Way, Ecology Valley, EV 12345</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="pt-4 border-t border-white/15 flex flex-wrap gap-4">
+                            <a href="tel:5551234567" class="btn-secondary px-6 py-3 text-sm font-semibold inline-flex items-center gap-2 border-white/30 hover:bg-white/10">
+                                <i data-lucide="phone" class="w-4 h-4"></i> Call Nursery Desk
+                            </a>
+                            <a href="products.html" class="btn-primary bg-accent hover:bg-accent-hover text-primary font-bold px-6 py-3 text-sm inline-flex items-center gap-2">
+                                <i data-lucide="shopping-bag" class="w-4 h-4"></i> View Inventory
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Stay Rooted / Newsletter Card -->
+                    <div class="lg:col-span-6 bg-white/10 backdrop-blur-md rounded-3xl p-8 border border-white/20 shadow-xl flex flex-col justify-between" data-aos="fade-left">
+                        <div>
+                            <div class="w-14 h-14 rounded-2xl bg-accent/20 flex items-center justify-center text-accent mb-6">
+                                <i data-lucide="mail" class="w-7 h-7"></i>
+                            </div>
+
+                            <h3 class="text-2xl font-bold font-serif text-white mb-2">Stay Rooted in Nature</h3>
+                            <p class="text-sm text-gray-300 mb-6 leading-relaxed">
+                                Join over 4,500 native plant enthusiasts. Receive our seasonal planting guides, native species restock alerts, and invitations to ecological restoration workshops.
+                            </p>
+
+                            <div class="space-y-3 mb-8">
+                                <div class="flex items-center gap-2.5 text-xs text-gray-200">
+                                    <i data-lucide="check-circle" class="w-4 h-4 text-accent"></i>
+                                    <span>Monthly seasonal planting and seed sowing checklists</span>
+                                </div>
+                                <div class="flex items-center gap-2.5 text-xs text-gray-200">
+                                    <i data-lucide="check-circle" class="w-4 h-4 text-accent"></i>
+                                    <span>Early access to rare spring ephemerals and woodland natives</span>
+                                </div>
+                                <div class="flex items-center gap-2.5 text-xs text-gray-200">
+                                    <i data-lucide="check-circle" class="w-4 h-4 text-accent"></i>
+                                    <span>Invitations to habitat restoration webinars and field walks</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div>
+                            <form class="flex flex-col sm:flex-row gap-3" onsubmit="event.preventDefault(); alert('Thank you for subscribing to Verdantia Ecological Dispatch!');">
+                                <input type="email" placeholder="Enter your email address" required 
+                                    class="flex-grow px-5 py-3.5 rounded-xl bg-white/95 text-text-dark text-sm focus:outline-none focus:ring-2 focus:ring-accent placeholder-gray-500">
+                                <button type="submit" class="btn-primary bg-accent hover:bg-accent-hover text-primary font-bold px-6 py-3.5 rounded-xl text-sm shrink-0 justify-center">
+                                    Subscribe <i data-lucide="arrow-right" class="w-4 h-4 ml-1"></i>
+                                </button>
+                            </form>
+                            <p class="text-[11px] text-gray-400 mt-2 text-center sm:text-left">We respect your inbox. Unsubscribe anytime with one click.</p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
     </main>

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr" data-theme="dark">
+<html lang="en" dir="ltr" data-theme="dark" class="dark">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -18,6 +18,7 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
+            darkMode: 'class',
             theme: {
                 extend: {
                     colors: {
@@ -136,36 +137,101 @@
                     <p class="text-lg opacity-80">Match plants to your specific site conditions for ecological success.</p>
                 </div>
                 
-                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-                    <div class="native-card p-6 shadow-sm hover:shadow-md group" data-aos="fade-up" data-aos-delay="100">
-                        <i data-lucide="sun" class="w-10 h-10 text-accent mb-4 group-hover:scale-110 transition-transform"></i>
-                        <h3 class="font-bold text-xl text-primary mb-2">Sun Loving</h3>
-                        <p class="text-sm opacity-80">Requires 6+ hours of direct sunlight. Ideal for prairie and meadow species.</p>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Sun Loving -->
+                    <div class="native-card rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 border border-gray-100 dark:border-white/10 group flex flex-col" data-aos="fade-up" data-aos-delay="100">
+                        <div class="relative aspect-[16/10] overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=600&q=80" alt="Sun Loving Prairie Meadow" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+                            <span class="absolute top-3 left-3 bg-[#e8a348] text-white text-xs font-semibold px-2.5 py-1 rounded-full shadow">Full Sun (6+ hrs)</span>
+                        </div>
+                        <div class="p-6 flex-1 flex flex-col">
+                            <h3 class="font-bold font-serif text-xl text-primary mb-2">Sun Loving</h3>
+                            <p class="text-sm opacity-80 mb-4 flex-1">Requires 6+ hours of uninterrupted direct sunlight. Perfect for establishing resilient tallgrass prairie, sunny meadows, and open borders.</p>
+                            <div class="text-xs pt-3 border-t border-gray-100 dark:border-white/10 text-secondary font-medium">
+                                <span class="font-semibold text-primary">Top Species:</span> Purple Coneflower, Little Bluestem, Black-Eyed Susan
+                            </div>
+                        </div>
                     </div>
-                    <div class="native-card p-6 shadow-sm hover:shadow-md group" data-aos="fade-up" data-aos-delay="200">
-                        <i data-lucide="cloud" class="w-10 h-10 text-accent mb-4 group-hover:scale-110 transition-transform"></i>
-                        <h3 class="font-bold text-xl text-primary mb-2">Shade Tolerant</h3>
-                        <p class="text-sm opacity-80">Thrives in less than 4 hours of sun. Perfect for woodland gardens and ferns.</p>
+
+                    <!-- Shade Tolerant -->
+                    <div class="native-card rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 border border-gray-100 dark:border-white/10 group flex flex-col" data-aos="fade-up" data-aos-delay="200">
+                        <div class="relative aspect-[16/10] overflow-hidden">
+                            <img src="assets/images/woodland-plants.jpg" alt="Shade Tolerant Woodland Understory" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+                            <span class="absolute top-3 left-3 bg-secondary text-white text-xs font-semibold px-2.5 py-1 rounded-full shadow">Partial to Full Shade</span>
+                        </div>
+                        <div class="p-6 flex-1 flex flex-col">
+                            <h3 class="font-bold font-serif text-xl text-primary mb-2">Shade Tolerant</h3>
+                            <p class="text-sm opacity-80 mb-4 flex-1">Thrives under dense tree canopies with under 4 hours of dappled light. Ideal for rich woodland understories, north-facing slopes, and fern glades.</p>
+                            <div class="text-xs pt-3 border-t border-gray-100 dark:border-white/10 text-secondary font-medium">
+                                <span class="font-semibold text-primary">Top Species:</span> White Trillium, Maidenhair Fern, Wild Ginger, Foamflower
+                            </div>
+                        </div>
                     </div>
-                    <div class="native-card p-6 shadow-sm hover:shadow-md group" data-aos="fade-up" data-aos-delay="300">
-                        <i data-lucide="sunset" class="w-10 h-10 text-accent mb-4 group-hover:scale-110 transition-transform"></i>
-                        <h3 class="font-bold text-xl text-primary mb-2">Dry Soil</h3>
-                        <p class="text-sm opacity-80">Deep-rooted species that excel in well-drained, sandy, or rocky conditions.</p>
+
+                    <!-- Dry Soil -->
+                    <div class="native-card rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 border border-gray-100 dark:border-white/10 group flex flex-col" data-aos="fade-up" data-aos-delay="300">
+                        <div class="relative aspect-[16/10] overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1509316975850-ff9c5deb0cd9?auto=format&fit=crop&w=600&q=80" alt="Drought Tolerant Native Sedum and Flora" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+                            <span class="absolute top-3 left-3 bg-amber-600 text-white text-xs font-semibold px-2.5 py-1 rounded-full shadow">Xeric & Well-Drained</span>
+                        </div>
+                        <div class="p-6 flex-1 flex flex-col">
+                            <h3 class="font-bold font-serif text-xl text-primary mb-2">Dry Soil</h3>
+                            <p class="text-sm opacity-80 mb-4 flex-1">Deep-rooted, drought-tolerant species that thrive in sandy, gravelly, or shallow soils without requiring supplemental summer irrigation once established.</p>
+                            <div class="text-xs pt-3 border-t border-gray-100 dark:border-white/10 text-secondary font-medium">
+                                <span class="font-semibold text-primary">Top Species:</span> Butterfly Weed (*Asclepias tuberosa*), Stonecrop, Sideoats Grama
+                            </div>
+                        </div>
                     </div>
-                    <div class="native-card p-6 shadow-sm hover:shadow-md group" data-aos="fade-up" data-aos-delay="100">
-                        <i data-lucide="droplets" class="w-10 h-10 text-accent mb-4 group-hover:scale-110 transition-transform"></i>
-                        <h3 class="font-bold text-xl text-primary mb-2">Moist Soil</h3>
-                        <p class="text-sm opacity-80">Plants for rain gardens, low spots, and clay soils that hold water.</p>
+
+                    <!-- Moist Soil -->
+                    <div class="native-card rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 border border-gray-100 dark:border-white/10 group flex flex-col" data-aos="fade-up" data-aos-delay="100">
+                        <div class="relative aspect-[16/10] overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1516214104703-d870798883c5?auto=format&fit=crop&w=600&q=80" alt="Moist Soil Rain Garden and Wetland" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+                            <span class="absolute top-3 left-3 bg-teal-600 text-white text-xs font-semibold px-2.5 py-1 rounded-full shadow">Hydric & Rain Gardens</span>
+                        </div>
+                        <div class="p-6 flex-1 flex flex-col">
+                            <h3 class="font-bold font-serif text-xl text-primary mb-2">Moist Soil</h3>
+                            <p class="text-sm opacity-80 mb-4 flex-1">Adapted to periodic flooding and damp soils. Excellent choices for engineered bio-swales, rain gardens, pond fringes, and seasonal retention basins.</p>
+                            <div class="text-xs pt-3 border-t border-gray-100 dark:border-white/10 text-secondary font-medium">
+                                <span class="font-semibold text-primary">Top Species:</span> Swamp Milkweed, Blue Flag Iris, Cardinal Flower, Joe Pye Weed
+                            </div>
+                        </div>
                     </div>
-                    <div class="native-card p-6 shadow-sm hover:shadow-md group" data-aos="fade-up" data-aos-delay="200">
-                        <i data-lucide="bug" class="w-10 h-10 text-accent mb-4 group-hover:scale-110 transition-transform"></i>
-                        <h3 class="font-bold text-xl text-primary mb-2">Pollinator Gardens</h3>
-                        <p class="text-sm opacity-80">High nectar output flowers blooming in succession to feed insects.</p>
+
+                    <!-- Pollinator Gardens -->
+                    <div class="native-card rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 border border-gray-100 dark:border-white/10 group flex flex-col" data-aos="fade-up" data-aos-delay="200">
+                        <div class="relative aspect-[16/10] overflow-hidden">
+                            <img src="assets/images/pollinator-plants.jpg" alt="Native Pollinator Flora" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+                            <span class="absolute top-3 left-3 bg-[#4a7c59] text-white text-xs font-semibold px-2.5 py-1 rounded-full shadow">Bees & Butterflies</span>
+                        </div>
+                        <div class="p-6 flex-1 flex flex-col">
+                            <h3 class="font-bold font-serif text-xl text-primary mb-2">Pollinator Gardens</h3>
+                            <p class="text-sm opacity-80 mb-4 flex-1">High-nectar and pollen-yielding flowers engineered to bloom in continuous succession from April to October to sustain native solitary bees and butterflies.</p>
+                            <div class="text-xs pt-3 border-t border-gray-100 dark:border-white/10 text-secondary font-medium">
+                                <span class="font-semibold text-primary">Top Species:</span> Wild Bergamot (*Monarda*), Common Milkweed, Stiff Goldenrod
+                            </div>
+                        </div>
                     </div>
-                    <div class="native-card p-6 shadow-sm hover:shadow-md group" data-aos="fade-up" data-aos-delay="300">
-                        <i data-lucide="bird" class="w-10 h-10 text-accent mb-4 group-hover:scale-110 transition-transform"></i>
-                        <h3 class="font-bold text-xl text-primary mb-2">Bird Habitat</h3>
-                        <p class="text-sm opacity-80">Shrubs and trees offering berries, nesting sites, and caterpillars.</p>
+
+                    <!-- Bird Habitat -->
+                    <div class="native-card rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 border border-gray-100 dark:border-white/10 group flex flex-col" data-aos="fade-up" data-aos-delay="300">
+                        <div class="relative aspect-[16/10] overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1452570053594-1b985d6ea890?auto=format&fit=crop&w=600&q=80" alt="Songbird in Native Berry Shrub" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+                            <span class="absolute top-3 left-3 bg-emerald-700 text-white text-xs font-semibold px-2.5 py-1 rounded-full shadow">Nesting & Forage</span>
+                        </div>
+                        <div class="p-6 flex-1 flex flex-col">
+                            <h3 class="font-bold font-serif text-xl text-primary mb-2">Bird Habitat</h3>
+                            <p class="text-sm opacity-80 mb-4 flex-1">Architectural shrubs and keystone canopy trees offering winter berries, protective nesting structures, and crucial host plants for caterpillar foraging.</p>
+                            <div class="text-xs pt-3 border-t border-gray-100 dark:border-white/10 text-secondary font-medium">
+                                <span class="font-semibold text-primary">Top Species:</span> Serviceberry (*Amelanchier*), American Elderberry, White Oak
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -182,37 +248,37 @@
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                     <!-- Step 1 -->
                     <div class="native-card p-8 rounded-2xl shadow-xl" data-aos="zoom-in" data-aos-delay="100">
-                        <div class="w-12 h-12 bg-accent text-white font-bold rounded-full flex items-center justify-center text-xl mb-6">1</div>
+                        <div class="w-12 h-12 bg-accent text-white font-bold rounded-full flex items-center justify-center text-xl mb-6 shadow-md">1</div>
                         <h3 class="font-bold text-xl mb-3 text-primary">Prepare the Site</h3>
-                        <p class="opacity-80 text-sm">Remove invasive species and lawn grass. Do not till the soil, as this brings weed seeds to the surface.</p>
+                        <p class="opacity-80 text-sm">Remove invasive species and lawn grass. Do not till the soil, as this brings dormant weed seeds to the surface.</p>
                     </div>
                     <!-- Step 2 -->
                     <div class="native-card p-8 rounded-2xl shadow-xl" data-aos="zoom-in" data-aos-delay="200">
-                        <div class="w-12 h-12 bg-accent text-white font-bold rounded-full flex items-center justify-center text-xl mb-6">2</div>
+                        <div class="w-12 h-12 bg-accent text-white font-bold rounded-full flex items-center justify-center text-xl mb-6 shadow-md">2</div>
                         <h3 class="font-bold text-xl mb-3 text-primary">Select Species</h3>
                         <p class="opacity-80 text-sm">Choose plants appropriate for your light and soil conditions. Avoid amending the soil; native plants prefer native soil.</p>
                     </div>
                     <!-- Step 3 -->
                     <div class="native-card p-8 rounded-2xl shadow-xl" data-aos="zoom-in" data-aos-delay="300">
-                        <div class="w-12 h-12 bg-accent text-white font-bold rounded-full flex items-center justify-center text-xl mb-6">3</div>
+                        <div class="w-12 h-12 bg-accent text-white font-bold rounded-full flex items-center justify-center text-xl mb-6 shadow-md">3</div>
                         <h3 class="font-bold text-xl mb-3 text-primary">Dig the Hole</h3>
                         <p class="opacity-80 text-sm">Dig a hole twice as wide as the pot but no deeper. The root flare should sit slightly above ground level.</p>
                     </div>
                     <!-- Step 4 -->
                     <div class="native-card p-8 rounded-2xl shadow-xl" data-aos="zoom-in" data-aos-delay="400">
-                        <div class="w-12 h-12 bg-accent text-white font-bold rounded-full flex items-center justify-center text-xl mb-6">4</div>
+                        <div class="w-12 h-12 bg-accent text-white font-bold rounded-full flex items-center justify-center text-xl mb-6 shadow-md">4</div>
                         <h3 class="font-bold text-xl mb-3 text-primary">Plant Correctly</h3>
                         <p class="opacity-80 text-sm">Gently loosen the roots. Place in hole and backfill with the original soil. Tamp down lightly to remove air pockets.</p>
                     </div>
                     <!-- Step 5 -->
                     <div class="native-card p-8 rounded-2xl shadow-xl" data-aos="zoom-in" data-aos-delay="500">
-                        <div class="w-12 h-12 bg-accent text-white font-bold rounded-full flex items-center justify-center text-xl mb-6">5</div>
+                        <div class="w-12 h-12 bg-accent text-white font-bold rounded-full flex items-center justify-center text-xl mb-6 shadow-md">5</div>
                         <h3 class="font-bold text-xl mb-3 text-primary">Water Properly</h3>
                         <p class="opacity-80 text-sm">Water deeply immediately after planting. Continue watering during dry spells for the first year until established.</p>
                     </div>
                     <!-- Step 6 -->
                     <div class="native-card p-8 rounded-2xl shadow-xl" data-aos="zoom-in" data-aos-delay="600">
-                        <div class="w-12 h-12 bg-accent text-white font-bold rounded-full flex items-center justify-center text-xl mb-6">6</div>
+                        <div class="w-12 h-12 bg-accent text-white font-bold rounded-full flex items-center justify-center text-xl mb-6 shadow-md">6</div>
                         <h3 class="font-bold text-xl mb-3 text-primary">Maintain & Monitor</h3>
                         <p class="opacity-80 text-sm">Mulch lightly with natural leaf litter or hardwood mulch (keep away from stems). Pull weeds as needed.</p>
                     </div>
@@ -225,44 +291,56 @@
             <div class="max-w-7xl mx-auto px-6">
                 <div class="text-center mb-16" data-aos="fade-up">
                     <h2 class="text-2xl md:text-3xl font-bold font-serif text-primary mb-4">Seasonal Planting Calendar</h2>
-                    <p class="text-lg opacity-80">When to plant and when to plan.</p>
+                    <p class="text-lg opacity-80">When to plant, when to seed, and when to plan for optimal restoration success.</p>
                 </div>
                 
                 <div class="space-y-6 max-w-4xl mx-auto">
                     <!-- Spring -->
-                    <div class="flex flex-col md:flex-row gap-6 p-6 rounded-2xl bg-bg-light border border-gray-100" data-aos="fade-up">
-                        <div class="md:w-1/4 font-serif font-bold text-2xl text-secondary flex items-center gap-2">
-                            <i data-lucide="flower" class="w-6 h-6"></i> Spring
-                        </div>
-                        <div class="md:w-3/4 text-sm opacity-80 leading-relaxed">
-                            Excellent time for planting container plants and bare root trees. Ensure danger of hard frost has passed. Early spring is also ideal for sowing warm-season grasses.
+                    <div class="flex flex-col sm:flex-row gap-6 p-6 rounded-2xl bg-bg-light border border-gray-100 dark:border-white/10 items-center overflow-hidden hover:shadow-lg transition-all" data-aos="fade-up">
+                        <img src="https://images.unsplash.com/photo-1490750967868-88aa4486c946?auto=format&fit=crop&w=400&q=80" alt="Spring Blooms" class="w-full sm:w-36 h-36 rounded-xl object-cover shrink-0 shadow">
+                        <div class="flex-1">
+                            <div class="font-serif font-bold text-2xl text-secondary mb-2 flex items-center gap-2">
+                                Spring <span class="text-xs font-sans uppercase tracking-wider font-semibold px-2 py-0.5 rounded-full bg-secondary/15 text-secondary">March – May</span>
+                            </div>
+                            <p class="text-sm opacity-80 leading-relaxed">
+                                Prime window for planting container stock, plugs, and bare-root shrubs as soil awakens. Ensure danger of severe frost has passed. Early spring is also ideal for sowing warm-season grasses and establishing root networks before summer heat.
+                            </p>
                         </div>
                     </div>
                     <!-- Summer -->
-                    <div class="flex flex-col md:flex-row gap-6 p-6 rounded-2xl bg-bg-light border border-gray-100" data-aos="fade-up">
-                        <div class="md:w-1/4 font-serif font-bold text-2xl text-accent-hover flex items-center gap-2">
-                            <i data-lucide="sun" class="w-6 h-6"></i> Summer
-                        </div>
-                        <div class="md:w-3/4 text-sm opacity-80 leading-relaxed">
-                            Generally avoid planting during heat waves. If you must plant, rigorous watering is required. Good time for planning fall restorations and site preparation.
+                    <div class="flex flex-col sm:flex-row gap-6 p-6 rounded-2xl bg-bg-light border border-gray-100 dark:border-white/10 items-center overflow-hidden hover:shadow-lg transition-all" data-aos="fade-up">
+                        <img src="https://images.unsplash.com/photo-1473448912268-2022ce9509d8?auto=format&fit=crop&w=400&q=80" alt="Summer Prairie Sunlight" class="w-full sm:w-36 h-36 rounded-xl object-cover shrink-0 shadow">
+                        <div class="flex-1">
+                            <div class="font-serif font-bold text-2xl text-accent-hover mb-2 flex items-center gap-2">
+                                Summer <span class="text-xs font-sans uppercase tracking-wider font-semibold px-2 py-0.5 rounded-full bg-accent/20 text-accent-hover">June – August</span>
+                            </div>
+                            <p class="text-sm opacity-80 leading-relaxed">
+                                Focus on hydration and site prep rather than new plantings. If you must plant, rigorous morning watering is mandatory. Ideal period for clearing invasive species, solarizing soil, and drafting restoration layouts for fall installation.
+                            </p>
                         </div>
                     </div>
                     <!-- Fall -->
-                    <div class="flex flex-col md:flex-row gap-6 p-6 rounded-2xl bg-bg-light border border-gray-100" data-aos="fade-up">
-                        <div class="md:w-1/4 font-serif font-bold text-2xl text-accent flex items-center gap-2">
-                            <i data-lucide="leaf" class="w-6 h-6"></i> Fall
-                        </div>
-                        <div class="md:w-3/4 text-sm opacity-80 leading-relaxed">
-                            Often the best time to plant! Cooler temps and rain help roots establish before winter. Ideal for dormant seeding of wildflowers.
+                    <div class="flex flex-col sm:flex-row gap-6 p-6 rounded-2xl bg-bg-light border border-gray-100 dark:border-white/10 items-center overflow-hidden hover:shadow-lg transition-all" data-aos="fade-up">
+                        <img src="https://images.unsplash.com/photo-1507371341162-763b5e419408?auto=format&fit=crop&w=400&q=80" alt="Fall Native Foliage" class="w-full sm:w-36 h-36 rounded-xl object-cover shrink-0 shadow">
+                        <div class="flex-1">
+                            <div class="font-serif font-bold text-2xl text-accent mb-2 flex items-center gap-2">
+                                Fall <span class="text-xs font-sans uppercase tracking-wider font-semibold px-2 py-0.5 rounded-full bg-amber-500/15 text-amber-600 dark:text-amber-400">September – November</span>
+                            </div>
+                            <p class="text-sm opacity-80 leading-relaxed">
+                                Widely regarded as the ecological sweet spot! Cooler ambient temperatures reduce plant transpiration while soil remains warm enough to foster vigorous root establishment before winter dormancy. Perfect for planting trees, shrubs, and dormant seeding.
+                            </p>
                         </div>
                     </div>
                     <!-- Winter -->
-                    <div class="flex flex-col md:flex-row gap-6 p-6 rounded-2xl bg-bg-light border border-gray-100" data-aos="fade-up">
-                        <div class="md:w-1/4 font-serif font-bold text-2xl text-primary flex items-center gap-2">
-                            <i data-lucide="snowflake" class="w-6 h-6"></i> Winter
-                        </div>
-                        <div class="md:w-3/4 text-sm opacity-80 leading-relaxed">
-                            Time for "winter sowing" seeds that require cold stratification. Excellent time for pruning dormant native trees and shrubs.
+                    <div class="flex flex-col sm:flex-row gap-6 p-6 rounded-2xl bg-bg-light border border-gray-100 dark:border-white/10 items-center overflow-hidden hover:shadow-lg transition-all" data-aos="fade-up">
+                        <img src="https://images.unsplash.com/photo-1483921020237-2ff51e8e4b22?auto=format&fit=crop&w=400&q=80" alt="Winter Native Landscape" class="w-full sm:w-36 h-36 rounded-xl object-cover shrink-0 shadow">
+                        <div class="flex-1">
+                            <div class="font-serif font-bold text-2xl text-primary mb-2 flex items-center gap-2">
+                                Winter <span class="text-xs font-sans uppercase tracking-wider font-semibold px-2 py-0.5 rounded-full bg-primary/15 text-primary">December – February</span>
+                            </div>
+                            <p class="text-sm opacity-80 leading-relaxed">
+                                The essential season for "winter sowing" and frost-seeding native prairie seeds onto frozen ground or snow cover. Natural freeze-thaw cycles break seed dormancy via cold-stratification. Also the best time for structural pruning of dormant native trees.
+                            </p>
                         </div>
                     </div>
                 </div>
@@ -270,20 +348,75 @@
         </section>
 
         <!-- SECTION 5 - Download / Explore More Guide CTA -->
-        <section class="py-24 bg-bg-light text-center relative overflow-hidden">
-            <div class="max-w-4xl mx-auto px-6 relative z-10" data-aos="zoom-in">
-                <i data-lucide="book-open" class="w-16 h-16 mx-auto mb-6 text-primary"></i>
-                <h2 class="text-3xl md:text-4xl font-bold mb-6 text-primary font-serif">Get the Full Planting Checklist</h2>
-                <p class="text-xl mb-10 opacity-80 leading-relaxed max-w-2xl mx-auto">
-                    Download our comprehensive native plant guide, complete with soil testing instructions, spacing charts, and maintenance schedules.
-                </p>
-                <div class="flex flex-col sm:flex-row justify-center gap-4">
-                    <a href="#" class="btn-primary justify-center px-8 py-4 text-lg">
-                        <i data-lucide="download" class="w-5 h-5 mr-2"></i> Download PDF Guide
-                    </a>
-                    <a href="contact.html" class="btn-secondary justify-center px-8 py-4 text-lg">
-                        Ask an Ecologist
-                    </a>
+        <section class="py-24 bg-[#14261e] text-white relative overflow-hidden">
+            <div class="absolute inset-0 z-0">
+                <img src="assets/images/echinacea-hero-bg.jpg" alt="Botanical Background" class="w-full h-full object-cover opacity-10">
+                <div class="absolute inset-0 bg-gradient-to-r from-[#14261e] via-[#14261e]/95 to-[#14261e]/80"></div>
+            </div>
+
+            <div class="max-w-7xl mx-auto px-6 relative z-10">
+                <div class="grid lg:grid-cols-12 gap-12 items-center">
+                    <!-- Left: Visual Handbook Mockup -->
+                    <div class="lg:col-span-5 relative" data-aos="fade-right">
+                        <div class="bg-white/10 backdrop-blur-md rounded-3xl p-6 md:p-8 border border-white/20 shadow-2xl relative">
+                            <div class="relative rounded-2xl overflow-hidden aspect-[4/3] mb-6 shadow-lg">
+                                <img src="assets/images/native-wildflowers.jpg" alt="Native Wildflowers Field Handbook" class="w-full h-full object-cover">
+                                <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
+                                <div class="absolute bottom-3 left-4 right-4 flex justify-between items-center text-xs">
+                                    <span class="bg-accent text-primary font-bold px-3 py-1 rounded-full uppercase tracking-wider text-[11px]">Free Edition</span>
+                                    <span class="text-white font-medium">32 Pages • Updated 2026</span>
+                                </div>
+                            </div>
+
+                            <h4 class="font-bold text-white text-base font-serif mb-3">Included in the Field Guide:</h4>
+                            <div class="space-y-2.5 text-xs text-gray-200">
+                                <div class="flex items-center gap-2.5">
+                                    <i data-lucide="check" class="w-4 h-4 text-accent shrink-0"></i>
+                                    <span>Soil moisture, drainage, and pH suitability matrix</span>
+                                </div>
+                                <div class="flex items-center gap-2.5">
+                                    <i data-lucide="check" class="w-4 h-4 text-accent shrink-0"></i>
+                                    <span>Perennial root architecture & companion spacing grids</span>
+                                </div>
+                                <div class="flex items-center gap-2.5">
+                                    <i data-lucide="check" class="w-4 h-4 text-accent shrink-0"></i>
+                                    <span>Four-season succession bloom calendars</span>
+                                </div>
+                                <div class="flex items-center gap-2.5">
+                                    <i data-lucide="check" class="w-4 h-4 text-accent shrink-0"></i>
+                                    <span>Monarch and pollinator larval host plant directory</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Right: Content & Download CTAs -->
+                    <div class="lg:col-span-7" data-aos="fade-left">
+                        <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-accent/20 text-accent font-semibold text-xs tracking-wider uppercase mb-6 border border-accent/30">
+                            <i data-lucide="book-open" class="w-4 h-4"></i> Free Botanical Resource
+                        </div>
+                        <h2 class="text-3xl md:text-5xl font-bold font-serif mb-6 leading-tight text-white">
+                            Get the Complete <br><span class="text-accent italic">Native Planting Field Guide.</span>
+                        </h2>
+                        <p class="text-base md:text-lg text-gray-300 mb-8 leading-relaxed max-w-xl">
+                            Successful ecological gardening begins with precise planning. Download our printable field handbook packed with soil preparation steps, cold stratification guides, and species companion matrices.
+                        </p>
+
+                        <div class="flex flex-wrap gap-4 mb-8">
+                            <a href="#" onclick="alert('Downloading Verdantia Native Planting Handbook (PDF)...'); return false;" class="btn-primary bg-accent hover:bg-accent-hover text-primary font-bold px-8 py-4 text-base shadow-xl inline-flex items-center gap-2">
+                                <i data-lucide="download" class="w-5 h-5"></i> Download PDF Handbook
+                            </a>
+                            <a href="contact.html" class="btn-secondary px-8 py-4 text-base font-semibold inline-flex items-center gap-2 border-white/30 hover:bg-white/10">
+                                <i data-lucide="help-circle" class="w-5 h-5"></i> Ask an Ecologist
+                            </a>
+                        </div>
+
+                        <div class="flex flex-wrap items-center gap-6 pt-6 border-t border-white/15 text-xs text-gray-300">
+                            <span class="flex items-center gap-1.5"><i data-lucide="file-check" class="w-4 h-4 text-accent"></i> Instant Digital PDF</span>
+                            <span class="flex items-center gap-1.5"><i data-lucide="sparkles" class="w-4 h-4 text-accent"></i> 100% Free Botanical Resource</span>
+                            <span class="flex items-center gap-1.5"><i data-lucide="printer" class="w-4 h-4 text-accent"></i> Printer-Friendly Layout</span>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>

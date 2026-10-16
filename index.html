@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr" data-theme="dark">
+<html lang="en" dir="ltr" data-theme="dark" class="dark">
 
 <head>
     <meta charset="UTF-8">
@@ -25,6 +25,7 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
+            darkMode: 'class',
             theme: {
                 extend: {
                     colors: {
@@ -116,9 +117,9 @@
         <!-- SECTION 1 - Premium Hero -->
         <section class="relative min-h-[90vh] flex items-center pt-20 pb-32 overflow-hidden">
             <!-- Background element -->
-            <div class="absolute inset-0 z-0 opacity-10">
-                <img src="https://images.unsplash.com/photo-1518531933037-91b2f5f229cc?auto=format&fit=crop&w=1920&q=80"
-                    alt="Botanical Pattern Background" class="w-full h-full object-cover">
+            <div class="absolute inset-0 z-0 opacity-15">
+                <img src="assets/images/echinacea-hero-bg.jpg"
+                    alt="Botanical Prairie Background" class="w-full h-full object-cover">
             </div>
 
             <div class="max-w-7xl mx-auto px-6 relative z-10 w-full">
@@ -148,8 +149,8 @@
 
                     <div class="relative hidden md:block" data-aos="fade-left" data-aos-delay="200">
                         <div class="rounded-2xl overflow-hidden aspect-[4/5] relative shadow-2xl">
-                            <img src="https://images.unsplash.com/photo-1470058869958-2a77ade41c02?auto=format&fit=crop&w=800&q=80"
-                                alt="Lush Native Plant Landscape"
+                            <img src="assets/images/native-nursery-hero.jpg"
+                                alt="Verdantia Native Plant Nursery and Restoration Garden"
                                 class="w-full h-full object-cover hover:scale-105 transition-transform duration-1000">
                         </div>
 
@@ -185,8 +186,8 @@
                     <!-- Card 1 -->
                     <div class="native-card group" data-aos="fade-up" data-aos-delay="100">
                         <div class="relative aspect-[4/3] overflow-hidden">
-                            <img src="https://images.pexels.com/photos/38848141/pexels-photo-38848141.jpeg"
-                                alt="Pollinator Plants"
+                            <img src="assets/images/pollinator-plants.jpg"
+                                alt="Pollinator Plants - Monarch Butterfly and Bumblebee on Native Coneflower"
                                 class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
                         </div>
                         <div class="p-8">
@@ -194,7 +195,7 @@
                             <h3 class="text-2xl font-bold mb-2">Pollinator Plants</h3>
                             <p class="mb-6 opacity-80 text-sm leading-relaxed">Essential nectar and pollen sources for
                                 bees, butterflies, and beneficial insects.</p>
-                            <a href="pages/products.html?category=pollinators"
+                            <a href="products.html?category=pollinators"
                                 class="text-primary font-semibold flex items-center gap-2 group-hover:text-accent-hover transition-colors">
                                 Explore Collection <i data-lucide="arrow-right" class="w-4 h-4"></i>
                             </a>
@@ -204,8 +205,8 @@
                     <!-- Card 2 -->
                     <div class="native-card group" data-aos="fade-up" data-aos-delay="200">
                         <div class="relative aspect-[4/3] overflow-hidden">
-                            <img src="https://images.pexels.com/photos/38689745/pexels-photo-38689745.jpeg"
-                                alt="Native Wildflowers"
+                            <img src="assets/images/native-wildflowers.jpg"
+                                alt="Native Wildflowers - Black-eyed Susan (Rudbeckia hirta)"
                                 class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
                         </div>
                         <div class="p-8">
@@ -213,7 +214,7 @@
                             <h3 class="text-2xl font-bold mb-2">Native Wildflowers</h3>
                             <p class="mb-6 opacity-80 text-sm leading-relaxed">Vibrant blooms that require less water
                                 and provide natural beauty year after year.</p>
-                            <a href="pages/products.html?category=wildflowers"
+                            <a href="products.html?category=wildflowers"
                                 class="text-primary font-semibold flex items-center gap-2 group-hover:text-accent-hover transition-colors">
                                 Explore Collection <i data-lucide="arrow-right" class="w-4 h-4"></i>
                             </a>
@@ -223,8 +224,8 @@
                     <!-- Card 3 -->
                     <div class="native-card group" data-aos="fade-up" data-aos-delay="300">
                         <div class="relative aspect-[4/3] overflow-hidden">
-                            <img src="https://images.pexels.com/photos/8355200/pexels-photo-8355200.jpeg"
-                                alt="Woodland Plants"
+                            <img src="assets/images/woodland-plants.jpg"
+                                alt="Woodland Plants - Native White Trillium (Trillium grandiflorum)"
                                 class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
                         </div>
                         <div class="p-8">
@@ -232,7 +233,7 @@
                             <h3 class="text-2xl font-bold mb-2">Woodland Plants</h3>
                             <p class="mb-6 opacity-80 text-sm leading-relaxed">Shade-tolerant ferns, understory shrubs,
                                 and delicate spring ephemerals.</p>
-                            <a href="pages/products.html?category=woodland"
+                            <a href="products.html?category=woodland"
                                 class="text-primary font-semibold flex items-center gap-2 group-hover:text-accent-hover transition-colors">
                                 Explore Collection <i data-lucide="arrow-right" class="w-4 h-4"></i>
                             </a>
@@ -242,8 +243,8 @@
                     <!-- Card 4 -->
                     <div class="native-card group" data-aos="fade-up" data-aos-delay="100">
                         <div class="relative aspect-[4/3] overflow-hidden">
-                            <img src="https://images.pexels.com/photos/2663562/pexels-photo-2663562.jpeg"
-                                alt="Native Grasses"
+                            <img src="assets/images/native-grasses.jpg"
+                                alt="Native Grasses - Pink Muhly Grass (Muhlenbergia capillaris)"
                                 class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
                         </div>
                         <div class="p-8">
@@ -251,7 +252,7 @@
                             <h3 class="text-2xl font-bold mb-2">Native Grasses</h3>
                             <p class="mb-6 opacity-80 text-sm leading-relaxed">Deep-rooted structural plants that
                                 control erosion and provide winter interest.</p>
-                            <a href="pages/products.html?category=grasses"
+                            <a href="products.html?category=grasses"
                                 class="text-primary font-semibold flex items-center gap-2 group-hover:text-accent-hover transition-colors">
                                 Explore Collection <i data-lucide="arrow-right" class="w-4 h-4"></i>
                             </a>
@@ -261,8 +262,8 @@
                     <!-- Card 5 -->
                     <div class="native-card group" data-aos="fade-up" data-aos-delay="200">
                         <div class="relative aspect-[4/3] overflow-hidden">
-                            <img src="https://images.unsplash.com/photo-1442120108414-42e7ea50d0b5?auto=format&fit=crop&w=600&q=80"
-                                alt="Native Shrubs"
+                            <img src="assets/images/native-shrubs.jpg"
+                                alt="Native Shrubs - Winterberry (Ilex verticillata) with Berries"
                                 class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
                         </div>
                         <div class="p-8">
@@ -270,7 +271,7 @@
                             <h3 class="text-2xl font-bold mb-2">Native Shrubs</h3>
                             <p class="mb-6 opacity-80 text-sm leading-relaxed">Foundational plants offering berries,
                                 shelter for birds, and multi-season beauty.</p>
-                            <a href="pages/products.html?category=shrubs"
+                            <a href="products.html?category=shrubs"
                                 class="text-primary font-semibold flex items-center gap-2 group-hover:text-accent-hover transition-colors">
                                 Explore Collection <i data-lucide="arrow-right" class="w-4 h-4"></i>
                             </a>
@@ -280,8 +281,8 @@
                     <!-- Card 6 -->
                     <div class="native-card group" data-aos="fade-up" data-aos-delay="300">
                         <div class="relative aspect-[4/3] overflow-hidden">
-                            <img src="https://images.pexels.com/photos/16082916/pexels-photo-16082916.jpeg"
-                                alt="Native Trees"
+                            <img src="assets/images/native-trees.jpg"
+                                alt="Native Trees - Historic White Oak (Quercus alba) Canopy"
                                 class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
                         </div>
                         <div class="p-8">
@@ -289,7 +290,7 @@
                             <h3 class="text-2xl font-bold mb-2">Native Trees</h3>
                             <p class="mb-6 opacity-80 text-sm leading-relaxed">Canopy builders providing crucial shade,
                                 air purification, and immense ecological value.</p>
-                            <a href="pages/products.html?category=trees"
+                            <a href="products.html?category=trees"
                                 class="text-primary font-semibold flex items-center gap-2 group-hover:text-accent-hover transition-colors">
                                 Explore Collection <i data-lucide="arrow-right" class="w-4 h-4"></i>
                             </a>
@@ -365,83 +366,110 @@
         <section class="py-24 bg-primary text-white">
             <div class="max-w-7xl mx-auto px-6">
                 <div class="text-center mb-16" data-aos="fade-up">
-                    <h2 class="text-3xl md:text-4xl font-bold mb-4">Discover Your Region's Natives</h2>
+                    <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/10 text-accent font-semibold text-xs tracking-wider uppercase mb-4">
+                        <i data-lucide="map-pin" class="w-4 h-4"></i> Tailored To Your Local Ecology
+                    </div>
+                    <h2 class="text-3xl md:text-4xl font-bold mb-4 font-serif">Discover Your Region's Natives</h2>
                     <p class="text-lg max-w-2xl mx-auto opacity-80">Plant success starts with right plant, right place.
-                        Explore species naturally adapted to your specific ecoregion.</p>
+                        Explore species naturally adapted to your specific ecoregion and soil conditions.</p>
                 </div>
 
-                <div class="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-8">
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
                     <!-- Region 1 -->
-                    <a href="pages/products.html?region=northeast"
-                        class="group relative overflow-hidden rounded-xl aspect-square" data-aos="zoom-in"
+                    <a href="products.html?region=northeast"
+                        class="group relative overflow-hidden rounded-2xl aspect-[4/5] shadow-lg border border-white/10" data-aos="zoom-in"
                         data-aos-delay="100">
                         <img src="https://images.unsplash.com/photo-1473448912268-2022ce9509d8?auto=format&fit=crop&w=500&q=80"
-                            alt="Northeast Region"
+                            alt="Northeast Native Plants"
                             class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
-                        <div
-                            class="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition-colors duration-300">
-                        </div>
-                        <div class="absolute inset-0 flex flex-col items-center justify-center text-center p-4">
-                            <h3 class="text-2xl font-bold">Northeast</h3>
-                            <span
-                                class="opacity-0 group-hover:opacity-100 transition-opacity duration-300 transform translate-y-4 group-hover:translate-y-0 mt-2 text-sm uppercase tracking-wider font-semibold">View
-                                Plants</span>
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/40 to-black/20 group-hover:via-black/30 transition-colors duration-300"></div>
+                        <div class="absolute inset-0 flex flex-col justify-between p-6">
+                            <span class="self-start text-[11px] font-bold tracking-widest uppercase px-3 py-1 rounded-full bg-black/40 backdrop-blur-md text-gray-200 border border-white/20">Zones 4–7</span>
+                            <div>
+                                <h3 class="text-2xl font-bold mb-1 font-serif text-white">Northeast</h3>
+                                <p class="text-xs text-gray-300 mb-4">Woodlands, vernal meadows & coastal scrub</p>
+                                <span class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/20 backdrop-blur-md border border-white/40 text-white text-xs font-bold uppercase tracking-wider group-hover:bg-accent group-hover:text-primary transition-all duration-300 shadow-md">
+                                    Explore Region <i data-lucide="arrow-right" class="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform"></i>
+                                </span>
+                            </div>
                         </div>
                     </a>
 
                     <!-- Region 2 -->
-                    <a href="pages/products.html?region=midwest"
-                        class="group relative overflow-hidden rounded-xl aspect-square" data-aos="zoom-in"
+                    <a href="products.html?region=midwest"
+                        class="group relative overflow-hidden rounded-2xl aspect-[4/5] shadow-lg border border-white/10" data-aos="zoom-in"
                         data-aos-delay="200">
                         <img src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=500&q=80"
-                            alt="Midwest Region"
+                            alt="Midwest Prairie Natives"
                             class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
-                        <div
-                            class="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition-colors duration-300">
-                        </div>
-                        <div class="absolute inset-0 flex flex-col items-center justify-center text-center p-4">
-                            <h3 class="text-2xl font-bold">Midwest</h3>
-                            <span
-                                class="opacity-0 group-hover:opacity-100 transition-opacity duration-300 transform translate-y-4 group-hover:translate-y-0 mt-2 text-sm uppercase tracking-wider font-semibold">View
-                                Plants</span>
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/40 to-black/20 group-hover:via-black/30 transition-colors duration-300"></div>
+                        <div class="absolute inset-0 flex flex-col justify-between p-6">
+                            <span class="self-start text-[11px] font-bold tracking-widest uppercase px-3 py-1 rounded-full bg-black/40 backdrop-blur-md text-gray-200 border border-white/20">Zones 3–6</span>
+                            <div>
+                                <h3 class="text-2xl font-bold mb-1 font-serif text-white">Midwest</h3>
+                                <p class="text-xs text-gray-300 mb-4">Deep-rooted tallgrass & pollinator prairies</p>
+                                <span class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/20 backdrop-blur-md border border-white/40 text-white text-xs font-bold uppercase tracking-wider group-hover:bg-accent group-hover:text-primary transition-all duration-300 shadow-md">
+                                    Explore Region <i data-lucide="arrow-right" class="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform"></i>
+                                </span>
+                            </div>
                         </div>
                     </a>
 
                     <!-- Region 3 -->
-                    <a href="pages/products.html?region=southeast"
-                        class="group relative overflow-hidden rounded-xl aspect-square" data-aos="zoom-in"
+                    <a href="products.html?region=southeast"
+                        class="group relative overflow-hidden rounded-2xl aspect-[4/5] shadow-lg border border-white/10" data-aos="zoom-in"
                         data-aos-delay="300">
                         <img src="https://images.unsplash.com/photo-1475924156734-496f6cac6ec1?auto=format&fit=crop&w=500&q=80"
-                            alt="Southeast Region"
+                            alt="Southeast Native Plants"
                             class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
-                        <div
-                            class="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition-colors duration-300">
-                        </div>
-                        <div class="absolute inset-0 flex flex-col items-center justify-center text-center p-4">
-                            <h3 class="text-2xl font-bold">Southeast</h3>
-                            <span
-                                class="opacity-0 group-hover:opacity-100 transition-opacity duration-300 transform translate-y-4 group-hover:translate-y-0 mt-2 text-sm uppercase tracking-wider font-semibold">View
-                                Plants</span>
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/40 to-black/20 group-hover:via-black/30 transition-colors duration-300"></div>
+                        <div class="absolute inset-0 flex flex-col justify-between p-6">
+                            <span class="self-start text-[11px] font-bold tracking-widest uppercase px-3 py-1 rounded-full bg-black/40 backdrop-blur-md text-gray-200 border border-white/20">Zones 7–10</span>
+                            <div>
+                                <h3 class="text-2xl font-bold mb-1 font-serif text-white">Southeast</h3>
+                                <p class="text-xs text-gray-300 mb-4">Piedmont wetlands, pine savannah & glades</p>
+                                <span class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/20 backdrop-blur-md border border-white/40 text-white text-xs font-bold uppercase tracking-wider group-hover:bg-accent group-hover:text-primary transition-all duration-300 shadow-md">
+                                    Explore Region <i data-lucide="arrow-right" class="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform"></i>
+                                </span>
+                            </div>
                         </div>
                     </a>
 
                     <!-- Region 4 -->
-                    <a href="pages/products.html?region=pacific-nw"
-                        class="group relative overflow-hidden rounded-xl aspect-square" data-aos="zoom-in"
+                    <a href="products.html?region=pacific-nw"
+                        class="group relative overflow-hidden rounded-2xl aspect-[4/5] shadow-lg border border-white/10" data-aos="zoom-in"
                         data-aos-delay="400">
                         <img src="https://images.unsplash.com/photo-1444858291040-58f756a3bdd6?auto=format&fit=crop&w=500&q=80"
-                            alt="Pacific Northwest"
+                            alt="Pacific Northwest Natives"
                             class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
-                        <div
-                            class="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition-colors duration-300">
-                        </div>
-                        <div class="absolute inset-0 flex flex-col items-center justify-center text-center p-4">
-                            <h3 class="text-2xl font-bold">Pacific NW</h3>
-                            <span
-                                class="opacity-0 group-hover:opacity-100 transition-opacity duration-300 transform translate-y-4 group-hover:translate-y-0 mt-2 text-sm uppercase tracking-wider font-semibold">View
-                                Plants</span>
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/40 to-black/20 group-hover:via-black/30 transition-colors duration-300"></div>
+                        <div class="absolute inset-0 flex flex-col justify-between p-6">
+                            <span class="self-start text-[11px] font-bold tracking-widest uppercase px-3 py-1 rounded-full bg-black/40 backdrop-blur-md text-gray-200 border border-white/20">Zones 6–9</span>
+                            <div>
+                                <h3 class="text-2xl font-bold mb-1 font-serif text-white">Pacific NW</h3>
+                                <p class="text-xs text-gray-300 mb-4">Temperate rainforest, fern glades & riparian</p>
+                                <span class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/20 backdrop-blur-md border border-white/40 text-white text-xs font-bold uppercase tracking-wider group-hover:bg-accent group-hover:text-primary transition-all duration-300 shadow-md">
+                                    Explore Region <i data-lucide="arrow-right" class="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform"></i>
+                                </span>
+                            </div>
                         </div>
                     </a>
+                </div>
+
+                <!-- Regional CTA Action Bar -->
+                <div class="bg-white/10 backdrop-blur-md rounded-2xl p-8 border border-white/15 flex flex-col lg:flex-row items-center justify-between gap-6" data-aos="fade-up">
+                    <div class="text-center lg:text-left">
+                        <h4 class="text-xl font-bold font-serif mb-1 text-white">Need help matching species to your microclimate?</h4>
+                        <p class="text-sm opacity-80 text-gray-200 max-w-xl">Consult our comprehensive regional planting guide or speak with our staff ecologists to build a customized native plant community.</p>
+                    </div>
+                    <div class="flex flex-wrap items-center justify-center gap-4 shrink-0">
+                        <a href="planting-guide.html" class="btn-secondary px-6 py-3 text-sm font-semibold inline-flex items-center gap-2">
+                            <i data-lucide="compass" class="w-4 h-4"></i> Regional Planting Guide
+                        </a>
+                        <a href="products.html" class="btn-primary bg-accent hover:bg-accent-hover text-primary px-6 py-3 text-sm font-semibold inline-flex items-center gap-2">
+                            <i data-lucide="sprout" class="w-4 h-4"></i> Browse All Native Species
+                        </a>
+                    </div>
                 </div>
             </div>
         </section>
@@ -498,30 +526,99 @@
         </section>
 
         <!-- SECTION 6 - CTA / Conservation Commitment -->
-        <section class="relative py-32 bg-secondary text-white text-center overflow-hidden">
+        <section class="relative py-28 text-white overflow-hidden">
             <div class="absolute inset-0 z-0">
-                <img src="https://images.unsplash.com/photo-1425082661705-1834bfd08d53?auto=format&fit=crop&w=1920&q=80"
-                    alt="" class="w-full h-full object-cover opacity-20">
-                <div class="absolute inset-0 bg-gradient-to-t from-secondary to-transparent"></div>
+                <img src="assets/images/echinacea-hero-bg.jpg"
+                    alt="Restored Native Prairie Meadow" class="w-full h-full object-cover">
+                <div class="absolute inset-0 bg-gradient-to-r from-[#14231c]/95 via-[#1b2e25]/90 to-[#14231c]/80"></div>
             </div>
 
-            <div class="max-w-4xl mx-auto px-6 relative z-10" data-aos="fade-up">
-                <i data-lucide="leaf" class="w-16 h-16 mx-auto mb-6 text-accent"></i>
-                <h2 class="text-4xl md:text-5xl font-bold mb-8">Bring Native Life Back.</h2>
-                <p class="text-xl mb-12 opacity-90 max-w-2xl mx-auto leading-relaxed">
-                    Every native plant you add to your landscape is a step toward repairing our local ecosystems. Join
-                    us in the movement to restore nature.
-                </p>
+            <div class="max-w-7xl mx-auto px-6 relative z-10">
+                <div class="grid lg:grid-cols-12 gap-12 items-center">
+                    <!-- Left: Content & CTAs -->
+                    <div class="lg:col-span-7" data-aos="fade-right">
+                        <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-accent/20 text-accent font-semibold text-xs tracking-wider uppercase mb-6 border border-accent/30">
+                            <i data-lucide="sprout" class="w-4 h-4"></i> Ecological Regeneration Guarantee
+                        </div>
+                        <h2 class="text-4xl md:text-5xl font-bold font-serif mb-6 leading-tight text-white">
+                            Bring Native Life Back <br><span class="text-accent italic">To Your Soil.</span>
+                        </h2>
+                        <p class="text-lg text-gray-200 mb-8 max-w-xl leading-relaxed">
+                            Every native wildflower, deep-rooted prairie grass, and canopy tree you plant repairs our local ecology. Whether you are rewilding a residential yard or restoring acres of degraded land, Verdantia provides the nursery-grown plants and ecological expertise to ensure success.
+                        </p>
 
-                <div class="flex flex-col sm:flex-row justify-center items-center gap-6">
-                    <a href="products.html"
-                        class="btn-primary bg-white text-primary hover:bg-gray-100 px-8 py-4 w-full sm:w-auto justify-center">
-                        Explore Plants
-                    </a>
-                    <a href="restoration-services.html"
-                        class="btn-secondary px-8 py-4 w-full sm:w-auto justify-center">
-                        Restoration Services
-                    </a>
+                        <div class="flex flex-wrap gap-4 mb-8">
+                            <a href="products.html" class="btn-primary bg-accent hover:bg-accent-hover text-primary font-bold px-8 py-4 text-base shadow-xl inline-flex items-center gap-2">
+                                <i data-lucide="shopping-bag" class="w-5 h-5"></i> Shop Native Plants
+                            </a>
+                            <a href="contact.html" class="btn-secondary px-8 py-4 text-base font-semibold inline-flex items-center gap-2 border-white/40 hover:bg-white/10">
+                                <i data-lucide="calendar" class="w-5 h-5"></i> Request Free Consultation
+                            </a>
+                        </div>
+
+                        <div class="flex items-center gap-6 pt-6 border-t border-white/15 text-sm text-gray-300">
+                            <div class="flex items-center gap-2">
+                                <i data-lucide="check-circle-2" class="w-4 h-4 text-accent"></i>
+                                <span>Organic & pesticide-free</span>
+                            </div>
+                            <div class="flex items-center gap-2">
+                                <i data-lucide="check-circle-2" class="w-4 h-4 text-accent"></i>
+                                <span>Locally adapted genotypes</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Right: Visual Cards & Proof -->
+                    <div class="lg:col-span-5" data-aos="fade-left">
+                        <div class="bg-white/10 backdrop-blur-md rounded-3xl p-8 border border-white/20 shadow-2xl relative">
+                            <!-- Visual Thumbnail -->
+                            <div class="aspect-[16/9] rounded-2xl overflow-hidden mb-6 relative shadow-lg">
+                                <img src="assets/images/native-nursery-hero.jpg" alt="Verdantia Nursery Propagation" class="w-full h-full object-cover">
+                                <div class="absolute bottom-3 left-3 bg-black/60 backdrop-blur-sm px-3 py-1 rounded-full text-xs font-semibold text-white flex items-center gap-1.5">
+                                    <i data-lucide="sparkles" class="w-3.5 h-3.5 text-accent"></i> Organically Grown On-Site
+                                </div>
+                            </div>
+
+                            <div class="space-y-4">
+                                <div class="flex items-start gap-4 p-3 rounded-xl bg-white/5 border border-white/10">
+                                    <div class="w-10 h-10 rounded-xl bg-accent/20 flex items-center justify-center shrink-0 text-accent">
+                                        <i data-lucide="shield-check" class="w-5 h-5"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-bold text-white text-sm">Neonicotinoid-Free Promise</h4>
+                                        <p class="text-xs text-gray-300">Zero systemic chemicals to ensure maximum pollinator and avian survival.</p>
+                                    </div>
+                                </div>
+
+                                <div class="flex items-start gap-4 p-3 rounded-xl bg-white/5 border border-white/10">
+                                    <div class="w-10 h-10 rounded-xl bg-accent/20 flex items-center justify-center shrink-0 text-accent">
+                                        <i data-lucide="trees" class="w-5 h-5"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-bold text-white text-sm">3-Year Establishment Guarantee</h4>
+                                        <p class="text-xs text-gray-300">Our habitat restoration projects come with ongoing monitoring and survival replacement.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="mt-6 pt-6 border-t border-white/15 flex justify-between items-center text-center">
+                                <div>
+                                    <p class="text-2xl font-bold text-accent font-serif">1,200+</p>
+                                    <p class="text-[11px] text-gray-300 uppercase tracking-wider">Acres Restored</p>
+                                </div>
+                                <div class="h-8 w-px bg-white/20"></div>
+                                <div>
+                                    <p class="text-2xl font-bold text-accent font-serif">300+</p>
+                                    <p class="text-[11px] text-gray-300 uppercase tracking-wider">Native Species</p>
+                                </div>
+                                <div class="h-8 w-px bg-white/20"></div>
+                                <div>
+                                    <p class="text-2xl font-bold text-accent font-serif">98%</p>
+                                    <p class="text-[11px] text-gray-300 uppercase tracking-wider">Client Satisfaction</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr" data-theme="dark">
+<html lang="en" dir="ltr" data-theme="dark" class="dark">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -18,6 +18,7 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
+            darkMode: 'class',
             theme: {
                 extend: {
                     colors: {
@@ -220,19 +221,85 @@
         </section>
 
         <!-- SECTION 5 - Sustainability Commitment / CTA -->
-        <section class="py-24 bg-secondary text-center relative">
-            <div class="max-w-4xl mx-auto px-6 relative z-10" data-aos="zoom-in">
-                <h2 class="text-3xl md:text-4xl font-bold mb-6 text-white font-serif">Committed to the Earth.</h2>
-                <p class="text-xl mb-10 text-gray-100 leading-relaxed max-w-2xl mx-auto">
-                    From biodegradable pots to solar-powered greenhouses, our operations strive to leave no trace. Join us in making a difference.
-                </p>
-                <div class="flex flex-col sm:flex-row justify-center gap-4">
-                    <a href="products.html" class="btn-primary bg-white text-primary hover:bg-gray-100 justify-center text-lg">
-                        Support Our Work
-                    </a>
-                    <a href="contact.html" class="btn-primary justify-center text-lg shadow-lg">
-                        Contact the Team
-                    </a>
+        <section class="py-28 bg-[#14261e] text-white relative overflow-hidden">
+            <!-- Subtle background glow -->
+            <div class="absolute -top-40 -right-40 w-96 h-96 bg-accent/15 rounded-full blur-3xl"></div>
+            <div class="absolute -bottom-40 -left-40 w-96 h-96 bg-primary/30 rounded-full blur-3xl"></div>
+
+            <div class="max-w-7xl mx-auto px-6 relative z-10">
+                <div class="grid lg:grid-cols-12 gap-12 items-center">
+                    <!-- Left: Nursery Visual Card -->
+                    <div class="lg:col-span-5 relative" data-aos="fade-right">
+                        <div class="rounded-3xl overflow-hidden shadow-2xl border border-white/15 relative aspect-[4/5] group">
+                            <img src="assets/images/native-nursery-hero.jpg" alt="Verdantia Sustainable Nursery Grounds" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-black/20"></div>
+                            
+                            <div class="absolute top-4 left-4 bg-black/50 backdrop-blur-md px-3.5 py-1.5 rounded-full text-xs font-semibold text-accent border border-white/20 flex items-center gap-2">
+                                <i data-lucide="sun" class="w-3.5 h-3.5"></i> 100% Solar-Powered Growing
+                            </div>
+
+                            <div class="absolute bottom-6 left-6 right-6 p-5 rounded-2xl bg-white/10 backdrop-blur-md border border-white/20 text-left">
+                                <p class="text-xs font-bold tracking-widest uppercase text-accent mb-1">Our Living Lab</p>
+                                <p class="text-sm text-gray-200">"We invite visitors to tour our propagation tables, walk our restored prairie trials, and see sustainable nursery science up close."</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Right: Content & 3 Sustainability Pillars -->
+                    <div class="lg:col-span-7" data-aos="fade-left">
+                        <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-accent/20 text-accent font-semibold text-xs tracking-wider uppercase mb-6 border border-accent/30">
+                            <i data-lucide="leaf" class="w-4 h-4"></i> Zero-Trace Horticulture
+                        </div>
+                        <h2 class="text-3xl md:text-5xl font-bold font-serif mb-6 leading-tight text-white">
+                            Committed to the Earth. <br><span class="text-accent italic">From Seed to Canopy.</span>
+                        </h2>
+                        <p class="text-base md:text-lg text-gray-300 mb-8 leading-relaxed">
+                            True habitat restoration begins long before plants hit your soil. Every facet of our nursery operations is designed to heal the earth, not burden it.
+                        </p>
+
+                        <!-- 3 Pillars -->
+                        <div class="space-y-4 mb-10">
+                            <div class="flex items-start gap-4 p-4 rounded-2xl bg-white/5 border border-white/10 hover:border-accent/40 transition-colors">
+                                <div class="w-12 h-12 rounded-xl bg-accent/20 flex items-center justify-center shrink-0 text-accent">
+                                    <i data-lucide="recycle" class="w-6 h-6"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-white text-base mb-1">100% Biodegradable & Recycled Containers</h4>
+                                    <p class="text-xs md:text-sm text-gray-300 leading-relaxed">We eliminate single-use plastics through compostable wood-fiber pots and reusable regional propagation trays.</p>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start gap-4 p-4 rounded-2xl bg-white/5 border border-white/10 hover:border-accent/40 transition-colors">
+                                <div class="w-12 h-12 rounded-xl bg-accent/20 flex items-center justify-center shrink-0 text-accent">
+                                    <i data-lucide="droplets" class="w-6 h-6"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-white text-base mb-1">Closed-Loop Rainwater Capture</h4>
+                                    <p class="text-xs md:text-sm text-gray-300 leading-relaxed">All propagation beds are irrigated with harvested rainwater filtered through natural bioswales, conserving local groundwater.</p>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start gap-4 p-4 rounded-2xl bg-white/5 border border-white/10 hover:border-accent/40 transition-colors">
+                                <div class="w-12 h-12 rounded-xl bg-accent/20 flex items-center justify-center shrink-0 text-accent">
+                                    <i data-lucide="shield-alert" class="w-6 h-6"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-white text-base mb-1">Strict Neonicotinoid-Free Guarantee</h4>
+                                    <p class="text-xs md:text-sm text-gray-300 leading-relaxed">We never use systemic insecticides that harm foraging bees, caterpillars, or bird populations.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- CTAs -->
+                        <div class="flex flex-wrap gap-4">
+                            <a href="products.html" class="btn-primary bg-accent hover:bg-accent-hover text-primary font-bold px-8 py-4 text-base shadow-xl inline-flex items-center gap-2">
+                                <i data-lucide="shopping-bag" class="w-5 h-5"></i> Explore Native Catalog
+                            </a>
+                            <a href="contact.html" class="btn-secondary px-8 py-4 text-base font-semibold inline-flex items-center gap-2 border-white/30 hover:bg-white/10">
+                                <i data-lucide="calendar" class="w-5 h-5"></i> Plan Nursery Visit
+                            </a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>

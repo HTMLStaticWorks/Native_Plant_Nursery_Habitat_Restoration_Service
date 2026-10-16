@@ -35,29 +35,34 @@ function initApp() {
   // Dark/Light Theme Toggle
   const themeToggles = document.querySelectorAll('.theme-toggle');
   
-  const currentTheme = localStorage.getItem('theme');
-  if (currentTheme) {
-    document.documentElement.setAttribute('data-theme', currentTheme);
+  const savedTheme = localStorage.getItem('theme');
+  const initialTheme = savedTheme || document.documentElement.getAttribute('data-theme') || 'dark';
+
+  function setTheme(theme) {
+    document.documentElement.setAttribute('data-theme', theme);
+    if (theme === 'dark') {
+      document.documentElement.classList.add('dark');
+    } else {
+      document.documentElement.classList.remove('dark');
+    }
+    localStorage.setItem('theme', theme);
     themeToggles.forEach(btn => {
       const icon = btn.querySelector('i');
-      if (icon) icon.setAttribute('data-lucide', currentTheme === 'dark' ? 'sun' : 'moon');
+      if (icon) icon.setAttribute('data-lucide', theme === 'dark' ? 'sun' : 'moon');
     });
+    if (window.lucide) {
+      lucide.createIcons();
+    }
   }
+
+  // Initialize theme
+  setTheme(initialTheme);
 
   themeToggles.forEach(themeToggle => {
     themeToggle.addEventListener('click', () => {
-      let theme = document.documentElement.getAttribute('data-theme');
-      let newTheme = theme === 'dark' ? 'light' : 'dark';
-      document.documentElement.setAttribute('data-theme', newTheme);
-      localStorage.setItem('theme', newTheme);
-      
-      themeToggles.forEach(btn => {
-        const icon = btn.querySelector('i');
-        if (icon) icon.setAttribute('data-lucide', newTheme === 'dark' ? 'sun' : 'moon');
-      });
-      if(window.lucide) {
-        lucide.createIcons();
-      }
+      let currentTheme = document.documentElement.getAttribute('data-theme') || (document.documentElement.classList.contains('dark') ? 'dark' : 'light');
+      let newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+      setTheme(newTheme);
     });
   });
 

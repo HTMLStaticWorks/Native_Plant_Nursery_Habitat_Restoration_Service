@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr" data-theme="dark">
+<html lang="en" dir="ltr" data-theme="dark" class="dark">
 
 <head>
     <meta charset="UTF-8">
@@ -24,6 +24,7 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
+            darkMode: 'class',
             theme: {
                 extend: {
                     colors: {
@@ -113,114 +114,320 @@
 
     <main>
         <!-- SECTION 1 - Hero -->
-        <section class="relative min-h-[85vh] flex items-center justify-center pt-20 overflow-hidden">
+        <section class="relative min-h-[85vh] flex items-center justify-center pt-24 pb-20 overflow-hidden">
             <div class="absolute inset-0 z-0">
-                <img src="https://images.pexels.com/photos/38439267/pexels-photo-38439267.jpeg"
-                    alt="Habitat Restoration" class="w-full h-full object-cover" data-aos="scale-up"
+                <img src="https://images.unsplash.com/photo-1500937386664-56d1dfef3854?auto=format&fit=crop&w=1600&q=80"
+                    alt="Regenerative Farmland and Restored Habitat Landscape" class="w-full h-full object-cover scale-105 transition-transform duration-1000" data-aos="scale-up"
                     data-aos-duration="3000">
-                <div class="absolute inset-0 bg-black/60"></div>
+                <div class="absolute inset-0 bg-gradient-to-t from-[#0a1811] via-[#0d1d15]/80 to-black/55"></div>
             </div>
 
             <div class="relative z-10 text-center px-6 max-w-4xl mx-auto" data-aos="fade-up">
+                <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-accent/20 text-accent font-semibold text-xs tracking-wider uppercase mb-6 border border-accent/30 backdrop-blur-md">
+                    <i data-lucide="sprout" class="w-4 h-4"></i> Ecological Land Consulting & Restoration
+                </div>
                 <h1 class="text-5xl md:text-7xl font-bold text-white mb-6 font-serif leading-tight">
                     Restore Habitats.<br>
-                    <span class="text-accent">Rebuild Biodiversity.</span>
+                    <span class="text-accent italic">Rebuild Living Soil.</span>
                 </h1>
-                <p class="text-xl text-gray-200 mb-10 opacity-90 leading-relaxed">
-                    From sterile lawns to thriving prairies and woodlands. We provide comprehensive ecological
-                    restoration services designed to bring life back to your land.
+                <p class="text-xl text-gray-200 mb-10 opacity-90 leading-relaxed max-w-3xl mx-auto">
+                    From regenerative working farms to degraded watersheds, prairies, and woodlands. We partner with landowners, agriculturalists, and estates to build biologically rich, self-sustaining, and highly profitable landscapes.
                 </p>
-                <div class="flex flex-col sm:flex-row justify-center items-center gap-4">
+                <div class="flex flex-col sm:flex-row justify-center items-center gap-4 mb-8">
                     <a href="#services"
-                        class="btn-primary bg-white text-primary hover:bg-gray-100 px-8 py-4 w-full sm:w-auto justify-center">
-                        View Our Services
+                        class="btn-primary bg-accent hover:bg-accent-hover text-primary font-bold px-8 py-4 text-base shadow-xl inline-flex items-center gap-2 w-full sm:w-auto justify-center">
+                        <i data-lucide="layers" class="w-5 h-5"></i> Explore Consulting Services
                     </a>
+                    <a href="#consultation"
+                        class="btn-secondary px-8 py-4 text-base font-semibold inline-flex items-center gap-2 border border-white/40 text-white hover:bg-white/10 w-full sm:w-auto justify-center">
+                        <i data-lucide="calendar" class="w-5 h-5"></i> Request Site Assessment
+                    </a>
+                </div>
+
+                <div class="flex flex-wrap items-center justify-center gap-6 pt-6 border-t border-white/15 text-xs text-gray-300">
+                    <span class="flex items-center gap-1.5"><i data-lucide="shield-check" class="w-4 h-4 text-accent"></i> Certified Ecological Planners</span>
+                    <span class="flex items-center gap-1.5"><i data-lucide="droplet" class="w-4 h-4 text-accent"></i> Watershed-Scale Hydrology</span>
+                    <span class="flex items-center gap-1.5"><i data-lucide="leaf" class="w-4 h-4 text-accent"></i> 100% Pesticide & Neonic-Free</span>
                 </div>
             </div>
         </section>
 
-        <!-- SECTION 2 - Services -->
+        <!-- SECTION 2 - Core Consulting Services -->
         <section id="services" class="py-24 bg-bg-light">
             <div class="max-w-7xl mx-auto px-6">
                 <div class="text-center mb-16" data-aos="fade-up">
-                    <h2 class="text-3xl md:text-4xl font-bold text-primary mb-4 font-serif">Comprehensive Restoration
-                        Services</h2>
-                    <p class="text-lg opacity-80 max-w-2xl mx-auto">Expert ecological planning and execution for
-                        properties of all sizes.</p>
+                    <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-secondary/10 text-secondary font-semibold text-xs tracking-wider uppercase mb-4">
+                        <i data-lucide="compass" class="w-4 h-4"></i> Whole-Ecosystem Advisory
+                    </div>
+                    <h2 class="text-3xl md:text-5xl font-bold text-primary mb-4 font-serif">Core Consulting Services</h2>
+                    <p class="text-lg opacity-80 max-w-3xl mx-auto leading-relaxed">
+                        Scientifically-grounded consulting programs blending native ecology, regenerative agriculture, and biological management to build lasting landscape fertility and economic return.
+                    </p>
                 </div>
 
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-                    <!-- Service 1 -->
-                    <div class="native-card p-8 border border-gray-100 hover:shadow-lg transition-shadow group"
+                    <!-- Service 1: Soil Health & Farming -->
+                    <div class="native-card group flex flex-col h-full overflow-hidden rounded-2xl shadow-lg border border-gray-100 hover:shadow-2xl transition-all duration-500 hover:-translate-y-1.5"
                         data-aos="fade-up" data-aos-delay="100">
-                        <i data-lucide="microscope"
-                            class="w-12 h-12 text-secondary mb-6 group-hover:scale-110 transition-transform"></i>
-                        <h3 class="text-xl font-bold mb-3 text-primary">Site <br class="hidden lg:block"> Assessment</h3>
-                        <p class="text-sm opacity-70 leading-relaxed">Detailed analysis of soil health, hydrology, and
-                            existing ecology to form a baseline.</p>
+                        <div class="relative aspect-[16/11] overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1464226184884-fa280b87c399?auto=format&fit=crop&w=800&q=80"
+                                alt="Soil Health and Farming Consulting"
+                                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/75 via-transparent to-transparent"></div>
+                            <span class="absolute bottom-3 left-3 text-[11px] font-bold uppercase tracking-wider text-accent bg-black/60 backdrop-blur-md px-2.5 py-1 rounded-full border border-white/20">
+                                Soil Microbiology
+                            </span>
+                            <div class="absolute top-3 right-3 w-8 h-8 rounded-full bg-primary/80 backdrop-blur-md flex items-center justify-center text-accent shadow">
+                                <i data-lucide="sprout" class="w-4 h-4"></i>
+                            </div>
+                        </div>
+                        <div class="p-6 flex flex-col flex-grow">
+                            <h3 class="text-xl font-bold font-serif text-primary mb-2 group-hover:text-accent transition-colors">
+                                Soil Health & Farming
+                            </h3>
+                            <p class="text-xs opacity-75 leading-relaxed mb-4 flex-grow">
+                                Comprehensive biological soil testing, fungal-to-bacterial biomass balancing, organic matter regeneration, and no-till cultivation blueprints tailored to native soil taxonomy.
+                            </p>
+                            <ul class="space-y-1.5 text-xs text-text-dark mb-5 border-t border-gray-100 pt-3">
+                                <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-accent shrink-0"></i> <span>Microbiome & fungal audits</span></li>
+                                <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-accent shrink-0"></i> <span>Organic matter rebuilding</span></li>
+                                <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-accent shrink-0"></i> <span>No-till & compost teas</span></li>
+                            </ul>
+                            <a href="#consultation" class="mt-auto pt-3 border-t border-gray-100 flex items-center justify-between text-xs font-bold text-secondary group-hover:text-accent transition-colors">
+                                <span>Inquire About Service</span> <i data-lucide="arrow-right" class="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform"></i>
+                            </a>
+                        </div>
                     </div>
-                    <!-- Service 2 -->
-                    <div class="native-card p-8 border border-gray-100 hover:shadow-lg transition-shadow group"
+
+                    <!-- Service 2: Crop Rotation -->
+                    <div class="native-card group flex flex-col h-full overflow-hidden rounded-2xl shadow-lg border border-gray-100 hover:shadow-2xl transition-all duration-500 hover:-translate-y-1.5"
                         data-aos="fade-up" data-aos-delay="200">
-                        <i data-lucide="map"
-                            class="w-12 h-12 text-secondary mb-6 group-hover:scale-110 transition-transform"></i>
-                        <h3 class="text-xl font-bold mb-3 text-primary">Native Plant Planning</h3>
-                        <p class="text-sm opacity-70 leading-relaxed">Custom plant palettes tailored to your specific
-                            ecoregion and site conditions.</p>
+                        <div class="relative aspect-[16/11] overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1595974482597-4b8da8879bc5?auto=format&fit=crop&w=800&q=80"
+                                alt="Crop Rotation and Cover Cropping"
+                                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/75 via-transparent to-transparent"></div>
+                            <span class="absolute bottom-3 left-3 text-[11px] font-bold uppercase tracking-wider text-accent bg-black/60 backdrop-blur-md px-2.5 py-1 rounded-full border border-white/20">
+                                Field Agronomy
+                            </span>
+                            <div class="absolute top-3 right-3 w-8 h-8 rounded-full bg-primary/80 backdrop-blur-md flex items-center justify-center text-accent shadow">
+                                <i data-lucide="repeat" class="w-4 h-4"></i>
+                            </div>
+                        </div>
+                        <div class="p-6 flex flex-col flex-grow">
+                            <h3 class="text-xl font-bold font-serif text-primary mb-2 group-hover:text-accent transition-colors">
+                                Crop Rotation
+                            </h3>
+                            <p class="text-xs opacity-75 leading-relaxed mb-4 flex-grow">
+                                Multi-year rotation sequences and multi-species cocktail cover crop blends that interrupt persistent pest cycles, fix atmospheric nitrogen, and eliminate synthetic input reliance.
+                            </p>
+                            <ul class="space-y-1.5 text-xs text-text-dark mb-5 border-t border-gray-100 pt-3">
+                                <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-accent shrink-0"></i> <span>Nitrogen-fixing legumes</span></li>
+                                <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-accent shrink-0"></i> <span>Pest & weed cycle breakage</span></li>
+                                <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-accent shrink-0"></i> <span>Multi-species cover cocktails</span></li>
+                            </ul>
+                            <a href="#consultation" class="mt-auto pt-3 border-t border-gray-100 flex items-center justify-between text-xs font-bold text-secondary group-hover:text-accent transition-colors">
+                                <span>Inquire About Service</span> <i data-lucide="arrow-right" class="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform"></i>
+                            </a>
+                        </div>
                     </div>
-                    <!-- Service 3 -->
-                    <div class="native-card p-8 border border-gray-100 hover:shadow-lg transition-shadow group"
+
+                    <!-- Service 3: Crop Planning -->
+                    <div class="native-card group flex flex-col h-full overflow-hidden rounded-2xl shadow-lg border border-gray-100 hover:shadow-2xl transition-all duration-500 hover:-translate-y-1.5"
                         data-aos="fade-up" data-aos-delay="300">
-                        <i data-lucide="scissors"
-                            class="w-12 h-12 text-secondary mb-6 group-hover:scale-110 transition-transform"></i>
-                        <h3 class="text-xl font-bold mb-3 text-primary">Invasive Management</h3>
-                        <p class="text-sm opacity-70 leading-relaxed">Strategic, low-impact removal of invasive species
-                            that choke out native flora.</p>
+                        <div class="relative aspect-[16/11] overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1585320806297-9794b3e4eeae?auto=format&fit=crop&w=800&q=80"
+                                alt="Crop Planning and Succession Modeling"
+                                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/75 via-transparent to-transparent"></div>
+                            <span class="absolute bottom-3 left-3 text-[11px] font-bold uppercase tracking-wider text-accent bg-black/60 backdrop-blur-md px-2.5 py-1 rounded-full border border-white/20">
+                                Production Strategy
+                            </span>
+                            <div class="absolute top-3 right-3 w-8 h-8 rounded-full bg-primary/80 backdrop-blur-md flex items-center justify-center text-accent shadow">
+                                <i data-lucide="calendar" class="w-4 h-4"></i>
+                            </div>
+                        </div>
+                        <div class="p-6 flex flex-col flex-grow">
+                            <h3 class="text-xl font-bold font-serif text-primary mb-2 group-hover:text-accent transition-colors">
+                                Crop Planning
+                            </h3>
+                            <p class="text-xs opacity-75 leading-relaxed mb-4 flex-grow">
+                                Data-driven succession schedules, companion planting matrices, polyculture spatial layout, and nursery propagation calendars calibrated to your microclimate and market demands.
+                            </p>
+                            <ul class="space-y-1.5 text-xs text-text-dark mb-5 border-t border-gray-100 pt-3">
+                                <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-accent shrink-0"></i> <span>Four-season succession grids</span></li>
+                                <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-accent shrink-0"></i> <span>Companion polyculture layout</span></li>
+                                <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-accent shrink-0"></i> <span>Frost & sun-angle mapping</span></li>
+                            </ul>
+                            <a href="#consultation" class="mt-auto pt-3 border-t border-gray-100 flex items-center justify-between text-xs font-bold text-secondary group-hover:text-accent transition-colors">
+                                <span>Inquire About Service</span> <i data-lucide="arrow-right" class="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform"></i>
+                            </a>
+                        </div>
                     </div>
-                    <!-- Service 4 -->
-                    <div class="native-card p-8 border border-gray-100 hover:shadow-lg transition-shadow group"
+
+                    <!-- Service 4: Water Management -->
+                    <div class="native-card group flex flex-col h-full overflow-hidden rounded-2xl shadow-lg border border-gray-100 hover:shadow-2xl transition-all duration-500 hover:-translate-y-1.5"
                         data-aos="fade-up" data-aos-delay="400">
-                        <i data-lucide="bug"
-                            class="w-12 h-12 text-secondary mb-6 group-hover:scale-110 transition-transform"></i>
-                        <h3 class="text-xl font-bold mb-3 text-primary">Pollinator Habitats</h3>
-                        <p class="text-sm opacity-70 leading-relaxed">High-density floral plantings designed
-                            specifically to support local bee and butterfly populations.</p>
+                        <div class="relative aspect-[16/11] overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1516214104703-d870798883c5?auto=format&fit=crop&w=800&q=80"
+                                alt="Water Management and Swale Design"
+                                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/75 via-transparent to-transparent"></div>
+                            <span class="absolute bottom-3 left-3 text-[11px] font-bold uppercase tracking-wider text-accent bg-black/60 backdrop-blur-md px-2.5 py-1 rounded-full border border-white/20">
+                                Hydrology & Keyline
+                            </span>
+                            <div class="absolute top-3 right-3 w-8 h-8 rounded-full bg-primary/80 backdrop-blur-md flex items-center justify-center text-accent shadow">
+                                <i data-lucide="droplets" class="w-4 h-4"></i>
+                            </div>
+                        </div>
+                        <div class="p-6 flex flex-col flex-grow">
+                            <h3 class="text-xl font-bold font-serif text-primary mb-2 group-hover:text-accent transition-colors">
+                                Water Management
+                            </h3>
+                            <p class="text-xs opacity-75 leading-relaxed mb-4 flex-grow">
+                                Topographical Keyline layout, swale design, retention wetland construction, and rainwater infiltration systems that prevent runoff, halt erosion, and store ground moisture.
+                            </p>
+                            <ul class="space-y-1.5 text-xs text-text-dark mb-5 border-t border-gray-100 pt-3">
+                                <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-accent shrink-0"></i> <span>Keyline contour catchments</span></li>
+                                <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-accent shrink-0"></i> <span>Retention ponds & wetlands</span></li>
+                                <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-accent shrink-0"></i> <span>Drought-resilience bioswales</span></li>
+                            </ul>
+                            <a href="#consultation" class="mt-auto pt-3 border-t border-gray-100 flex items-center justify-between text-xs font-bold text-secondary group-hover:text-accent transition-colors">
+                                <span>Inquire About Service</span> <i data-lucide="arrow-right" class="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform"></i>
+                            </a>
+                        </div>
                     </div>
-                    <!-- Service 5 -->
-                    <div class="native-card p-8 border border-gray-100 hover:shadow-lg transition-shadow group"
+
+                    <!-- Service 5: Livestock -->
+                    <div class="native-card group flex flex-col h-full overflow-hidden rounded-2xl shadow-lg border border-gray-100 hover:shadow-2xl transition-all duration-500 hover:-translate-y-1.5"
                         data-aos="fade-up" data-aos-delay="100">
-                        <i data-lucide="trees"
-                            class="w-12 h-12 text-secondary mb-6 group-hover:scale-110 transition-transform"></i>
-                        <h3 class="text-xl font-bold mb-3 text-primary">Woodland Restoration</h3>
-                        <p class="text-sm opacity-70 leading-relaxed">Rebuilding complex forest understories with native
-                            shrubs, ferns, and ephemerals.</p>
+                        <div class="relative aspect-[16/11] overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1500595046743-cd271d694d30?auto=format&fit=crop&w=800&q=80"
+                                alt="Livestock and Managed Rotational Grazing"
+                                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/75 via-transparent to-transparent"></div>
+                            <span class="absolute bottom-3 left-3 text-[11px] font-bold uppercase tracking-wider text-accent bg-black/60 backdrop-blur-md px-2.5 py-1 rounded-full border border-white/20">
+                                Regenerative Grazing
+                            </span>
+                            <div class="absolute top-3 right-3 w-8 h-8 rounded-full bg-primary/80 backdrop-blur-md flex items-center justify-center text-accent shadow">
+                                <i data-lucide="shield" class="w-4 h-4"></i>
+                            </div>
+                        </div>
+                        <div class="p-6 flex flex-col flex-grow">
+                            <h3 class="text-xl font-bold font-serif text-primary mb-2 group-hover:text-accent transition-colors">
+                                Livestock Integration
+                            </h3>
+                            <p class="text-xs opacity-75 leading-relaxed mb-4 flex-grow">
+                                Adaptive Multi-Paddock (AMP) rotational grazing designs that optimize stocking densities, accelerate topsoil accumulation, and cycle nutrients across pasture and prairie.
+                            </p>
+                            <ul class="space-y-1.5 text-xs text-text-dark mb-5 border-t border-gray-100 pt-3">
+                                <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-accent shrink-0"></i> <span>AMP high-density rotations</span></li>
+                                <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-accent shrink-0"></i> <span>Pasture forage quality tests</span></li>
+                                <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-accent shrink-0"></i> <span>Living fence & paddock layout</span></li>
+                            </ul>
+                            <a href="#consultation" class="mt-auto pt-3 border-t border-gray-100 flex items-center justify-between text-xs font-bold text-secondary group-hover:text-accent transition-colors">
+                                <span>Inquire About Service</span> <i data-lucide="arrow-right" class="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform"></i>
+                            </a>
+                        </div>
                     </div>
-                    <!-- Service 6 -->
-                    <div class="native-card p-8 border border-gray-100 hover:shadow-lg transition-shadow group"
+
+                    <!-- Service 6: Biodiversity -->
+                    <div class="native-card group flex flex-col h-full overflow-hidden rounded-2xl shadow-lg border border-gray-100 hover:shadow-2xl transition-all duration-500 hover:-translate-y-1.5"
                         data-aos="fade-up" data-aos-delay="200">
-                        <i data-lucide="sun"
-                            class="w-12 h-12 text-secondary mb-6 group-hover:scale-110 transition-transform"></i>
-                        <h3 class="text-xl font-bold mb-3 text-primary">Prairie Restoration</h3>
-                        <p class="text-sm opacity-70 leading-relaxed">Establishing deep-rooted native grasses and forbs
-                            that restore soil health and sequester carbon.</p>
+                        <div class="relative aspect-[16/11] overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1558642452-9d2a7deb7f62?auto=format&fit=crop&w=800&q=80"
+                                alt="Biodiversity Enhancement and Pollinators"
+                                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/75 via-transparent to-transparent"></div>
+                            <span class="absolute bottom-3 left-3 text-[11px] font-bold uppercase tracking-wider text-accent bg-black/60 backdrop-blur-md px-2.5 py-1 rounded-full border border-white/20">
+                                Ecosystem Services
+                            </span>
+                            <div class="absolute top-3 right-3 w-8 h-8 rounded-full bg-primary/80 backdrop-blur-md flex items-center justify-center text-accent shadow">
+                                <i data-lucide="leaf" class="w-4 h-4"></i>
+                            </div>
+                        </div>
+                        <div class="p-6 flex flex-col flex-grow">
+                            <h3 class="text-xl font-bold font-serif text-primary mb-2 group-hover:text-accent transition-colors">
+                                Biodiversity Enhancement
+                            </h3>
+                            <p class="text-xs opacity-75 leading-relaxed mb-4 flex-grow">
+                                Establishing native wildflower meadow strips, predator-attracting beetle banks, and avian corridors that deliver biological pest suppression and restore critical pollinator networks.
+                            </p>
+                            <ul class="space-y-1.5 text-xs text-text-dark mb-5 border-t border-gray-100 pt-3">
+                                <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-accent shrink-0"></i> <span>Monarch & bee meadow strips</span></li>
+                                <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-accent shrink-0"></i> <span>Natural predator beetle banks</span></li>
+                                <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-accent shrink-0"></i> <span>Native hedgerow connections</span></li>
+                            </ul>
+                            <a href="#consultation" class="mt-auto pt-3 border-t border-gray-100 flex items-center justify-between text-xs font-bold text-secondary group-hover:text-accent transition-colors">
+                                <span>Inquire About Service</span> <i data-lucide="arrow-right" class="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform"></i>
+                            </a>
+                        </div>
                     </div>
-                    <!-- Service 7 -->
-                    <div class="native-card p-8 border border-gray-100 hover:shadow-lg transition-shadow group"
+
+                    <!-- Service 7: Agroforestry -->
+                    <div class="native-card group flex flex-col h-full overflow-hidden rounded-2xl shadow-lg border border-gray-100 hover:shadow-2xl transition-all duration-500 hover:-translate-y-1.5"
                         data-aos="fade-up" data-aos-delay="300">
-                        <i data-lucide="droplets"
-                            class="w-12 h-12 text-secondary mb-6 group-hover:scale-110 transition-transform"></i>
-                        <h3 class="text-xl font-bold mb-3 text-primary">Wetland Planting</h3>
-                        <p class="text-sm opacity-70 leading-relaxed">Restoring riparian buffers, bioswales, and rain
-                            gardens with water-loving natives.</p>
+                        <div class="relative aspect-[16/11] overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1513836279014-a89f7a76ae86?auto=format&fit=crop&w=800&q=80"
+                                alt="Agroforestry and Alley Cropping"
+                                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/75 via-transparent to-transparent"></div>
+                            <span class="absolute bottom-3 left-3 text-[11px] font-bold uppercase tracking-wider text-accent bg-black/60 backdrop-blur-md px-2.5 py-1 rounded-full border border-white/20">
+                                Tree Systems
+                            </span>
+                            <div class="absolute top-3 right-3 w-8 h-8 rounded-full bg-primary/80 backdrop-blur-md flex items-center justify-center text-accent shadow">
+                                <i data-lucide="trees" class="w-4 h-4"></i>
+                            </div>
+                        </div>
+                        <div class="p-6 flex flex-col flex-grow">
+                            <h3 class="text-xl font-bold font-serif text-primary mb-2 group-hover:text-accent transition-colors">
+                                Agroforestry
+                            </h3>
+                            <p class="text-xs opacity-75 leading-relaxed mb-4 flex-grow">
+                                Integrating multi-tier alley cropping, perennial fruit and nut canopies, timber rows, and shelterbelts that buffer crops against climate extremes and build perennial equity.
+                            </p>
+                            <ul class="space-y-1.5 text-xs text-text-dark mb-5 border-t border-gray-100 pt-3">
+                                <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-accent shrink-0"></i> <span>Alley cropping & fruit rows</span></li>
+                                <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-accent shrink-0"></i> <span>Perennial windbreak buffers</span></li>
+                                <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-accent shrink-0"></i> <span>Timber & nut capital growth</span></li>
+                            </ul>
+                            <a href="#consultation" class="mt-auto pt-3 border-t border-gray-100 flex items-center justify-between text-xs font-bold text-secondary group-hover:text-accent transition-colors">
+                                <span>Inquire About Service</span> <i data-lucide="arrow-right" class="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform"></i>
+                            </a>
+                        </div>
                     </div>
-                    <!-- Service 8 -->
-                    <div class="native-card p-8 border border-gray-100 hover:shadow-lg transition-shadow group"
+
+                    <!-- Service 8: Farm Business and Profitability -->
+                    <div class="native-card group flex flex-col h-full overflow-hidden rounded-2xl shadow-lg border border-gray-100 hover:shadow-2xl transition-all duration-500 hover:-translate-y-1.5"
                         data-aos="fade-up" data-aos-delay="400">
-                        <i data-lucide="home"
-                            class="w-12 h-12 text-secondary mb-6 group-hover:scale-110 transition-transform"></i>
-                        <h3 class="text-xl font-bold mb-3 text-primary">Landscape Conversion</h3>
-                        <p class="text-sm opacity-70 leading-relaxed">Transitioning traditional sterile lawns into
-                            vibrant, sustainable ecological landscapes.</p>
+                        <div class="relative aspect-[16/11] overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1488459716781-31db52582fe9?auto=format&fit=crop&w=800&q=80"
+                                alt="Farm Business and Profitability Advisory"
+                                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/75 via-transparent to-transparent"></div>
+                            <span class="absolute bottom-3 left-3 text-[11px] font-bold uppercase tracking-wider text-accent bg-black/60 backdrop-blur-md px-2.5 py-1 rounded-full border border-white/20">
+                                Economics & Grants
+                            </span>
+                            <div class="absolute top-3 right-3 w-8 h-8 rounded-full bg-primary/80 backdrop-blur-md flex items-center justify-center text-accent shadow">
+                                <i data-lucide="trending-up" class="w-4 h-4"></i>
+                            </div>
+                        </div>
+                        <div class="p-6 flex flex-col flex-grow">
+                            <h3 class="text-xl font-bold font-serif text-primary mb-2 group-hover:text-accent transition-colors">
+                                Farm Business & Profitability
+                            </h3>
+                            <p class="text-xs opacity-75 leading-relaxed mb-4 flex-grow">
+                                Whole-farm financial enterprise modeling, NRCS / EQIP / CSP conservation grant funding capture, organic certification pathways, and high-margin direct distribution channels.
+                            </p>
+                            <ul class="space-y-1.5 text-xs text-text-dark mb-5 border-t border-gray-100 pt-3">
+                                <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-accent shrink-0"></i> <span>NRCS & EQIP grant navigation</span></li>
+                                <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-accent shrink-0"></i> <span>Input reduction & margin gains</span></li>
+                                <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-accent shrink-0"></i> <span>Value-added organic pathways</span></li>
+                            </ul>
+                            <a href="#consultation" class="mt-auto pt-3 border-t border-gray-100 flex items-center justify-between text-xs font-bold text-secondary group-hover:text-accent transition-colors">
+                                <span>Inquire About Service</span> <i data-lucide="arrow-right" class="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform"></i>
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -230,53 +437,87 @@
         <section class="py-24 bg-primary text-white">
             <div class="max-w-7xl mx-auto px-6">
                 <div class="text-center mb-16" data-aos="fade-up">
-                    <h2 class="text-3xl md:text-4xl font-bold font-serif mb-4">Our Restoration Process</h2>
-                    <p class="text-lg opacity-80">A scientifically-backed approach to ecological recovery.</p>
+                    <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/10 text-accent font-semibold text-xs tracking-wider uppercase mb-4 border border-white/20">
+                        <i data-lucide="git-branch" class="w-4 h-4"></i> Five-Phase Scientific Workflow
+                    </div>
+                    <h2 class="text-3xl md:text-5xl font-bold font-serif mb-4 text-white">Our Restoration Process</h2>
+                    <p class="text-lg opacity-85 max-w-2xl mx-auto text-gray-200">A rigorous, biologically-backed methodology ensuring self-sustaining ecological recovery.</p>
                 </div>
 
-                <div class="grid grid-cols-1 md:grid-cols-5 gap-4 relative">
-                    <!-- Progress Line for Desktop -->
-                    <div class="hidden md:block absolute top-1/2 left-0 w-full h-1 bg-white/20 -translate-y-1/2 z-0">
+                <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-6">
+                    <!-- Step 1 -->
+                    <div class="group bg-white/10 backdrop-blur-md rounded-2xl overflow-hidden border border-white/15 hover:border-accent/60 transition-all duration-500 hover:-translate-y-1.5 flex flex-col shadow-xl" data-aos="fade-up" data-aos-delay="100">
+                        <div class="relative aspect-[4/3] overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=600&q=80"
+                                alt="Ecological Site Assessment" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
+                            <span class="absolute top-3 left-3 w-8 h-8 rounded-full bg-accent text-primary font-bold text-sm flex items-center justify-center shadow-lg">1</span>
+                            <span class="absolute bottom-2.5 left-3 text-[11px] font-bold uppercase tracking-wider text-accent bg-black/60 backdrop-blur-md px-2.5 py-0.5 rounded-full border border-white/20">Phase 01</span>
+                        </div>
+                        <div class="p-5 flex flex-col flex-grow bg-black/20">
+                            <h4 class="font-bold text-lg font-serif text-white mb-1.5 group-hover:text-accent transition-colors">Site Assessment</h4>
+                            <p class="text-xs text-gray-300 leading-relaxed opacity-90">In-depth soil microbiology profiling, hydrology flow modeling, and invasive seed-bank audits to establish an ecological baseline.</p>
+                        </div>
                     </div>
 
-                    <div class="relative z-10 text-center" data-aos="fade-up" data-aos-delay="100">
-                        <div
-                            class="w-16 h-16 mx-auto bg-primary border-4 border-accent rounded-full flex items-center justify-center text-xl font-bold text-accent mb-4 shadow-xl">
-                            1</div>
-                        <h4 class="font-bold text-lg mb-2">Assessment</h4>
-                        <p class="text-xs opacity-70">Evaluating the land's current ecological state.</p>
+                    <!-- Step 2 -->
+                    <div class="group bg-white/10 backdrop-blur-md rounded-2xl overflow-hidden border border-white/15 hover:border-accent/60 transition-all duration-500 hover:-translate-y-1.5 flex flex-col shadow-xl" data-aos="fade-up" data-aos-delay="200">
+                        <div class="relative aspect-[4/3] overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=600&q=80"
+                                alt="Restoration Masterplan Planning" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
+                            <span class="absolute top-3 left-3 w-8 h-8 rounded-full bg-accent text-primary font-bold text-sm flex items-center justify-center shadow-lg">2</span>
+                            <span class="absolute bottom-2.5 left-3 text-[11px] font-bold uppercase tracking-wider text-accent bg-black/60 backdrop-blur-md px-2.5 py-0.5 rounded-full border border-white/20">Phase 02</span>
+                        </div>
+                        <div class="p-5 flex flex-col flex-grow bg-black/20">
+                            <h4 class="font-bold text-lg font-serif text-white mb-1.5 group-hover:text-accent transition-colors">Blueprint Design</h4>
+                            <p class="text-xs text-gray-300 leading-relaxed opacity-90">Developing site-specific genotype palettes, root architecture zoning, and four-season pollinator succession schedules.</p>
+                        </div>
                     </div>
 
-                    <div class="relative z-10 text-center" data-aos="fade-up" data-aos-delay="200">
-                        <div
-                            class="w-16 h-16 mx-auto bg-primary border-4 border-accent rounded-full flex items-center justify-center text-xl font-bold text-accent mb-4 shadow-xl">
-                            2</div>
-                        <h4 class="font-bold text-lg mb-2">Planning</h4>
-                        <p class="text-xs opacity-70">Creating a detailed plant and methodology blueprint.</p>
+                    <!-- Step 3 -->
+                    <div class="group bg-white/10 backdrop-blur-md rounded-2xl overflow-hidden border border-white/15 hover:border-accent/60 transition-all duration-500 hover:-translate-y-1.5 flex flex-col shadow-xl" data-aos="fade-up" data-aos-delay="300">
+                        <div class="relative aspect-[4/3] overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1416879595882-3373a0480b5b?auto=format&fit=crop&w=600&q=80"
+                                alt="Non-Chemical Site Preparation" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
+                            <span class="absolute top-3 left-3 w-8 h-8 rounded-full bg-accent text-primary font-bold text-sm flex items-center justify-center shadow-lg">3</span>
+                            <span class="absolute bottom-2.5 left-3 text-[11px] font-bold uppercase tracking-wider text-accent bg-black/60 backdrop-blur-md px-2.5 py-0.5 rounded-full border border-white/20">Phase 03</span>
+                        </div>
+                        <div class="p-5 flex flex-col flex-grow bg-black/20">
+                            <h4 class="font-bold text-lg font-serif text-white mb-1.5 group-hover:text-accent transition-colors">Site Preparation</h4>
+                            <p class="text-xs text-gray-300 leading-relaxed opacity-90">Low-disturbance removal of persistent invasives, bioswale contouring, and biological microbial soil inoculation.</p>
+                        </div>
                     </div>
 
-                    <div class="relative z-10 text-center" data-aos="fade-up" data-aos-delay="300">
-                        <div
-                            class="w-16 h-16 mx-auto bg-primary border-4 border-accent rounded-full flex items-center justify-center text-xl font-bold text-accent mb-4 shadow-xl">
-                            3</div>
-                        <h4 class="font-bold text-lg mb-2">Preparation</h4>
-                        <p class="text-xs opacity-70">Clearing invasives and preparing the seedbed.</p>
+                    <!-- Step 4 -->
+                    <div class="group bg-white/10 backdrop-blur-md rounded-2xl overflow-hidden border border-white/15 hover:border-accent/60 transition-all duration-500 hover:-translate-y-1.5 flex flex-col shadow-xl" data-aos="fade-up" data-aos-delay="400">
+                        <div class="relative aspect-[4/3] overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1589923188900-85dae523342b?auto=format&fit=crop&w=600&q=80"
+                                alt="Native Plug and Tree Planting" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
+                            <span class="absolute top-3 left-3 w-8 h-8 rounded-full bg-accent text-primary font-bold text-sm flex items-center justify-center shadow-lg">4</span>
+                            <span class="absolute bottom-2.5 left-3 text-[11px] font-bold uppercase tracking-wider text-accent bg-black/60 backdrop-blur-md px-2.5 py-0.5 rounded-full border border-white/20">Phase 04</span>
+                        </div>
+                        <div class="p-5 flex flex-col flex-grow bg-black/20">
+                            <h4 class="font-bold text-lg font-serif text-white mb-1.5 group-hover:text-accent transition-colors">Native Planting</h4>
+                            <p class="text-xs text-gray-300 leading-relaxed opacity-90">Precision installation of nursery-grown, neonicotinoid-free deep-plug wildflowers, native grasses, and bare-root trees.</p>
+                        </div>
                     </div>
 
-                    <div class="relative z-10 text-center" data-aos="fade-up" data-aos-delay="400">
-                        <div
-                            class="w-16 h-16 mx-auto bg-primary border-4 border-accent rounded-full flex items-center justify-center text-xl font-bold text-accent mb-4 shadow-xl">
-                            4</div>
-                        <h4 class="font-bold text-lg mb-2">Planting</h4>
-                        <p class="text-xs opacity-70">Installing high-quality native species.</p>
-                    </div>
-
-                    <div class="relative z-10 text-center" data-aos="fade-up" data-aos-delay="500">
-                        <div
-                            class="w-16 h-16 mx-auto bg-primary border-4 border-accent rounded-full flex items-center justify-center text-xl font-bold text-accent mb-4 shadow-xl">
-                            5</div>
-                        <h4 class="font-bold text-lg mb-2">Monitoring</h4>
-                        <p class="text-xs opacity-70">Ensuring long-term establishment and health.</p>
+                    <!-- Step 5 -->
+                    <div class="group bg-white/10 backdrop-blur-md rounded-2xl overflow-hidden border border-white/15 hover:border-accent/60 transition-all duration-500 hover:-translate-y-1.5 flex flex-col shadow-xl" data-aos="fade-up" data-aos-delay="500">
+                        <div class="relative aspect-[4/3] overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1448375240586-882707db888b?auto=format&fit=crop&w=600&q=80"
+                                alt="Restoration Monitoring and Health" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
+                            <span class="absolute top-3 left-3 w-8 h-8 rounded-full bg-accent text-primary font-bold text-sm flex items-center justify-center shadow-lg">5</span>
+                            <span class="absolute bottom-2.5 left-3 text-[11px] font-bold uppercase tracking-wider text-accent bg-black/60 backdrop-blur-md px-2.5 py-0.5 rounded-full border border-white/20">Phase 05</span>
+                        </div>
+                        <div class="p-5 flex flex-col flex-grow bg-black/20">
+                            <h4 class="font-bold text-lg font-serif text-white mb-1.5 group-hover:text-accent transition-colors">Monitoring</h4>
+                            <p class="text-xs text-gray-300 leading-relaxed opacity-90">Multi-season botanical health audits, spot weed stewardship, and our 3-year establishment guarantee for total success.</p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -356,40 +597,123 @@
         </section>
 
         <!-- SECTION 5 - Project Consultation CTA -->
-        <section class="py-32 bg-secondary relative overflow-hidden">
-            <div class="absolute inset-0 z-0 opacity-10">
-                <img src="https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?auto=format&fit=crop&w=1920&q=80"
-                    alt="Leaves background" class="w-full h-full object-cover">
+        <section id="consultation" class="py-28 bg-[#14261e] text-white relative overflow-hidden">
+            <div class="absolute inset-0 z-0">
+                <img src="assets/images/echinacea-hero-bg.jpg" alt="Native Habitat Restoration" class="w-full h-full object-cover opacity-15">
+                <div class="absolute inset-0 bg-gradient-to-t from-[#14261e] via-[#14261e]/90 to-transparent"></div>
             </div>
 
-            <div class="max-w-4xl mx-auto px-6 text-center relative z-10" data-aos="zoom-in">
-                <h2 class="text-3xl md:text-4xl font-bold mb-6 text-white font-serif">Ready to Restore Your Land?</h2>
-                <p class="text-xl mb-10 text-gray-200 leading-relaxed max-w-2xl mx-auto">
-                    Fill out our brief enquiry form to tell us about your property. Our ecological team will contact you
-                    to schedule an initial consultation.
-                </p>
-                <div
-                    class="bg-white/10 backdrop-blur-md p-8 rounded-2xl border border-white/20 mb-8 text-left max-w-2xl mx-auto">
-                    <form class="space-y-4" onsubmit="event.preventDefault(); alert('Request Sent!');">
-                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                            <input type="text" placeholder="First Name" required
-                                class="w-full px-4 py-3 bg-white/90 rounded-lg focus:outline-none focus:ring-2 focus:ring-accent text-primary">
-                            <input type="text" placeholder="Last Name" required
-                                class="w-full px-4 py-3 bg-white/90 rounded-lg focus:outline-none focus:ring-2 focus:ring-accent text-primary">
+            <div class="max-w-7xl mx-auto px-6 relative z-10">
+                <div class="text-center max-w-3xl mx-auto mb-16" data-aos="fade-up">
+                    <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-accent/20 text-accent font-semibold text-xs tracking-wider uppercase mb-4 border border-accent/30">
+                        <i data-lucide="calendar" class="w-4 h-4"></i> Free Initial Site Assessment
+                    </div>
+                    <h2 class="text-3xl md:text-5xl font-bold font-serif text-white mb-4">Ready to Restore Your Land?</h2>
+                    <p class="text-base md:text-lg text-gray-300 max-w-2xl mx-auto leading-relaxed">
+                        Whether you manage five hundred acres of degraded watershed or a half-acre residential parcel, our ecological team will craft a site-specific restoration masterplan.
+                    </p>
+                </div>
+
+                <div class="grid lg:grid-cols-12 gap-12 items-center">
+                    <!-- Left: Form -->
+                    <div class="lg:col-span-6" data-aos="fade-right">
+                        <div class="bg-white/10 backdrop-blur-md p-8 md:p-10 rounded-3xl border border-white/20 shadow-2xl">
+                            <h3 class="text-xl font-bold text-white font-serif mb-2">Request an On-Site Consultation</h3>
+                            <p class="text-xs text-gray-300 mb-6">Fill out your project details and an ecologist will contact you within 24 hours.</p>
+
+                            <form class="space-y-4" onsubmit="event.preventDefault(); alert('Consultation Request Received! A Verdantia ecologist will contact you within 24 hours.');">
+                                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                    <div>
+                                        <label class="block text-xs font-semibold uppercase tracking-wider text-gray-300 mb-1">First Name *</label>
+                                        <input type="text" placeholder="John" required
+                                            class="w-full px-4 py-3 bg-white/95 text-text-dark rounded-xl focus:outline-none focus:ring-2 focus:ring-accent text-sm">
+                                    </div>
+                                    <div>
+                                        <label class="block text-xs font-semibold uppercase tracking-wider text-gray-300 mb-1">Last Name *</label>
+                                        <input type="text" placeholder="Doe" required
+                                            class="w-full px-4 py-3 bg-white/95 text-text-dark rounded-xl focus:outline-none focus:ring-2 focus:ring-accent text-sm">
+                                    </div>
+                                </div>
+                                <div>
+                                    <label class="block text-xs font-semibold uppercase tracking-wider text-gray-300 mb-1">Email Address *</label>
+                                    <input type="email" placeholder="john@example.com" required
+                                        class="w-full px-4 py-3 bg-white/95 text-text-dark rounded-xl focus:outline-none focus:ring-2 focus:ring-accent text-sm">
+                                </div>
+                                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                    <div>
+                                        <label class="block text-xs font-semibold uppercase tracking-wider text-gray-300 mb-1">Phone *</label>
+                                        <input type="tel" placeholder="(555) 000-0000" required
+                                            class="w-full px-4 py-3 bg-white/95 text-text-dark rounded-xl focus:outline-none focus:ring-2 focus:ring-accent text-sm">
+                                    </div>
+                                    <div>
+                                        <label class="block text-xs font-semibold uppercase tracking-wider text-gray-300 mb-1">Project Type *</label>
+                                        <select required
+                                            class="w-full px-4 py-3 bg-white/95 text-text-dark rounded-xl focus:outline-none focus:ring-2 focus:ring-accent text-sm">
+                                            <option value="">Select Scale</option>
+                                            <option value="residential">Residential (< 1 Acre)</option>
+                                            <option value="acreage">Acreage / Estate (1–10 Acres)</option>
+                                            <option value="commercial">Commercial / Institutional</option>
+                                            <option value="large-scale">Watershed / Municipal (> 10 Acres)</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div>
+                                    <label class="block text-xs font-semibold uppercase tracking-wider text-gray-300 mb-1">Approximate Location / Zip Code *</label>
+                                    <input type="text" placeholder="e.g. 12345 or City, State" required
+                                        class="w-full px-4 py-3 bg-white/95 text-text-dark rounded-xl focus:outline-none focus:ring-2 focus:ring-accent text-sm">
+                                </div>
+                                <button type="submit"
+                                    class="btn-primary bg-accent hover:bg-accent-hover text-primary font-bold w-full justify-center py-4 text-base shadow-xl transition-all duration-300 mt-2">
+                                    Schedule Ecological Consultation <i data-lucide="arrow-right" class="w-5 h-5 ml-2"></i>
+                                </button>
+                            </form>
                         </div>
-                        <input type="email" placeholder="Email Address" required
-                            class="w-full px-4 py-3 bg-white/90 rounded-lg focus:outline-none focus:ring-2 focus:ring-accent text-primary">
-                        <select required
-                            class="w-full px-4 py-3 bg-white/90 rounded-lg focus:outline-none focus:ring-2 focus:ring-accent text-primary">
-                            <option value="">Project Type</option>
-                            <option value="residential">Residential Yard</option>
-                            <option value="commercial">Commercial Property</option>
-                            <option value="large-scale">Large Scale Restoration (> 1 Acre)</option>
-                        </select>
-                        <button type="submit"
-                            class="btn-primary bg-accent hover:bg-accent-hover text-primary w-full justify-center py-4 text-lg">Request
-                            Consultation</button>
-                    </form>
+                    </div>
+
+                    <!-- Right: Visual Deliverables Card -->
+                    <div class="lg:col-span-6" data-aos="fade-left">
+                        <div class="rounded-3xl overflow-hidden shadow-2xl border border-white/15 bg-white/5 backdrop-blur-sm p-8">
+                            <div class="relative rounded-2xl overflow-hidden aspect-[16/9] mb-6 shadow-md">
+                                <img src="assets/images/echinacea-hero-bg.jpg" alt="Restoration Prairie Masterplan" class="w-full h-full object-cover">
+                                <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent"></div>
+                                <span class="absolute bottom-3 left-4 text-xs font-bold text-white bg-black/50 backdrop-blur-md px-3 py-1 rounded-full border border-white/20">
+                                    Restored Native Prairie • Season 2
+                                </span>
+                            </div>
+
+                            <h4 class="text-xl font-bold font-serif text-white mb-4">What Every Consultation Includes:</h4>
+
+                            <div class="space-y-4 mb-6">
+                                <div class="flex items-start gap-3">
+                                    <i data-lucide="check-circle" class="w-5 h-5 text-accent mt-0.5 shrink-0"></i>
+                                    <div>
+                                        <p class="font-bold text-white text-sm">On-Site Ecological Soil & Hydrology Audit</p>
+                                        <p class="text-xs text-gray-300">We inspect soil compaction, moisture gradations, sun exposure, and invasive weed seed banks.</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-start gap-3">
+                                    <i data-lucide="check-circle" class="w-5 h-5 text-accent mt-0.5 shrink-0"></i>
+                                    <div>
+                                        <p class="font-bold text-white text-sm">Custom Genotype Species Schedule</p>
+                                        <p class="text-xs text-gray-300">Precision mapping of deep-rooted grasses, pollinator forbs, and foundational canopy species.</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-start gap-3">
+                                    <i data-lucide="check-circle" class="w-5 h-5 text-accent mt-0.5 shrink-0"></i>
+                                    <div>
+                                        <p class="font-bold text-white text-sm">3-Year Establishment Guarantee</p>
+                                        <p class="text-xs text-gray-300">Ongoing monitoring, spot weed control, and replanting support until the habitat is self-sustaining.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Verified Review -->
+                            <div class="p-4 rounded-xl bg-white/10 border border-white/10 text-xs text-gray-200 italic">
+                                "Verdantia converted 8 acres of overgrown invasive thistle into a breathtaking native prairie meadow in under two seasons. Maintenance dropped by 70%."
+                                <span class="block not-italic font-bold text-accent mt-1">— Mark T., Land Trust Director</span>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>

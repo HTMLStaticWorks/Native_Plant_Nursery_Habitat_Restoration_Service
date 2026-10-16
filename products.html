@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr" data-theme="dark">
+<html lang="en" dir="ltr" data-theme="dark" class="dark">
 
 <head>
     <meta charset="UTF-8">
@@ -25,6 +25,7 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
+            darkMode: 'class',
             theme: {
                 extend: {
                     colors: {
@@ -201,67 +202,150 @@
         </section>
 
         <!-- SECTION 3 - Browse by Plant Type -->
-        <section class="py-24">
-            <div class="max-w-7xl mx-auto px-6">
-                <div class="text-center mb-16" data-aos="fade-up">
-                    <h2 class="text-2xl md:text-3xl font-bold font-serif text-primary mb-4">Browse by Plant Type</h2>
-                    <p class="text-lg opacity-80">Build structure and diversity into your ecological design.</p>
+        <section class="py-16 md:py-24">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6">
+                <div class="text-center mb-10 md:mb-16" data-aos="fade-up">
+                    <h2 class="text-2xl md:text-3xl font-bold font-serif text-primary mb-3">Browse by Plant Type</h2>
+                    <p class="text-base md:text-lg opacity-80 max-w-md mx-auto text-balance">Build structure and diversity into your ecological design.</p>
                 </div>
 
-                <div class="grid grid-cols-2 md:grid-cols-3 gap-8">
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+                    <!-- 1: Wildflowers -->
                     <a href="#wildflowers"
-                        class="flex items-center gap-4 p-6 rounded-2xl bg-bg-light hover:shadow-md transition-shadow group"
-                        data-aos="fade-right">
-                        <div
-                            class="w-16 h-16 rounded-full bg-secondary/10 flex items-center justify-center text-secondary group-hover:scale-110 transition-transform">
-                            <i data-lucide="flower-2" class="w-8 h-8"></i>
+                        class="group native-card overflow-hidden border border-gray-200/80 dark:border-white/10 hover:shadow-2xl transition-all duration-500 hover:-translate-y-1.5 flex flex-col"
+                        data-aos="fade-up" data-aos-delay="100">
+                        <div class="relative aspect-[16/10] overflow-hidden">
+                            <img src="assets/images/native-wildflowers.jpg"
+                                alt="Native Wildflowers Collection"
+                                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+                            <span class="absolute bottom-3 left-4 text-xs font-bold uppercase tracking-wider text-accent bg-black/60 backdrop-blur-md px-3 py-1 rounded-full border border-white/20">
+                                120+ Species
+                            </span>
                         </div>
-                        <h3 class="font-bold text-xl text-primary">Wildflowers</h3>
+                        <div class="p-5 sm:p-6 flex flex-col flex-grow">
+                            <h3 class="text-xl font-bold font-serif text-primary mb-2 group-hover:text-accent transition-colors">Wildflowers</h3>
+                            <p class="text-sm opacity-80 leading-relaxed mb-4 flex-grow text-text-dark">High-nectar perennial forbs, prairie coneflowers, asters, and milkweeds designed for vibrant ecological borders.</p>
+                            <div class="pt-3 border-t border-gray-100 dark:border-white/10 flex items-center justify-between text-sm font-semibold text-accent group-hover:text-accent-hover transition-colors">
+                                <span>Browse Wildflowers</span>
+                                <i data-lucide="arrow-right" class="w-4 h-4 group-hover:translate-x-1 transition-transform"></i>
+                            </div>
+                        </div>
                     </a>
+
+                    <!-- 2: Grasses -->
                     <a href="#grasses"
-                        class="flex items-center gap-4 p-6 rounded-2xl bg-bg-light hover:shadow-md transition-shadow group"
-                        data-aos="fade-right" data-aos-delay="100">
-                        <div
-                            class="w-16 h-16 rounded-full bg-secondary/10 flex items-center justify-center text-secondary group-hover:scale-110 transition-transform">
-                            <i data-lucide="wind" class="w-8 h-8"></i>
+                        class="group native-card overflow-hidden border border-gray-200/80 dark:border-white/10 hover:shadow-2xl transition-all duration-500 hover:-translate-y-1.5 flex flex-col"
+                        data-aos="fade-up" data-aos-delay="200">
+                        <div class="relative aspect-[16/10] overflow-hidden">
+                            <img src="assets/images/native-grasses.jpg"
+                                alt="Native Ornamental and Prairie Grasses"
+                                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+                            <span class="absolute bottom-3 left-4 text-xs font-bold uppercase tracking-wider text-accent bg-black/60 backdrop-blur-md px-3 py-1 rounded-full border border-white/20">
+                                45+ Species
+                            </span>
                         </div>
-                        <h3 class="font-bold text-xl text-primary">Grasses</h3>
+                        <div class="p-5 sm:p-6 flex flex-col flex-grow">
+                            <h3 class="text-xl font-bold font-serif text-primary mb-2 group-hover:text-accent transition-colors">Native Grasses</h3>
+                            <p class="text-sm opacity-80 leading-relaxed mb-4 flex-grow text-text-dark">Deep-rooted warm and cool season grasses including Little Bluestem, Prairie Dropseed, and Pink Muhly for year-round texture.</p>
+                            <div class="pt-3 border-t border-gray-100 dark:border-white/10 flex items-center justify-between text-sm font-semibold text-accent group-hover:text-accent-hover transition-colors">
+                                <span>Browse Native Grasses</span>
+                                <i data-lucide="arrow-right" class="w-4 h-4 group-hover:translate-x-1 transition-transform"></i>
+                            </div>
+                        </div>
                     </a>
+
+                    <!-- 3: Shrubs -->
                     <a href="#shrubs"
-                        class="flex items-center gap-4 p-6 rounded-2xl bg-bg-light hover:shadow-md transition-shadow group"
-                        data-aos="fade-right" data-aos-delay="200">
-                        <div
-                            class="w-16 h-16 rounded-full bg-secondary/10 flex items-center justify-center text-secondary group-hover:scale-110 transition-transform">
-                            <i data-lucide="tree-deciduous" class="w-8 h-8"></i>
+                        class="group native-card overflow-hidden border border-gray-200/80 dark:border-white/10 hover:shadow-2xl transition-all duration-500 hover:-translate-y-1.5 flex flex-col"
+                        data-aos="fade-up" data-aos-delay="300">
+                        <div class="relative aspect-[16/10] overflow-hidden">
+                            <img src="assets/images/native-shrubs.jpg"
+                                alt="Native Berry and Flowering Shrubs"
+                                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+                            <span class="absolute bottom-3 left-4 text-xs font-bold uppercase tracking-wider text-accent bg-black/60 backdrop-blur-md px-3 py-1 rounded-full border border-white/20">
+                                60+ Species
+                            </span>
                         </div>
-                        <h3 class="font-bold text-xl text-primary">Shrubs</h3>
+                        <div class="p-5 sm:p-6 flex flex-col flex-grow">
+                            <h3 class="text-xl font-bold font-serif text-primary mb-2 group-hover:text-accent transition-colors">Native Shrubs</h3>
+                            <p class="text-sm opacity-80 leading-relaxed mb-4 flex-grow text-text-dark">Wildlife-sustaining woody perennials like Winterberry Holly, Spicebush, and Arrowwood Viburnum offering winter berries and nesting cover.</p>
+                            <div class="pt-3 border-t border-gray-100 dark:border-white/10 flex items-center justify-between text-sm font-semibold text-accent group-hover:text-accent-hover transition-colors">
+                                <span>Browse Native Shrubs</span>
+                                <i data-lucide="arrow-right" class="w-4 h-4 group-hover:translate-x-1 transition-transform"></i>
+                            </div>
+                        </div>
                     </a>
+
+                    <!-- 4: Trees -->
                     <a href="#trees"
-                        class="flex items-center gap-4 p-6 rounded-2xl bg-bg-light hover:shadow-md transition-shadow group"
-                        data-aos="fade-left">
-                        <div
-                            class="w-16 h-16 rounded-full bg-secondary/10 flex items-center justify-center text-secondary group-hover:scale-110 transition-transform">
-                            <i data-lucide="trees" class="w-8 h-8"></i>
+                        class="group native-card overflow-hidden border border-gray-200/80 dark:border-white/10 hover:shadow-2xl transition-all duration-500 hover:-translate-y-1.5 flex flex-col"
+                        data-aos="fade-up" data-aos-delay="400">
+                        <div class="relative aspect-[16/10] overflow-hidden">
+                            <img src="assets/images/native-trees.jpg"
+                                alt="Native Canopy and Understory Trees"
+                                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+                            <span class="absolute bottom-3 left-4 text-xs font-bold uppercase tracking-wider text-accent bg-black/60 backdrop-blur-md px-3 py-1 rounded-full border border-white/20">
+                                50+ Species
+                            </span>
                         </div>
-                        <h3 class="font-bold text-xl text-primary">Trees</h3>
+                        <div class="p-5 sm:p-6 flex flex-col flex-grow">
+                            <h3 class="text-xl font-bold font-serif text-primary mb-2 group-hover:text-accent transition-colors">Canopy Trees</h3>
+                            <p class="text-sm opacity-80 leading-relaxed mb-4 flex-grow text-text-dark">Foundational keystone species including White Oak, Red Maple, and River Birch that support hundreds of native caterpillar and bird species.</p>
+                            <div class="pt-3 border-t border-gray-100 dark:border-white/10 flex items-center justify-between text-sm font-semibold text-accent group-hover:text-accent-hover transition-colors">
+                                <span>Browse Canopy Trees</span>
+                                <i data-lucide="arrow-right" class="w-4 h-4 group-hover:translate-x-1 transition-transform"></i>
+                            </div>
+                        </div>
                     </a>
+
+                    <!-- 5: Ferns -->
                     <a href="#ferns"
-                        class="flex items-center gap-4 p-6 rounded-2xl bg-bg-light hover:shadow-md transition-shadow group"
-                        data-aos="fade-left" data-aos-delay="100">
-                        <div
-                            class="w-16 h-16 rounded-full bg-secondary/10 flex items-center justify-center text-secondary group-hover:scale-110 transition-transform">
-                            <i data-lucide="leafy-green" class="w-8 h-8"></i>
+                        class="group native-card overflow-hidden border border-gray-200/80 dark:border-white/10 hover:shadow-2xl transition-all duration-500 hover:-translate-y-1.5 flex flex-col"
+                        data-aos="fade-up" data-aos-delay="500">
+                        <div class="relative aspect-[16/10] overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1518531933037-91b2f5f229cc?auto=format&fit=crop&w=600&q=80"
+                                alt="Native Woodland Ferns"
+                                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+                            <span class="absolute bottom-3 left-4 text-xs font-bold uppercase tracking-wider text-accent bg-black/60 backdrop-blur-md px-3 py-1 rounded-full border border-white/20">
+                                25+ Species
+                            </span>
                         </div>
-                        <h3 class="font-bold text-xl text-primary">Ferns</h3>
+                        <div class="p-5 sm:p-6 flex flex-col flex-grow">
+                            <h3 class="text-xl font-bold font-serif text-primary mb-2 group-hover:text-accent transition-colors">Native Ferns</h3>
+                            <p class="text-sm opacity-80 leading-relaxed mb-4 flex-grow text-text-dark">Lush shade-adapted foliage including Maidenhair, Cinnamon, and Christmas Ferns ideal for damp woodland understories and ravines.</p>
+                            <div class="pt-3 border-t border-gray-100 dark:border-white/10 flex items-center justify-between text-sm font-semibold text-accent group-hover:text-accent-hover transition-colors">
+                                <span>Browse Native Ferns</span>
+                                <i data-lucide="arrow-right" class="w-4 h-4 group-hover:translate-x-1 transition-transform"></i>
+                            </div>
+                        </div>
                     </a>
+
+                    <!-- 6: Groundcovers -->
                     <a href="#groundcovers"
-                        class="flex items-center gap-4 p-6 rounded-2xl bg-bg-light hover:shadow-md transition-shadow group"
-                        data-aos="fade-left" data-aos-delay="200">
-                        <div
-                            class="w-16 h-16 rounded-full bg-secondary/10 flex items-center justify-center text-secondary group-hover:scale-110 transition-transform">
-                            <i data-lucide="layout-grid" class="w-8 h-8"></i>
+                        class="group native-card overflow-hidden border border-gray-200/80 dark:border-white/10 hover:shadow-2xl transition-all duration-500 hover:-translate-y-1.5 flex flex-col"
+                        data-aos="fade-up" data-aos-delay="600">
+                        <div class="relative aspect-[16/10] overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1509316975850-ff9c5deb0cd9?auto=format&fit=crop&w=600&q=80"
+                                alt="Native Living Groundcovers"
+                                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+                            <span class="absolute bottom-3 left-4 text-xs font-bold uppercase tracking-wider text-accent bg-black/60 backdrop-blur-md px-3 py-1 rounded-full border border-white/20">
+                                30+ Species
+                            </span>
                         </div>
-                        <h3 class="font-bold text-xl text-primary">Groundcovers</h3>
+                        <div class="p-5 sm:p-6 flex flex-col flex-grow">
+                            <h3 class="text-xl font-bold font-serif text-primary mb-2 group-hover:text-accent transition-colors">Groundcovers</h3>
+                            <p class="text-sm opacity-80 leading-relaxed mb-4 flex-grow text-text-dark">Living green mulches like Wild Ginger, Creeping Phlox, and Pennsylvania Sedge that suppress weeds and stabilize soil.</p>
+                            <div class="pt-3 border-t border-gray-100 dark:border-white/10 flex items-center justify-between text-sm font-semibold text-accent group-hover:text-accent-hover transition-colors">
+                                <span>Browse Groundcovers</span>
+                                <i data-lucide="arrow-right" class="w-4 h-4 group-hover:translate-x-1 transition-transform"></i>
+                            </div>
+                        </div>
                     </a>
                 </div>
             </div>
@@ -376,21 +460,79 @@
         </section>
 
         <!-- SECTION 5 - Plant Selection CTA -->
-        <section class="py-32 relative overflow-hidden">
-            <!-- Decorative blur -->
-            <div class="absolute -top-40 -right-40 w-96 h-96 bg-accent/20 rounded-full blur-3xl"></div>
+        <section class="py-24 relative overflow-hidden bg-bg-light border-t border-gray-200/60 dark:border-white/10">
+            <!-- Decorative background accents -->
+            <div class="absolute -top-40 -right-40 w-96 h-96 bg-accent/15 rounded-full blur-3xl"></div>
             <div class="absolute -bottom-40 -left-40 w-96 h-96 bg-primary/10 rounded-full blur-3xl"></div>
 
-            <div class="max-w-4xl mx-auto px-6 text-center relative z-10" data-aos="zoom-in">
-                <i data-lucide="sprout" class="w-16 h-16 mx-auto mb-6 text-primary"></i>
-                <h2 class="text-3xl md:text-4xl font-bold mb-6 text-primary font-serif">Need Help Selecting?</h2>
-                <p class="text-xl mb-10 opacity-80 leading-relaxed max-w-2xl mx-auto">
-                    Not sure which plants are best for your site conditions? Our ecologists can help you design a custom
-                    plant community for your restoration or landscaping project.
-                </p>
-                <a href="contact.html" class="btn-secondary text-lg px-10 py-4 shadow-xl">
-                    Request Nursery Consultation
-                </a>
+            <div class="max-w-7xl mx-auto px-6 relative z-10">
+                <div class="grid lg:grid-cols-12 gap-12 items-center">
+                    <!-- Left: Description and Steps -->
+                    <div class="lg:col-span-7" data-aos="fade-right">
+                        <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-secondary/10 text-secondary font-semibold text-xs tracking-wider uppercase mb-6">
+                            <i data-lucide="compass" class="w-4 h-4"></i> Custom Plant Matrix Service
+                        </div>
+                        <h2 class="text-3xl md:text-5xl font-bold mb-6 text-primary font-serif leading-tight">
+                            Need Help Selecting <br><span class="text-accent italic">The Right Native Plants?</span>
+                        </h2>
+                        <p class="text-base md:text-lg opacity-80 leading-relaxed mb-8 max-w-xl text-text-dark">
+                            Every site has unique microclimates—from soggy clay ditches to sun-baked sandy slopes. Our on-staff ecologists analyze your site's hydrology and light to recommend plants guaranteed to thrive.
+                        </p>
+
+                        <!-- 3 Step Service Visuals -->
+                        <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-8">
+                            <div class="p-4 rounded-2xl bg-white dark:bg-[#1f3328] border border-gray-100 dark:border-white/10 shadow-sm">
+                                <span class="w-8 h-8 rounded-full bg-primary/10 text-primary font-bold text-sm flex items-center justify-center mb-3">1</span>
+                                <h4 class="font-bold text-sm text-primary mb-1">Site Profile</h4>
+                                <p class="text-xs opacity-75">Send your sun, soil type, and drainage conditions.</p>
+                            </div>
+                            <div class="p-4 rounded-2xl bg-white dark:bg-[#1f3328] border border-gray-100 dark:border-white/10 shadow-sm">
+                                <span class="w-8 h-8 rounded-full bg-accent/20 text-accent font-bold text-sm flex items-center justify-center mb-3">2</span>
+                                <h4 class="font-bold text-sm text-primary mb-1">Species Matrix</h4>
+                                <p class="text-xs opacity-75">We design a biodiverse bloom & root depth palette.</p>
+                            </div>
+                            <div class="p-4 rounded-2xl bg-white dark:bg-[#1f3328] border border-gray-100 dark:border-white/10 shadow-sm">
+                                <span class="w-8 h-8 rounded-full bg-secondary/10 text-secondary font-bold text-sm flex items-center justify-center mb-3">3</span>
+                                <h4 class="font-bold text-sm text-primary mb-1">Direct Delivery</h4>
+                                <p class="text-xs opacity-75">Healthy nursery plugs ready for immediate planting.</p>
+                            </div>
+                        </div>
+
+                        <!-- Actions -->
+                        <div class="flex flex-wrap gap-4">
+                            <a href="contact.html" class="btn-primary px-8 py-4 text-base font-bold shadow-xl inline-flex items-center gap-2">
+                                <i data-lucide="calendar" class="w-5 h-5"></i> Request Plant Consultation
+                            </a>
+                            <a href="planting-guide.html" class="btn-secondary px-8 py-4 text-base font-semibold inline-flex items-center gap-2">
+                                <i data-lucide="book-open" class="w-5 h-5"></i> View Planting Guide
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Right: Visual Card -->
+                    <div class="lg:col-span-5" data-aos="fade-left">
+                        <div class="relative rounded-3xl overflow-hidden shadow-2xl border border-gray-200/80 dark:border-white/10 group">
+                            <div class="aspect-[4/3] overflow-hidden">
+                                <img src="assets/images/native-wildflowers.jpg" alt="Native Wildflower Nursery Stock" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                            </div>
+                            <div class="p-6 bg-white dark:bg-[#1b2e25] border-t border-gray-100 dark:border-white/10">
+                                <div class="flex items-center justify-between mb-4">
+                                    <div class="flex items-center gap-2">
+                                        <i data-lucide="sparkles" class="w-5 h-5 text-accent"></i>
+                                        <span class="font-bold text-sm text-primary">Wholesale & Residential Orders</span>
+                                    </div>
+                                    <span class="text-xs font-semibold px-2.5 py-1 bg-primary/10 text-primary rounded-full">In Stock</span>
+                                </div>
+                                <p class="text-xs opacity-75 leading-relaxed mb-4">
+                                    Looking for 50+ flats or landscape plug trays? We provide special trade and conservation volume pricing for contractors and land trusts.
+                                </p>
+                                <a href="contact.html" class="text-primary hover:text-accent font-semibold text-xs inline-flex items-center gap-1.5 transition-colors">
+                                    Inquire about bulk contractor pricing <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
     </main>

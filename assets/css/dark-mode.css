@@ -56,10 +56,43 @@
 }
 
 /* Override layout background colors for dark mode to keep them dark */
-[data-theme="dark"] .bg-primary {
+[data-theme="dark"] .bg-primary,
+.dark .bg-primary {
   background-color: #08130e !important;
 }
 
-[data-theme="dark"] .bg-secondary {
+[data-theme="dark"] .bg-secondary,
+.dark .bg-secondary {
   background-color: #0b1a13 !important;
 }
+
+/* Card and container dark mode adaptivity */
+[data-theme="dark"] .bg-white:not(input):not(select):not(textarea):not(.keep-white),
+.dark .bg-white:not(input):not(select):not(textarea):not(.keep-white) {
+  background-color: #1b2e25 !important;
+  color: var(--color-text-dark) !important;
+}
+
+[data-theme="dark"] .border-gray-100,
+[data-theme="dark"] .border-gray-200,
+[data-theme="dark"] .border-gray-300,
+.dark .border-gray-100,
+.dark .border-gray-200,
+.dark .border-gray-300 {
+  border-color: rgba(255, 255, 255, 0.12) !important;
+}
+
+[data-theme="dark"] .text-gray-600,
+[data-theme="dark"] .text-gray-700,
+[data-theme="dark"] .text-gray-800,
+.dark .text-gray-600,
+.dark .text-gray-700,
+.dark .text-gray-800 {
+  color: #e2e8f0 !important;
+}
+
+[data-theme="dark"] .text-gray-500,
+.dark .text-gray-500 {
+  color: #cbd5e1 !important;
+}
+
