@@ -37,12 +37,41 @@
 
 [data-theme="dark"] .btn-primary {
   background-color: var(--color-primary);
+  border-color: var(--color-primary);
   color: #0d1b14;
 }
 
 [data-theme="dark"] .btn-primary:hover {
   background-color: var(--color-accent);
+  border-color: var(--color-accent);
   color: #0d1b14;
+}
+
+[data-theme="dark"] .btn-secondary {
+  background-color: var(--color-accent);
+  border-color: var(--color-accent);
+  color: #0d1b14;
+}
+
+[data-theme="dark"] .btn-secondary:hover {
+  background-color: var(--color-accent-hover);
+  border-color: var(--color-accent-hover);
+  color: #ffffff;
+}
+
+[data-theme="dark"] .btn-primary.bg-accent,
+.dark .btn-primary.bg-accent {
+  background-color: var(--color-accent) !important;
+  border-color: var(--color-accent) !important;
+  color: #0d1b14 !important;
+  font-weight: 700 !important;
+}
+
+[data-theme="dark"] .btn-primary.bg-accent:hover,
+.dark .btn-primary.bg-accent:hover {
+  background-color: var(--color-accent-hover) !important;
+  border-color: var(--color-accent-hover) !important;
+  color: #ffffff !important;
 }
 
 [data-theme="dark"] .form-input {
@@ -95,4 +124,32 @@
 .dark .text-gray-500 {
   color: #cbd5e1 !important;
 }
+
+/* Mobile menu dark mode container and links */
+[data-theme="dark"] .mobile-menu,
+.dark .mobile-menu {
+  background-color: #0d1b14 !important;
+  border-bottom-color: rgba(255, 255, 255, 0.12) !important;
+  box-shadow: 0 15px 30px -5px rgba(0, 0, 0, 0.6) !important;
+}
+
+[data-theme="dark"] .mobile-menu .nav-link,
+.dark .mobile-menu .nav-link {
+  color: var(--color-text-dark) !important;
+  border-bottom-color: rgba(255, 255, 255, 0.08) !important;
+}
+
+[data-theme="dark"] .mobile-menu .nav-link:hover,
+.dark .mobile-menu .nav-link:hover,
+[data-theme="dark"] .mobile-menu .nav-link.active,
+.dark .mobile-menu .nav-link.active {
+  color: var(--color-accent) !important;
+  border-left-color: var(--color-accent) !important;
+}
+
+[dir="rtl"][data-theme="dark"] .mobile-menu .nav-link.active,
+[dir="rtl"].dark .mobile-menu .nav-link.active {
+  border-right-color: var(--color-accent) !important;
+}
+
 

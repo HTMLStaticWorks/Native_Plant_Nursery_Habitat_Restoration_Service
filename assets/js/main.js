@@ -2,33 +2,54 @@ function initApp() {
   // Mobile Menu Toggle
   const mobileMenuBtn = document.getElementById('mobile-menu-btn');
   const mobileMenu = document.getElementById('mobile-menu');
-  const menuIcon = document.getElementById('menu-icon');
 
   if (mobileMenuBtn && mobileMenu) {
-    mobileMenuBtn.addEventListener('click', () => {
-      mobileMenu.classList.toggle('hidden');
-      mobileMenu.classList.toggle('active');
-      
+    function openMenu() {
+      mobileMenu.classList.remove('hidden');
+      mobileMenu.classList.add('active');
+      mobileMenuBtn.innerHTML = '<i data-lucide="x" class="w-6 h-6"></i>';
+      if (window.lucide) lucide.createIcons();
+    }
+
+    function closeMenu() {
+      mobileMenu.classList.add('hidden');
+      mobileMenu.classList.remove('active');
+      mobileMenuBtn.innerHTML = '<i data-lucide="menu" class="w-6 h-6"></i>';
+      if (window.lucide) lucide.createIcons();
+    }
+
+    mobileMenuBtn.addEventListener('click', (e) => {
+      e.stopPropagation();
       if (mobileMenu.classList.contains('active')) {
-        menuIcon.setAttribute('data-lucide', 'x');
+        closeMenu();
       } else {
-        menuIcon.setAttribute('data-lucide', 'menu');
-      }
-      if(window.lucide) {
-        lucide.createIcons();
+        openMenu();
       }
     });
 
-    const mobileLinks = mobileMenu.querySelectorAll('.nav-link');
+    const mobileLinks = mobileMenu.querySelectorAll('a');
     mobileLinks.forEach(link => {
       link.addEventListener('click', () => {
-        mobileMenu.classList.add('hidden');
-        mobileMenu.classList.remove('active');
-        menuIcon.setAttribute('data-lucide', 'menu');
-        if(window.lucide) {
-          lucide.createIcons();
-        }
+        closeMenu();
       });
+    });
+
+    document.addEventListener('click', (e) => {
+      if (!mobileMenu.contains(e.target) && !mobileMenuBtn.contains(e.target)) {
+        closeMenu();
+      }
+    });
+
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && mobileMenu.classList.contains('active')) {
+        closeMenu();
+      }
+    });
+
+    window.addEventListener('resize', () => {
+      if (window.innerWidth >= 1280 && mobileMenu.classList.contains('active')) {
+        closeMenu();
+      }
     });
   }
 

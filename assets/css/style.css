@@ -52,38 +52,244 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .nav-link:hover, .nav-link.active {
-  color: var(--color-accent-hover);
+  color: var(--color-accent-hover) !important;
+  font-weight: 600 !important;
+}
+
+/* Mobile Menu Active Link Highlight */
+.mobile-menu .nav-link.active {
+  color: var(--color-accent-hover) !important;
+  font-weight: 700 !important;
+  border-left: 3px solid var(--color-accent-hover) !important;
+  padding-left: 0.75rem !important;
+}
+
+[dir="rtl"] .mobile-menu .nav-link.active {
+  border-left: none !important;
+  border-right: 3px solid var(--color-accent-hover) !important;
+  padding-right: 0.75rem !important;
+}
+
+/* ==========================================================================
+   UNIFIED CTA & BUTTON SYSTEM (Identical Same Size Across All Pages & Views)
+   ========================================================================== */
+
+/* Universal Button Base */
+.btn-primary,
+.btn-secondary,
+.cta-equal,
+button[class*="btn-"],
+a[class*="btn-"] {
+  display: inline-flex;
+  align-items: center !important;
+  justify-content: center !important;
+  height: 50px !important;
+  min-height: 50px !important;
+  max-height: 50px !important;
+  box-sizing: border-box !important;
+  padding: 0 1.5rem !important;
+  font-family: var(--font-body) !important;
+  font-size: 0.9375rem !important;
+  font-weight: 600 !important;
+  line-height: 1 !important;
+  border-radius: 0.625rem !important;
+  gap: 0.5rem !important;
+  white-space: nowrap !important;
+  word-break: keep-all !important;
+  text-decoration: none !important;
+  cursor: pointer !important;
+  transition: var(--transition) !important;
+  text-align: center !important;
+  flex-shrink: 0;
+}
+
+/* Ensure button text and icons never break into multiple lines */
+.btn-primary *,
+.btn-secondary *,
+.cta-equal *,
+button[class*="btn-"] *,
+a[class*="btn-"] * {
+  white-space: nowrap !important;
+}
+
+/* Ensure hidden utility classes always win over button display */
+.hidden,
+.btn-primary.hidden,
+.btn-secondary.hidden,
+.cta-equal.hidden {
+  display: none !important;
 }
 
 .btn-primary {
   background-color: var(--color-primary);
   color: var(--color-text-light);
-  padding: 0.75rem 1.5rem;
-  border-radius: 0.5rem;
-  font-weight: 600;
-  transition: var(--transition);
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
+  border: 1.5px solid var(--color-primary);
 }
 
 .btn-primary:hover {
   background-color: var(--color-secondary);
+  border-color: var(--color-secondary);
   color: var(--color-text-light);
+  transform: translateY(-1px);
 }
 
 .btn-secondary {
   background-color: var(--color-accent);
-  color: var(--color-text-dark);
-  padding: 0.75rem 1.5rem;
-  border-radius: 0.5rem;
-  font-weight: 600;
-  transition: var(--transition);
+  color: #0d1b14;
+  border: 1.5px solid var(--color-accent);
 }
 
 .btn-secondary:hover {
   background-color: var(--color-accent-hover);
+  border-color: var(--color-accent-hover);
   color: white;
+  transform: translateY(-1px);
+}
+
+/* Secondary outline variants (for translucent / dark sections) */
+.btn-secondary.border,
+.btn-secondary[class*="border-white"] {
+  background-color: rgba(255, 255, 255, 0.12) !important;
+  color: #ffffff !important;
+  border-color: rgba(255, 255, 255, 0.35) !important;
+}
+
+.btn-secondary.border:hover,
+.btn-secondary[class*="border-white"]:hover {
+  background-color: rgba(255, 255, 255, 0.22) !important;
+  color: #ffffff !important;
+  border-color: rgba(255, 255, 255, 0.6) !important;
+}
+
+/* Primary accent variants */
+.btn-primary.bg-accent {
+  background-color: var(--color-accent) !important;
+  color: #0d1b14 !important;
+  border-color: var(--color-accent) !important;
+  font-weight: 700 !important;
+}
+
+.btn-primary.bg-accent:hover {
+  background-color: var(--color-accent-hover) !important;
+  border-color: var(--color-accent-hover) !important;
+  color: #ffffff !important;
+}
+
+/* Uniform icon sizing and centering inside all buttons */
+.btn-primary i,
+.btn-primary svg,
+.btn-secondary i,
+.btn-secondary svg,
+.cta-equal i,
+.cta-equal svg {
+  width: 1.125rem !important;
+  height: 1.125rem !important;
+  flex-shrink: 0 !important;
+  display: inline-block !important;
+  vertical-align: middle !important;
+}
+
+/* Header Navbar CTA */
+.header-sticky .btn-primary,
+.btn-nav {
+  height: 44px !important;
+  min-height: 44px !important;
+  max-height: 44px !important;
+  width: auto !important;
+  min-width: auto !important;
+  padding: 0 1.25rem !important;
+  font-size: 0.875rem !important;
+}
+
+/* Mobile Navigation Full-Width CTA */
+.mobile-menu .btn-primary {
+  width: 100% !important;
+  min-width: 100% !important;
+  height: 48px !important;
+  min-height: 48px !important;
+  margin-top: 1rem !important;
+}
+
+/* Equal-Sized CTA Buttons (Desktop & Tablet) */
+@media (min-width: 640px) {
+  .cta-equal,
+  .hero-cta-group > a,
+  .hero-cta-group > button,
+  .cta-banner-group > a,
+  .cta-banner-group > button,
+  .flex.flex-wrap.gap-4 > .btn-primary,
+  .flex.flex-wrap.gap-4 > .btn-secondary,
+  .flex.flex-wrap.justify-center.gap-4 > .btn-primary,
+  .flex.flex-wrap.justify-center.gap-4 > .btn-secondary,
+  .flex.flex-wrap.items-center.gap-4 > .btn-primary,
+  .flex.flex-wrap.items-center.gap-4 > .btn-secondary,
+  .flex.flex-wrap.items-center.justify-center.gap-4 > .btn-primary,
+  .flex.flex-wrap.items-center.justify-center.gap-4 > .btn-secondary,
+  .flex-col.sm\:flex-row.gap-4 > .btn-primary,
+  .flex-col.sm\:flex-row.gap-4 > .btn-secondary,
+  .flex-col.sm\:flex-row.justify-center > .btn-primary,
+  .flex-col.sm\:flex-row.justify-center > .btn-secondary,
+  .flex-col.sm\:flex-row.justify-center.items-center > .btn-primary,
+  .flex-col.sm\:flex-row.justify-center.items-center > .btn-secondary {
+    min-width: 240px !important;
+    width: auto !important;
+    max-width: 100% !important;
+    height: 50px !important;
+    min-height: 50px !important;
+    max-height: 50px !important;
+    padding-left: 1.5rem !important;
+    padding-right: 1.5rem !important;
+    white-space: nowrap !important;
+    word-break: keep-all !important;
+  }
+}
+
+/* Equal-Sized CTA Buttons (Mobile View: Full Width Stacking with Matching Height & Single Line Text) */
+@media (max-width: 639px) {
+  .cta-equal,
+  .hero-cta-group > a,
+  .hero-cta-group > button,
+  .cta-banner-group > a,
+  .cta-banner-group > button,
+  .flex.flex-wrap.gap-4 > .btn-primary,
+  .flex.flex-wrap.gap-4 > .btn-secondary,
+  .flex.flex-wrap.justify-center.gap-4 > .btn-primary,
+  .flex.flex-wrap.justify-center.gap-4 > .btn-secondary,
+  .flex.flex-wrap.items-center.gap-4 > .btn-primary,
+  .flex.flex-wrap.items-center.gap-4 > .btn-secondary,
+  .flex.flex-wrap.items-center.justify-center.gap-4 > .btn-primary,
+  .flex.flex-wrap.items-center.justify-center.gap-4 > .btn-secondary,
+  .flex-col.sm\:flex-row.gap-4 > .btn-primary,
+  .flex-col.sm\:flex-row.gap-4 > .btn-secondary,
+  .flex-col.sm\:flex-row.justify-center > .btn-primary,
+  .flex-col.sm\:flex-row.justify-center > .btn-secondary,
+  .flex-col.sm\:flex-row.justify-center.items-center > .btn-primary,
+  .flex-col.sm\:flex-row.justify-center.items-center > .btn-secondary {
+    width: 100% !important;
+    min-width: 100% !important;
+    max-width: 100% !important;
+    height: 50px !important;
+    min-height: 50px !important;
+    max-height: 50px !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    white-space: nowrap !important;
+    word-break: keep-all !important;
+    font-size: 0.875rem !important;
+    padding-left: 0.75rem !important;
+    padding-right: 0.75rem !important;
+  }
+}
+
+@media (max-width: 380px) {
+  .btn-primary,
+  .btn-secondary,
+  .cta-equal {
+    font-size: 0.8125rem !important;
+    padding-left: 0.5rem !important;
+    padding-right: 0.5rem !important;
+    white-space: nowrap !important;
+  }
 }
 
 /* Cards */
@@ -121,6 +327,14 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Responsive Overrides */
 @media (max-width: 1279px) {
+  /* Strictly hide desktop navbar CTA and desktop nav links on tablet & mobile */
+  header .hidden.xl\:inline-flex,
+  .header-sticky .hidden.xl\:inline-flex,
+  header a.hidden,
+  .header-sticky a.hidden {
+    display: none !important;
+  }
+
   .mobile-menu {
     display: none;
     position: absolute;
@@ -128,12 +342,37 @@ h1, h2, h3, h4, h5, h6 {
     left: 0;
     right: 0;
     background: var(--color-bg-light);
-    padding: 1rem;
-    box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1);
+    padding: 1rem 1.5rem 1.5rem;
+    box-shadow: 0 15px 30px -5px rgba(0, 0, 0, 0.2);
+    max-height: calc(100vh - 5rem);
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.08);
   }
+
   .mobile-menu.active {
     display: flex;
     flex-direction: column;
+  }
+}
+
+@media (min-width: 1280px) {
+  .xl\:inline-flex {
+    display: inline-flex !important;
+  }
+  .xl\:hidden {
+    display: none !important;
+  }
+}
+
+/* Mobile header safety for narrow viewports */
+@media (max-width: 480px) {
+  .logo-text {
+    font-size: 1.25rem !important;
+  }
+  .header-sticky {
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
   }
 }
 
