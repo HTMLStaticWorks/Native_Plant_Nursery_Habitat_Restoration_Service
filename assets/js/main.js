@@ -7,6 +7,7 @@ function initApp() {
     function openMenu() {
       mobileMenu.classList.remove('hidden');
       mobileMenu.classList.add('active');
+      document.body.classList.add('overflow-hidden');
       mobileMenuBtn.innerHTML = '<i data-lucide="x" class="w-6 h-6"></i>';
       if (window.lucide) lucide.createIcons();
     }
@@ -14,6 +15,7 @@ function initApp() {
     function closeMenu() {
       mobileMenu.classList.add('hidden');
       mobileMenu.classList.remove('active');
+      document.body.classList.remove('overflow-hidden');
       mobileMenuBtn.innerHTML = '<i data-lucide="menu" class="w-6 h-6"></i>';
       if (window.lucide) lucide.createIcons();
     }

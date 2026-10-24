@@ -22,6 +22,13 @@ body {
   background-color: var(--color-bg-light);
   color: var(--color-text-dark);
   overflow-x: hidden;
+  padding-top: 66px;
+}
+
+@media (max-width: 1279px) {
+  body {
+    padding-top: 57px;
+  }
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -30,12 +37,17 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Header & Nav */
 .header-sticky {
-  position: sticky;
+  position: fixed;
   top: 0;
-  z-index: 50;
-  backdrop-filter: blur(10px);
-  background-color: rgba(254, 250, 224, 0.9);
-  transition: var(--transition);
+  left: 0;
+  right: 0;
+  width: 100%;
+  z-index: 100;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  background-color: rgba(254, 250, 224, 0.95);
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.05);
+  transition: background-color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
 .logo-text {
@@ -103,20 +115,24 @@ a[class*="btn-"] {
   flex-shrink: 0;
 }
 
-/* Ensure button text and icons never break into multiple lines */
-.btn-primary *,
-.btn-secondary *,
-.cta-equal *,
-button[class*="btn-"] *,
+/* Ensure button text and icons never break into multiple lines (except form buttons) */
+.btn-primary:not(form *):not(form) *,
+.btn-secondary:not(form *):not(form) *,
+.cta-equal:not(form *):not(form) *,
+button[class*="btn-"]:not(form *):not(form) *,
 a[class*="btn-"] * {
   white-space: nowrap !important;
 }
 
-/* Ensure hidden utility classes always win over button display */
-.hidden,
-.btn-primary.hidden,
-.btn-secondary.hidden,
-.cta-equal.hidden {
+form button[type="submit"] *,
+form .btn-primary * {
+  white-space: normal !important;
+}
+
+/* Ensure standalone hidden classes on buttons without responsive modifiers */
+.btn-primary.hidden:not([class*="sm:"]):not([class*="md:"]):not([class*="lg:"]):not([class*="xl:"]),
+.btn-secondary.hidden:not([class*="sm:"]):not([class*="md:"]):not([class*="lg:"]):not([class*="xl:"]),
+.cta-equal.hidden:not([class*="sm:"]):not([class*="md:"]):not([class*="lg:"]):not([class*="xl:"]) {
   display: none !important;
 }
 
@@ -279,6 +295,17 @@ a[class*="btn-"] * {
     padding-left: 0.75rem !important;
     padding-right: 0.75rem !important;
   }
+
+  /* Form action buttons on mobile */
+  form button[type="submit"].btn-primary,
+  form .btn-primary {
+    white-space: normal !important;
+    word-break: normal !important;
+    height: auto !important;
+    min-height: 48px !important;
+    padding-top: 0.75rem !important;
+    padding-bottom: 0.75rem !important;
+  }
 }
 
 @media (max-width: 380px) {
@@ -328,11 +355,17 @@ a[class*="btn-"] * {
 /* Responsive Overrides */
 @media (max-width: 1279px) {
   /* Strictly hide desktop navbar CTA and desktop nav links on tablet & mobile */
+  header nav.hidden,
+  .header-sticky nav.hidden,
   header .hidden.xl\:inline-flex,
   .header-sticky .hidden.xl\:inline-flex,
   header a.hidden,
   .header-sticky a.hidden {
     display: none !important;
+  }
+
+  #mobile-menu-btn {
+    display: flex !important;
   }
 
   .mobile-menu {
@@ -341,13 +374,18 @@ a[class*="btn-"] * {
     top: 100%;
     left: 0;
     right: 0;
+    width: 100%;
     background: var(--color-bg-light);
-    padding: 1rem 1.5rem 1.5rem;
+    padding: 1.25rem 1.5rem 3rem;
     box-shadow: 0 15px 30px -5px rgba(0, 0, 0, 0.2);
-    max-height: calc(100vh - 5rem);
+    min-height: calc(100vh - 100%);
+    min-height: calc(100dvh - 100%);
+    height: calc(100vh - 100%);
+    height: calc(100dvh - 100%);
     overflow-y: auto;
     -webkit-overflow-scrolling: touch;
     border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+    z-index: 60;
   }
 
   .mobile-menu.active {
@@ -357,10 +395,29 @@ a[class*="btn-"] * {
 }
 
 @media (min-width: 1280px) {
+  header nav.hidden.xl\:flex,
+  .header-sticky nav.hidden.xl\:flex,
+  nav.xl\:flex,
+  .xl\:flex {
+    display: flex !important;
+  }
+
+  header a.hidden.xl\:inline-flex,
+  .header-sticky a.hidden.xl\:inline-flex,
   .xl\:inline-flex {
     display: inline-flex !important;
   }
+
+  .xl\:block {
+    display: block !important;
+  }
+
+  #mobile-menu-btn,
   .xl\:hidden {
+    display: none !important;
+  }
+
+  .mobile-menu {
     display: none !important;
   }
 }

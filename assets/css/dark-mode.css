@@ -74,14 +74,83 @@
   color: #ffffff !important;
 }
 
-[data-theme="dark"] .form-input {
+/* Form inputs, selects, and textareas in dark mode */
+[data-theme="dark"] .form-input,
+.dark .form-input,
+[data-theme="dark"] input:not([type="checkbox"]):not([type="radio"]):not([type="submit"]):not([type="button"]),
+.dark input:not([type="checkbox"]):not([type="radio"]):not([type="submit"]):not([type="button"]),
+[data-theme="dark"] select,
+.dark select,
+[data-theme="dark"] textarea,
+.dark textarea {
   background-color: #0d1b14 !important;
   border-color: #2a4034 !important;
-  color: var(--color-text-dark) !important;
+  color: #f8f9fa !important;
 }
 
-[data-theme="dark"] .form-input::placeholder {
-  color: rgba(248, 249, 250, 0.5);
+[data-theme="dark"] input::placeholder,
+.dark input::placeholder,
+[data-theme="dark"] textarea::placeholder,
+.dark textarea::placeholder,
+[data-theme="dark"] .form-input::placeholder,
+.dark .form-input::placeholder {
+  color: rgba(248, 249, 250, 0.6) !important;
+}
+
+[data-theme="dark"] select option,
+.dark select option {
+  background-color: #0d1b14 !important;
+  color: #f8f9fa !important;
+}
+
+/* Badges with warm accent gold background: force dark readable text */
+[data-theme="dark"] .bg-accent.text-primary,
+.dark .bg-accent.text-primary,
+[data-theme="dark"] .bg-accent.text-primary *,
+.dark .bg-accent.text-primary *,
+[data-theme="dark"] span.bg-accent,
+.dark span.bg-accent,
+[data-theme="dark"] .badge-accent,
+.dark .badge-accent {
+  color: #0d1b14 !important;
+  font-weight: 700 !important;
+}
+
+/* Product image overlay category badges in dark mode */
+[data-theme="dark"] .plant-badge,
+.dark .plant-badge,
+[data-theme="dark"] .native-card [class*="bg-white/"],
+.dark .native-card [class*="bg-white/"] {
+  background-color: rgba(13, 27, 20, 0.92) !important;
+  color: var(--color-accent) !important;
+  border: 1px solid rgba(221, 161, 94, 0.4) !important;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.5) !important;
+}
+
+/* Floating Project Tags & Image Cards in Dark Mode */
+[data-theme="dark"] .project-tag,
+.dark .project-tag,
+[data-theme="dark"] .bg-white\/90,
+.dark .bg-white\/90,
+[data-theme="dark"] .bg-white\/80,
+.dark .bg-white\/80 {
+  background-color: rgba(13, 27, 20, 0.92) !important;
+  border-color: rgba(255, 255, 255, 0.15) !important;
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.5) !important;
+}
+
+[data-theme="dark"] .project-tag p.text-primary,
+.dark .project-tag p.text-primary,
+[data-theme="dark"] .bg-white\/90 p.text-primary,
+.dark .bg-white\/90 p.text-primary {
+  color: var(--color-accent) !important;
+}
+
+[data-theme="dark"] .project-tag p.text-gray-800,
+.dark .project-tag p.text-gray-800,
+[data-theme="dark"] .bg-white\/90 p.text-gray-800,
+.dark .bg-white\/90 p.text-gray-800 {
+  color: #e2e8f0 !important;
 }
 
 /* Override layout background colors for dark mode to keep them dark */
